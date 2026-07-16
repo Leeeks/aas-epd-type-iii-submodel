@@ -1,0 +1,26 @@
+artifacts:
+  - original_name: epd_smt_template_v3_v12.aasx
+    repository_path: model/template/epd-type-iii-submodel-template.aasx
+    artifact_type: aas-submodel-template
+    model_kind: Template
+    status: working-draft
+    aas_metamodel_version: "V3.0"
+    template_version: "V1.0"
+    sha256: "tbd"
+
+  - original_name: WAGO-00001-V01.01-EN_AAS31.aasx
+    repository_path: examples/wago-00001/wago-00001-v01-01-en-epd-submodel-instance.aasx
+    artifact_type: aas-submodel-instance
+    model_kind: Instance
+    status: working-draft
+    aas_metamodel_version: "V3.0"
+    template_version: "V1.0"
+    sha256: "tbd"
+
+  - original_name: WAGO-00001-V01.01-EN.pdf
+    repository_path: examples/wago-00001/source/wago-00001-v01-01-en.pdf
+    artifact_type: document
+    model_kind: null
+    status: working-draft
+    sha256: "tbd"
+    note: "PEP publication. License to publish in this repository needs to be confirmed."

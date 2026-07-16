@@ -1,0 +1,29 @@
+# Validation Report
+
+**Test object**: EPD Type III Submodel Template and WAGO example instance
+**Method used**: Automated conversion and manual check against source PDF
+**Tool used**: Python-based conversion scripts (AAS Excel Conversion Tool)
+**Tool version**: N/A (Script-based)
+
+## Results
+
+| Test point | Result | Cause / Measure | Release relevance |
+| :--- | :--- | :--- | :--- |
+| ZIP integrity of AASX files | **passed** | | No |
+| Correct AASX package structure | **passed** | | No |
+| XML/JSON readability | **passed** | | No |
+| Used AAS metamodel version | **passed** | V3.0 | No |
+| `kind = Template` | **passed** | | No |
+| `kind = Instance` | **passed** | | No |
+| Unique `idShort` | **passed** | | No |
+| Preservation of LCIA `idShort` | **passed** | Dynamic naming | No |
+| Preservation of phase `idShort` | **passed** | Dynamic naming | No |
+| Consistent `semanticIdListElement` | **passed** | | No |
+| Consistent `typeValueListElement` | **passed** | | No |
+| Consistent `valueTypeListElement` | **passed** | | No |
+| No broken references | **passed** | | No |
+| Embedded PEP file accessible | **warning** | Legal clarification for PDF publication is missing. | **Release blocker** |
+| Use of `idShort` in list elements | **warning** | AAS V3.0 conformity of `idShort` on direct list elements must be validated. | **Release blocker** |
+| `issueDate` incomplete | **warning** | Check formatting (e.g., xs:dateTime). | Medium |
+| Placeholder Semantic IDs | **warning** | Working IDs (0173-1#...) used. | **Release blocker** |
+| `Total` as life cycle phase | **warning** | Not standard-compliant with specific phases. | Medium |

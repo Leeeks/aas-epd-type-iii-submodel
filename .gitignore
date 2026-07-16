@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+*.tmp
+*.bak
+~$*
+.env
+.venv/
+venv/
+node_modules/
+local-renders/
+temp/
+tmp/

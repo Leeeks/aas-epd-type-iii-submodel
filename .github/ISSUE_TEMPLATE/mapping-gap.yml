@@ -1,0 +1,56 @@
+name: Mapping Gap
+description: Report a mapping gap from an external format to the AAS Submodel
+title: "[Gap]: "
+labels: ["mapping", "enhancement"]
+body:
+  - type: input
+    id: source_format
+    attributes:
+      label: Source format
+      description: E.g., ILCD+EPD XML, openEPD JSON, PEP PDF
+    validations:
+      required: true
+  - type: input
+    id: source_element
+    attributes:
+      label: Source element
+      description: What is the specific field/element in the source?
+    validations:
+      required: true
+  - type: textarea
+    id: source_definition
+    attributes:
+      label: Source definition
+      description: What does this element mean?
+  - type: input
+    id: missing_target_path
+    attributes:
+      label: Missing target path
+      description: Where should this ideally be in the AAS?
+  - type: input
+    id: proposed_aas_element_type
+    attributes:
+      label: Proposed AAS element type
+      description: Property, MultiLanguageProperty, SubmodelElementCollection, etc.
+  - type: input
+    id: datatype
+    attributes:
+      label: Datatype
+      description: xs:string, xs:double, etc.
+  - type: input
+    id: cardinality
+    attributes:
+      label: Cardinality
+      description: 1..1, 0..1, 0..*
+  - type: input
+    id: proposed_semanticid
+    attributes:
+      label: Proposed semanticId
+      description: ECLASS IRDI, IEC CDD, or other standard
+  - type: dropdown
+    id: relevance
+    attributes:
+      label: Relevance
+      options:
+        - General EPD relevance
+        - Program-specific relevance

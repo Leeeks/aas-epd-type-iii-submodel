@@ -1,0 +1,2117 @@
+{
+  "id": "CQDPP5FX",
+  "ext": {
+    "pep_ecopassport": {
+      "general": {
+        "name": "General",
+        "table_not_applicable": false,
+        "fields": {
+          "disclaimer": {
+            "name": "Disclaimer",
+            "value": "The PEP owner has the sole ownership, liability, and responsibility for this PEP. The elements of the present PEP cannot be compared with elements from another program."
+          }
+        }
+      },
+      "lca": {
+        "name": "LCA Information",
+        "table_not_applicable": false,
+        "fields": {}
+      },
+      "additional_info": {
+        "name": "Additional Environmental Info",
+        "table_not_applicable": false,
+        "fields": {}
+      },
+      "energy": {
+        "name": "Energy Modeling",
+        "table_not_applicable": false,
+        "fields": {}
+      },
+      "product_composition": {
+        "name": "Product Composition",
+        "headers": [
+          {
+            "name": "Material",
+            "key": "material"
+          },
+          {
+            "name": "Mass",
+            "key": "mass"
+          },
+          {
+            "name": "Mass %",
+            "key": "mass_percent"
+          },
+          {
+            "name": "CAS No",
+            "key": "cas_no"
+          },
+          {
+            "name": "Recycled Content",
+            "key": "recycled_content"
+          },
+          {
+            "name": "Material Category",
+            "key": "material_type"
+          }
+        ],
+        "table_not_applicable": false,
+        "rows": [
+          {
+            "material": {},
+            "mass": {
+              "format": "d3.format(\">.3g\")"
+            },
+            "mass_percent": null,
+            "cas_no": {},
+            "recycled_content": {
+              "format": "d3.format(\".0%\")"
+            },
+            "material_type": {}
+          },
+          {
+            "material": {},
+            "mass": {
+              "format": "d3.format(\">.3g\")"
+            },
+            "mass_percent": null,
+            "cas_no": {},
+            "recycled_content": {
+              "format": "d3.format(\".0%\")"
+            },
+            "material_type": {}
+          }
+        ],
+        "summary": [
+          {
+            "value": "Totals"
+          },
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "packaging": {
+        "name": "Packaging Composition",
+        "headers": [
+          {
+            "name": "Packaging Material",
+            "key": "material"
+          },
+          {
+            "name": "Mass",
+            "key": "mass"
+          },
+          {
+            "name": "Mass %",
+            "key": "mass_percent"
+          },
+          {
+            "name": "Recycled Content",
+            "key": "recycled_content"
+          },
+          {
+            "name": "Material Category",
+            "key": "material_type"
+          }
+        ],
+        "table_not_applicable": false,
+        "rows": [
+          {
+            "material": {},
+            "mass": {
+              "format": "d3.format(\">.3g\")"
+            },
+            "mass_percent": null,
+            "recycled_content": {
+              "format": "d3.format(\".0%\")"
+            },
+            "material_type": {}
+          },
+          {
+            "material": {},
+            "mass": {
+              "format": "d3.format(\">.3g\")"
+            },
+            "mass_percent": null,
+            "recycled_content": {
+              "format": "d3.format(\".0%\")"
+            },
+            "material_type": {}
+          }
+        ],
+        "summary": [
+          {
+            "value": "Totals"
+          },
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "totals": {
+        "name": "Totals",
+        "table_not_applicable": false,
+        "fields": {
+          "plastics": null,
+          "metals": null,
+          "other": null
+        }
+      },
+      "extrapolation": {
+        "name": "Extrapolation",
+        "headers": [
+          {
+            "name": "Product",
+            "key": "product"
+          },
+          {
+            "name": "Manufacturing (A1A2A3) Factor",
+            "key": "a1a2a3"
+          },
+          {
+            "name": "Distribution (A4) Factor",
+            "key": "a4"
+          },
+          {
+            "name": "Installation (A5) Factor",
+            "key": "a5"
+          },
+          {
+            "name": "Use (B1-B7) Factor",
+            "key": "b"
+          },
+          {
+            "name": "EoL (C) Factor",
+            "key": "c"
+          },
+          {
+            "name": "Post EoL Benefits (D) Factor",
+            "key": "d"
+          }
+        ],
+        "table_not_applicable": false,
+        "rows": [
+          {
+            "product": {},
+            "a1a2a3": {
+              "format": "d3.format(\".3~g\")"
+            },
+            "a4": {
+              "format": "d3.format(\".3~g\")"
+            },
+            "a5": {
+              "format": "d3.format(\".3~g\")"
+            },
+            "b": {
+              "format": "d3.format(\".3~g\")"
+            },
+            "c": {
+              "format": "d3.format(\".3~g\")"
+            },
+            "d": {
+              "format": "d3.format(\".3~g\")"
+            }
+          }
+        ]
+      },
+      "references": {
+        "name": "References",
+        "headers": [
+          {
+            "name": "Reference",
+            "key": "citation_text"
+          }
+        ],
+        "table_not_applicable": false,
+        "rows": [
+          {
+            "citation_text": {
+              "value": "Title, Publisher, Date"
+            }
+          },
+          {
+            "citation_text": {
+              "value": "Title, Publisher, Date"
+            }
+          }
+        ]
+      }
+    },
+    "ec3": {
+      "uaGWP_a1a2a3_traci21": 0.015429990028601098,
+      "uaGWP_a1a2a3_ar5": 0.015413772302707527,
+      "category": "Electrical >> LowVoltageElectricalDistribution >> ElectricalConnectors",
+      "manufacturer_specific": true,
+      "plant_specific": false,
+      "product_specific": true,
+      "batch_specific": null,
+      "supply_chain_specificity": 0,
+      "original_data_format": null
+    }
+  },
+  "doctype": "openEPD",
+  "openepd_version": "0.1",
+  "date_of_issue": "2026-02-01T00:00:00Z",
+  "valid_until": "2031-02-01T00:00:00Z",
+  "version": null,
+  "declared_unit": {
+    "qty": 1,
+    "unit": "item"
+  },
+  "kg_per_declared_unit": {
+    "unit": "kg",
+    "qty": 0.001958
+  },
+  "compliance": [],
+  "product_classes": {
+    "EC3": "Electrical >> LowVoltageElectricalDistribution >> ElectricalConnectors",
+    "io.cqd.ec3": "Electrical >> LowVoltageElectricalDistribution >> ElectricalConnectors"
+  },
+  "language": "en",
+  "private": false,
+  "pcr": {
+    "ext": {
+      "functional_unit": {
+        "functional_units": []
+      }
+    },
+    "attachments": {
+      "Translation/Official/French": "https://register.pep-ecopassport.org/files/mbesqrsCBZbWbKJq6-kJ3ho4FCoDCHmcn1fQl8ufkF0HBfcwSRZmYSk5Aa34bb8BIirLmACzjMbcPpiMLk3S_j0apEC66z7i06CrWpazXIPkWL4HtTpDFssuNH1wk4SptG9frXaHdboeIGW8uBp9-iIO_qg8qRau9QorIP3uMg6bz28RRaFumnE7wjCdYF46wpsvSxCpNCm4RH6_0LgWZlFPK585hBfGG8HzDrJ6mIjP-WzqGsexM0VIVjJspfhTU3NQg_0UNTxyMbUVPABNQOjKbkn3RHZXGa--cqKq-SU6UFau0j4lbloUSJ8gX3Csgxd8UuOPyBzTjCp0kMNY5bDwUjHWqv2qQATlJzfBS6d8_efmQrset2TDRVJETROEAs64UKf6P2ddIlrf8kp8zUD5yNcLAWfz8ooVNeCINaheEyVYedZmVntn7QQXZ_JkMk2NiDrajGkr_9C9j2OJvXOf-NO4Ngfy35HCAUWxBPVi_y8_iA-k6U4Gr8m9b87qYgjza_KyPuM-1e3Y1dqRSVbX6vucBScYJiN1GcHOc_NK7S-lgsd55DFoWZY8eruMKiPA4LaP6mItN5pCjzrvc1RBV0KdPYtl_XHpjEGEYDNlcz3T59-BDyOBHZoyUJc3DS44DOUW4DEZanmlHHfRnTK3c7e0-3BWB7pJYtdQKTzIeus6udNxwxOCfbOsSeY2DvXgwVWClQyzlVEewmv-xpbOUqKtmiQR0dbt_L4eXpN0KJ03adwOLyAzJ1xZDW9ZNHF48nBskCeoSol8qzEeQggNwY7o6CMEHnCUePzis1ICs05VZQm6oR_i3ZJxcDfFWKUpLcptXMNHKn8r25PbjLq0X851AM-SonRA8XFujjXl0-7sPDGzfUS-nvAKjks3iWennxyHCvGanGOic9DVwdyvHxqhPJcP_7JUmdGkVTd8rtIgDrxWOOUxcNwZn3VmhBqE9sijNjM-xxDkG707BA"
+    },
+    "id": "EC3A6NMM",
+    "issuer": {
+      "ext": null,
+      "web_domain": "pep-ecopassport.org",
+      "name": "Association P.E.P",
+      "ref": "https://openepd.epd.world/api/orgs/pep-ecopassport.org",
+      "alt_ids": null,
+      "attachments": {},
+      "alt_names": [
+        "P.E.P. ",
+        "P.E.P. Association",
+        "PEP Ecopassport",
+        "PEP ecopassport",
+        "PEP ecopassport\u00ae",
+        "PEP"
+      ],
+      "owner": null,
+      "subsidiaries": null,
+      "description": null,
+      "hq_location": {
+        "pluscode": "8FW4V78R+RP",
+        "latlng": {
+          "lat": 48.8670117,
+          "lng": 2.2918163
+        },
+        "address": "17 Rue de l'Amiral Hamelin, 75116 Paris, France",
+        "country": "FR",
+        "jurisdiction": null
+      },
+      "logo": "https://static.epd.world/images/f383c2601d84486289c03bb4c8bb7529.png"
+    },
+    "issuer_doc_id": "PCR-ed4-EN-2021 09 06",
+    "name": "Product Category Rules for Electrical, Electronic and HVAC-R Products",
+    "short_name": "Electrical, Electronic and HVAC-R Products",
+    "declared_units": [
+      {
+        "qty": 1,
+        "unit": "m"
+      }
+    ],
+    "version": "4",
+    "date_of_issue": "2021-09-06T00:00:00Z",
+    "valid_until": null,
+    "doc": "https://register.pep-ecopassport.org/files/mbesqrsCBZbWbKJq6-kJ3ho4FCoDCHmcn1fQl8ufkF0HBfcwSRZmYSk5Aa34bb8BIirLmACzjMbcPpiMLk3S_j0apEC66z7i06CrWpazXIOoU2BD6_yWzyE6n2qiHcDsOpcLLV9Xih4bBS9ldc2M5IMMuUsgsgGRnE_UOdgp8tLQ8Qh6ltyUKc9CkXp5_DJbAoxiBFJn0rQkn4vOdFgxOVYvj472TxynUQ556HeTSy0nc-KLjpNInQAuu0Apv-HhhDV1XNuUGacfLTl5psomlyqpe_tUp7x4cbWXaphYxHPizqjkaGab6sj3GlVxBE--Mrloo6bKyWLKKQyc-i2IXyIKS7wfDo1gGiWEDohc8tOqoD7KU39K8HXcGN3Uu1iN9x_MXKWPS6X2Kgqa0ULbqRsSzl7HWf7-w8lOnGr0Zc8SzQMh4GYzAGsBTIBTHQh_pJ1wsYYQ90n35ZNim4d3408q8buhv_HmnTAKERvzwWaGAZumweE1Yo3_1K_Qg_654JspHsdTle7DBBEVvgOIR4JN_Qsvu5f30vBqsYSyW5uL8iGCuA9A8a3ad99bU4r8PGx6Dnat6WRl3XnAJHRtTnNEa5-NMBsRMteT8h9k3iDgHZupQhJnQAWv4IURim73yfyn0_ukn2U5fT7YUObu7W_V21CgXPYYE-TZAFgRo9K1qAja9E_h5ntZh5Z6q1Mivuq04DEcQMB4gyV19iu-qEK_K6lDsCJBm-B13iG5gOkWiRJLGiVPFHz45RMZVEEjvVEDzIDjl8xocIshksPG-CcP77iMMjpHDU9rf8pyTKOW9Dlmh1aDIo_rjCTDdg4GaRGORopI3T2jUGmW9quLDSxSj6dbuY4Q2oHvr_TmSJHjdrpwaF2u6uD6hdzROQy0emcCqlu14A0pmA1s6oFukrrlKH3uXbL16iIBhpKmWtgh6kVudXYbxP71kFrRgr2q9S7IT7TI6YXvKdVIqHQjbw",
+    "parent": null,
+    "status": "Published",
+    "product_classes": {
+      "EC3": [
+        "NetworkInfrastructure",
+        "Mechanical",
+        "Electrical",
+        "Unsupported"
+      ],
+      "io.cqd.ec3": [
+        "NetworkInfrastructure",
+        "Mechanical",
+        "Electrical",
+        "Unsupported"
+      ]
+    },
+    "applicable_in": null
+  },
+  "lca_discussion": null,
+  "product_image_small": null,
+  "product_image": null,
+  "declaration_url": "epd.world/e/cqdpp5fxd2",
+  "kg_C_per_declared_unit": null,
+  "kg_C_biogenic_per_declared_unit": null,
+  "product_service_life_years": 30,
+  "alt_ids": {},
+  "third_party_verifier": {
+    "ext": null,
+    "web_domain": "wapsustainability.com",
+    "name": "WAP Sustainability",
+    "ref": "https://openepd.epd.world/api/orgs/wapsustainability.com",
+    "alt_ids": null,
+    "attachments": {},
+    "alt_names": [
+      "WAP Sustainability",
+      "WAP Sustainability Consulting",
+      "WAP Sustainability Consulting, LLC",
+      "WAP"
+    ],
+    "owner": null,
+    "subsidiaries": null,
+    "description": null,
+    "hq_location": {
+      "pluscode": "867P2MMR+PH",
+      "latlng": {
+        "lat": 35.0343565,
+        "lng": -85.3085122
+      },
+      "address": "1701 Market St, Chattanooga, TN 37408, USA",
+      "country": "US",
+      "jurisdiction": null
+    },
+    "logo": "https://static.epd.world/images/0d41be5eff0443e385134022ca79ee61.png"
+  },
+  "third_party_verification_url": null,
+  "third_party_verifier_email": null,
+  "third_party_verifier_name": null,
+  "epd_developer": {
+    "ext": null,
+    "web_domain": "wago.com",
+    "name": "WAGO GmbH",
+    "ref": "https://openepd.epd.world/api/orgs/wago.com",
+    "alt_ids": null,
+    "attachments": {},
+    "alt_names": null,
+    "owner": null,
+    "subsidiaries": null,
+    "description": null,
+    "hq_location": {
+      "pluscode": "9F4C7WXF+Q2",
+      "latlng": {
+        "lat": 52.2994563,
+        "lng": 8.9225336
+      },
+      "address": "Hansastra\u00dfe 27, 32423 Minden, Germany",
+      "country": "DE",
+      "jurisdiction": null
+    },
+    "logo": "https://static.epd.world/images/32d642e6a3b94e11a1108019acaf02ce.png"
+  },
+  "epd_developer_email": null,
+  "program_operator": {
+    "ext": null,
+    "web_domain": "pep-ecopassport.org",
+    "name": "Association P.E.P",
+    "ref": "https://openepd.epd.world/api/orgs/pep-ecopassport.org",
+    "alt_ids": null,
+    "attachments": {},
+    "alt_names": [
+      "P.E.P. ",
+      "P.E.P. Association",
+      "PEP Ecopassport",
+      "PEP ecopassport",
+      "PEP ecopassport\u00ae",
+      "PEP"
+    ],
+    "owner": null,
+    "subsidiaries": null,
+    "description": null,
+    "hq_location": {
+      "pluscode": "8FW4V78R+RP",
+      "latlng": {
+        "lat": 48.8670117,
+        "lng": 2.2918163
+      },
+      "address": "17 Rue de l'Amiral Hamelin, 75116 Paris, France",
+      "country": "FR",
+      "jurisdiction": null
+    },
+    "logo": "https://static.epd.world/images/f383c2601d84486289c03bb4c8bb7529.png"
+  },
+  "program_operator_doc_id": null,
+  "program_operator_version": "01.01",
+  "attachments": null,
+  "product_name": "221 Series / Splicing Connector with Levers",
+  "product_sku": "21-422",
+  "product_description": "The function of the product is to connect power transmission cables together, or to connect them to equipment, for one unit and its packaging, under operating conditions identical to those of the cable: 1 ampere (A) over 30 years, with a use rate of 70%, in accordance with the applicable standards.",
+  "manufacturer": {
+    "ext": null,
+    "web_domain": "wago.com",
+    "name": "WAGO GmbH",
+    "ref": "https://openepd.epd.world/api/orgs/wago.com",
+    "alt_ids": null,
+    "attachments": {},
+    "alt_names": null,
+    "owner": null,
+    "subsidiaries": null,
+    "description": null,
+    "hq_location": {
+      "pluscode": "9F4C7WXF+Q2",
+      "latlng": {
+        "lat": 52.2994563,
+        "lng": 8.9225336
+      },
+      "address": "Hansastra\u00dfe 27, 32423 Minden, Germany",
+      "country": "DE",
+      "jurisdiction": null
+    },
+    "logo": "https://static.epd.world/images/32d642e6a3b94e11a1108019acaf02ce.png"
+  },
+  "plants": [],
+  "applicable_in": [
+    "001"
+  ],
+  "product_usage_description": null,
+  "product_usage_image": null,
+  "manufacturing_description": null,
+  "manufacturing_image": null,
+  "specs": {
+    "ext_version": "1.1",
+    "Electrical": {
+      "ext_version": "1.2",
+      "ElectricalPowerStorage": null,
+      "LowVoltageElectricalDistribution": {
+        "ext_version": "1.1",
+        "CableTrays": null,
+        "ElectricalCables": null,
+        "ElectricalBuses": null,
+        "FloorEquipmentBoxes": null,
+        "PowerDistributionUnits": null,
+        "Raceways": null,
+        "ElectricalConnectors": {
+          "ext_version": "1.0",
+          "ElectricalGroundingConnectors": null
+        },
+        "ElectricalDistSwitchgear": null,
+        "ChargingStations": null
+      },
+      "ElectricalGenerationEquipment": null,
+      "ElectricPower": null,
+      "Lighting": null,
+      "ElectricalConduit": null,
+      "OtherElectricalEquipment": null
+    }
+  },
+  "includes": [],
+  "ec3": {
+    "uaGWP_a1a2a3_traci21": 0.015429990028601098,
+    "uaGWP_a1a2a3_ar5": 0.015413772302707527,
+    "category": "Electrical >> LowVoltageElectricalDistribution >> ElectricalConnectors",
+    "manufacturer_specific": true,
+    "plant_specific": false,
+    "product_specific": true,
+    "batch_specific": null,
+    "supply_chain_specificity": 0,
+    "original_data_format": null
+  },
+  "impacts": {
+    "EF 3.0": {
+      "gwp": {
+        "ext": null,
+        "A1A2A3": {
+          "mean": 0.0124,
+          "unit": "kgCO2e",
+          "rsd": 0.28879058156387305,
+          "dist": "log-normal"
+        },
+        "A1": null,
+        "A2": null,
+        "A3": null,
+        "A4": {
+          "mean": 0.00057,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A5": {
+          "mean": 0.00068,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1_years": null,
+        "B2": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B2_years": null,
+        "B3": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B3_years": null,
+        "B4": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B4_years": null,
+        "B5": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B5_years": null,
+        "B6": {
+          "mean": 0.0702,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B6_years": null,
+        "B7": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B7_years": null,
+        "C_scenarios": [],
+        "C1": null,
+        "C2": null,
+        "C3": null,
+        "C4": null,
+        "D": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        }
+      },
+      "odp": {
+        "ext": null,
+        "A1A2A3": {
+          "mean": 2.5e-09,
+          "unit": "kgCFC11e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A1": null,
+        "A2": null,
+        "A3": null,
+        "A4": {
+          "mean": 8.56e-12,
+          "unit": "kgCFC11e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A5": {
+          "mean": 1e-12,
+          "unit": "kgCFC11e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1": {
+          "mean": 0,
+          "unit": "kgCFC11e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1_years": null,
+        "B2": {
+          "mean": 0,
+          "unit": "kgCFC11e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B2_years": null,
+        "B3": {
+          "mean": 0,
+          "unit": "kgCFC11e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B3_years": null,
+        "B4": {
+          "mean": 0,
+          "unit": "kgCFC11e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B4_years": null,
+        "B5": {
+          "mean": 0,
+          "unit": "kgCFC11e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B5_years": null,
+        "B6": {
+          "mean": 4.93e-10,
+          "unit": "kgCFC11e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B6_years": null,
+        "B7": {
+          "mean": 0,
+          "unit": "kgCFC11e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B7_years": null,
+        "C_scenarios": [],
+        "C1": null,
+        "C2": null,
+        "C3": null,
+        "C4": null,
+        "D": {
+          "mean": -4.29e-12,
+          "unit": "kgCFC11e",
+          "rsd": null,
+          "dist": "log-normal"
+        }
+      },
+      "ap": {
+        "ext": null,
+        "A1A2A3": {
+          "mean": 0.00032,
+          "unit": "molHe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A1": null,
+        "A2": null,
+        "A3": null,
+        "A4": {
+          "mean": 8.35e-06,
+          "unit": "molHe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A5": {
+          "mean": 3.34e-07,
+          "unit": "molHe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1": {
+          "mean": 0,
+          "unit": "molHe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1_years": null,
+        "B2": {
+          "mean": 0,
+          "unit": "molHe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B2_years": null,
+        "B3": {
+          "mean": 0,
+          "unit": "molHe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B3_years": null,
+        "B4": {
+          "mean": 0,
+          "unit": "molHe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B4_years": null,
+        "B5": {
+          "mean": 0,
+          "unit": "molHe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B5_years": null,
+        "B6": {
+          "mean": 0.00037,
+          "unit": "molHe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B6_years": null,
+        "B7": {
+          "mean": 0,
+          "unit": "molHe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B7_years": null,
+        "C_scenarios": [],
+        "C1": null,
+        "C2": null,
+        "C3": null,
+        "C4": null,
+        "D": {
+          "mean": -6.9e-06,
+          "unit": "molHe",
+          "rsd": null,
+          "dist": "log-normal"
+        }
+      },
+      "pocp": {
+        "ext": null,
+        "A1A2A3": {
+          "mean": 9.2e-05,
+          "unit": "kgNMVOCe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A1": null,
+        "A2": null,
+        "A3": null,
+        "A4": {
+          "mean": 6.87e-06,
+          "unit": "kgNMVOCe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A5": {
+          "mean": 5.44e-07,
+          "unit": "kgNMVOCe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1": {
+          "mean": 0,
+          "unit": "kgNMVOCe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1_years": null,
+        "B2": {
+          "mean": 0,
+          "unit": "kgNMVOCe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B2_years": null,
+        "B3": {
+          "mean": 0,
+          "unit": "kgNMVOCe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B3_years": null,
+        "B4": {
+          "mean": 0,
+          "unit": "kgNMVOCe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B4_years": null,
+        "B5": {
+          "mean": 0,
+          "unit": "kgNMVOCe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B5_years": null,
+        "B6": {
+          "mean": 0.00021,
+          "unit": "kgNMVOCe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B6_years": null,
+        "B7": {
+          "mean": 0,
+          "unit": "kgNMVOCe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B7_years": null,
+        "C_scenarios": [],
+        "C1": null,
+        "C2": null,
+        "C3": null,
+        "C4": null,
+        "D": {
+          "mean": -1.14e-05,
+          "unit": "kgNMVOCe",
+          "rsd": null,
+          "dist": "log-normal"
+        }
+      },
+      "ep-marine": {
+        "ext": null,
+        "A1A2A3": {
+          "mean": 2.17e-05,
+          "unit": "kgNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A1": null,
+        "A2": null,
+        "A3": null,
+        "A4": {
+          "mean": 2.1e-06,
+          "unit": "kgNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A5": {
+          "mean": 2.32e-07,
+          "unit": "kgNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1": {
+          "mean": 0,
+          "unit": "kgNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1_years": null,
+        "B2": {
+          "mean": 0,
+          "unit": "kgNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B2_years": null,
+        "B3": {
+          "mean": 0,
+          "unit": "kgNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B3_years": null,
+        "B4": {
+          "mean": 0,
+          "unit": "kgNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B4_years": null,
+        "B5": {
+          "mean": 0,
+          "unit": "kgNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B5_years": null,
+        "B6": {
+          "mean": 6.39e-05,
+          "unit": "kgNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B6_years": null,
+        "B7": {
+          "mean": 0,
+          "unit": "kgNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B7_years": null,
+        "C_scenarios": [],
+        "C1": null,
+        "C2": null,
+        "C3": null,
+        "C4": null,
+        "D": {
+          "mean": -3.88e-06,
+          "unit": "kgNe",
+          "rsd": null,
+          "dist": "log-normal"
+        }
+      },
+      "ep-fresh": {
+        "ext": null,
+        "A1A2A3": {
+          "mean": 1.66e-06,
+          "unit": "kgPe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A1": null,
+        "A2": null,
+        "A3": null,
+        "A4": {
+          "mean": 4.93e-09,
+          "unit": "kgPe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A5": {
+          "mean": 7.73e-10,
+          "unit": "kgPe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1": {
+          "mean": 0,
+          "unit": "kgPe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1_years": null,
+        "B2": {
+          "mean": 0,
+          "unit": "kgPe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B2_years": null,
+        "B3": {
+          "mean": 0,
+          "unit": "kgPe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B3_years": null,
+        "B4": {
+          "mean": 0,
+          "unit": "kgPe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B4_years": null,
+        "B5": {
+          "mean": 0,
+          "unit": "kgPe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B5_years": null,
+        "B6": {
+          "mean": 3.78e-05,
+          "unit": "kgPe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B6_years": null,
+        "B7": {
+          "mean": 0,
+          "unit": "kgPe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B7_years": null,
+        "C_scenarios": [],
+        "C1": null,
+        "C2": null,
+        "C3": null,
+        "C4": null,
+        "D": {
+          "mean": -5.17e-07,
+          "unit": "kgPe",
+          "rsd": null,
+          "dist": "log-normal"
+        }
+      },
+      "ep-terr": {
+        "ext": null,
+        "A1A2A3": {
+          "mean": 0.00028,
+          "unit": "molNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A1": null,
+        "A2": null,
+        "A3": null,
+        "A4": {
+          "mean": 2.33e-05,
+          "unit": "molNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A5": {
+          "mean": 1.28e-06,
+          "unit": "molNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1": {
+          "mean": 0,
+          "unit": "molNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1_years": null,
+        "B2": {
+          "mean": 0,
+          "unit": "molNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B2_years": null,
+        "B3": {
+          "mean": 0,
+          "unit": "molNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B3_years": null,
+        "B4": {
+          "mean": 0,
+          "unit": "molNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B4_years": null,
+        "B5": {
+          "mean": 0,
+          "unit": "molNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B5_years": null,
+        "B6": {
+          "mean": 0.00071,
+          "unit": "molNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B6_years": null,
+        "B7": {
+          "mean": 0,
+          "unit": "molNe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B7_years": null,
+        "C_scenarios": [],
+        "C1": null,
+        "C2": null,
+        "C3": null,
+        "C4": null,
+        "D": {
+          "mean": -6.05e-05,
+          "unit": "molNe",
+          "rsd": null,
+          "dist": "log-normal"
+        }
+      },
+      "gwp-biogenic": {
+        "ext": null,
+        "A1A2A3": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A1": null,
+        "A2": null,
+        "A3": null,
+        "A4": {
+          "mean": 4.73e-07,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A5": {
+          "mean": 0.00043,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1_years": null,
+        "B2": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B2_years": null,
+        "B3": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B3_years": null,
+        "B4": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B4_years": null,
+        "B5": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B5_years": null,
+        "B6": {
+          "mean": 0.00042,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B6_years": null,
+        "B7": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B7_years": null,
+        "C_scenarios": [],
+        "C1": null,
+        "C2": null,
+        "C3": null,
+        "C4": null,
+        "D": {
+          "mean": 1.42e-05,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        }
+      },
+      "gwp-luluc": {
+        "ext": null,
+        "A1A2A3": {
+          "mean": 2.09e-05,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A1": null,
+        "A2": null,
+        "A3": null,
+        "A4": {
+          "mean": 1.19e-06,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A5": {
+          "mean": 1.9e-07,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1_years": null,
+        "B2": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B2_years": null,
+        "B3": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B3_years": null,
+        "B4": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B4_years": null,
+        "B5": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B5_years": null,
+        "B6": {
+          "mean": 0.00015,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B6_years": null,
+        "B7": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B7_years": null,
+        "C_scenarios": [],
+        "C1": null,
+        "C2": null,
+        "C3": null,
+        "C4": null,
+        "D": {
+          "mean": -5.81e-07,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        }
+      },
+      "gwp-fossil": {
+        "ext": null,
+        "A1A2A3": {
+          "mean": 0.0138,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A1": null,
+        "A2": null,
+        "A3": null,
+        "A4": {
+          "mean": 0.00057,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A5": {
+          "mean": 0.00025,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1_years": null,
+        "B2": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B2_years": null,
+        "B3": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B3_years": null,
+        "B4": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B4_years": null,
+        "B5": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B5_years": null,
+        "B6": {
+          "mean": 0.0696,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B6_years": null,
+        "B7": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B7_years": null,
+        "C_scenarios": [],
+        "C1": null,
+        "C2": null,
+        "C3": null,
+        "C4": null,
+        "D": {
+          "mean": 0,
+          "unit": "kgCO2e",
+          "rsd": null,
+          "dist": "log-normal"
+        }
+      },
+      "adp-fossil": {
+        "A1A2A3": {
+          "mean": 0.206,
+          "unit": "MJ",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A1": null,
+        "A2": null,
+        "A3": null,
+        "A4": {
+          "mean": 0.00753,
+          "unit": "MJ",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A5": {
+          "mean": 0.00089,
+          "unit": "MJ",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1": {
+          "mean": 0,
+          "unit": "MJ",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1_years": null,
+        "B2": {
+          "mean": 0,
+          "unit": "MJ",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B2_years": null,
+        "B3": {
+          "mean": 0,
+          "unit": "MJ",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B3_years": null,
+        "B4": {
+          "mean": 0,
+          "unit": "MJ",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B4_years": null,
+        "B5": {
+          "mean": 0,
+          "unit": "MJ",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B5_years": null,
+        "B6": {
+          "mean": 0.937,
+          "unit": "MJ",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B6_years": null,
+        "B7": {
+          "mean": 0,
+          "unit": "MJ",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B7_years": null,
+        "C_scenarios": [],
+        "C1": null,
+        "C2": null,
+        "C3": null,
+        "C4": null,
+        "D": {
+          "mean": -0.01,
+          "unit": "MJ",
+          "rsd": null,
+          "dist": "log-normal"
+        }
+      },
+      "adp-elements": {
+        "A1A2A3": {
+          "mean": 3.76e-06,
+          "unit": "kgSbe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A1": null,
+        "A2": null,
+        "A3": null,
+        "A4": {
+          "mean": 1.34e-09,
+          "unit": "kgSbe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "A5": {
+          "mean": 0.000197,
+          "unit": "kgSbe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1": {
+          "mean": 0,
+          "unit": "kgSbe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B1_years": null,
+        "B2": {
+          "mean": 0,
+          "unit": "kgSbe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B2_years": null,
+        "B3": {
+          "mean": 0,
+          "unit": "kgSbe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B3_years": null,
+        "B4": {
+          "mean": 0,
+          "unit": "kgSbe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B4_years": null,
+        "B5": {
+          "mean": 0,
+          "unit": "kgSbe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B5_years": null,
+        "B6": {
+          "mean": 4.27e-07,
+          "unit": "kgSbe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B6_years": null,
+        "B7": {
+          "mean": 0,
+          "unit": "kgSbe",
+          "rsd": null,
+          "dist": "log-normal"
+        },
+        "B7_years": null,
+        "C_scenarios": [],
+        "C1": null,
+        "C2": null,
+        "C3": null,
+        "C4": null,
+        "D": {
+          "mean": -8.98e-08,
+          "unit": "kgSbe",
+          "rsd": null,
+          "dist": "log-normal"
+        }
+      }
+    }
+  },
+  "resource_uses": {},
+  "output_flows": {
+    "hwd": {
+      "ext": null,
+      "A1A2A3": {
+        "mean": 0.00465,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A1": null,
+      "A2": null,
+      "A3": null,
+      "A4": {
+        "mean": 1.12e-05,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A5": {
+        "mean": 2.72e-06,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1_years": null,
+      "B2": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B2_years": null,
+      "B3": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B3_years": null,
+      "B4": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B4_years": null,
+      "B5": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B5_years": null,
+      "B6": {
+        "mean": 0.00361,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B6_years": null,
+      "B7": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B7_years": null,
+      "C_scenarios": [],
+      "C1": null,
+      "C2": null,
+      "C3": null,
+      "C4": null,
+      "D": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      }
+    },
+    "nhwd": {
+      "ext": null,
+      "A1A2A3": {
+        "mean": 0.0185,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A1": null,
+      "A2": null,
+      "A3": null,
+      "A4": {
+        "mean": 7.09e-05,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A5": {
+        "mean": 0.00088,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1_years": null,
+      "B2": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B2_years": null,
+      "B3": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B3_years": null,
+      "B4": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B4_years": null,
+      "B5": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B5_years": null,
+      "B6": {
+        "mean": 0.00725,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B6_years": null,
+      "B7": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B7_years": null,
+      "C_scenarios": [],
+      "C1": null,
+      "C2": null,
+      "C3": null,
+      "C4": null,
+      "D": {
+        "mean": 0.00335,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      }
+    },
+    "rwd": {
+      "ext": null,
+      "A1A2A3": {
+        "mean": 2.86e-07,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A1": null,
+      "A2": null,
+      "A3": null,
+      "A4": {
+        "mean": 1.35e-09,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A5": {
+        "mean": 2.13e-10,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1_years": null,
+      "B2": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B2_years": null,
+      "B3": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B3_years": null,
+      "B4": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B4_years": null,
+      "B5": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B5_years": null,
+      "B6": {
+        "mean": 2.4e-06,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B6_years": null,
+      "B7": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B7_years": null,
+      "C_scenarios": [],
+      "C1": null,
+      "C2": null,
+      "C3": null,
+      "C4": null,
+      "D": {
+        "mean": -6.43e-09,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      }
+    },
+    "cru": {
+      "ext": null,
+      "A1A2A3": {
+        "mean": -2.18e-22,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A1": null,
+      "A2": null,
+      "A3": null,
+      "A4": {
+        "mean": -3.1e-24,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A5": {
+        "mean": -2e-25,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1_years": null,
+      "B2": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B2_years": null,
+      "B3": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B3_years": null,
+      "B4": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B4_years": null,
+      "B5": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B5_years": null,
+      "B6": {
+        "mean": -1.12e-21,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B6_years": null,
+      "B7": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B7_years": null,
+      "C_scenarios": [],
+      "C1": null,
+      "C2": null,
+      "C3": null,
+      "C4": null,
+      "D": {
+        "mean": 1.34e-23,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      }
+    },
+    "mfr": {
+      "ext": null,
+      "A1A2A3": {
+        "mean": 0.00073,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A1": null,
+      "A2": null,
+      "A3": null,
+      "A4": {
+        "mean": 8.55e-06,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A5": {
+        "mean": 5.97e-07,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1_years": null,
+      "B2": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B2_years": null,
+      "B3": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B3_years": null,
+      "B4": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B4_years": null,
+      "B5": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B5_years": null,
+      "B6": {
+        "mean": 0.00211,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B6_years": null,
+      "B7": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B7_years": null,
+      "C_scenarios": [],
+      "C1": null,
+      "C2": null,
+      "C3": null,
+      "C4": null,
+      "D": {
+        "mean": -6.52e-05,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      }
+    },
+    "mer": {
+      "ext": null,
+      "A1A2A3": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A1": null,
+      "A2": null,
+      "A3": null,
+      "A4": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A5": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1_years": null,
+      "B2": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B2_years": null,
+      "B3": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B3_years": null,
+      "B4": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B4_years": null,
+      "B5": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B5_years": null,
+      "B6": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B6_years": null,
+      "B7": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B7_years": null,
+      "C_scenarios": [],
+      "C1": null,
+      "C2": null,
+      "C3": null,
+      "C4": null,
+      "D": {
+        "mean": 0,
+        "unit": "kg",
+        "rsd": null,
+        "dist": "log-normal"
+      }
+    },
+    "ee": {
+      "ext": null,
+      "A1A2A3": {
+        "mean": 0.00054,
+        "unit": "MJ",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A1": null,
+      "A2": null,
+      "A3": null,
+      "A4": {
+        "mean": 1.34e-06,
+        "unit": "MJ",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "A5": {
+        "mean": 2.25e-07,
+        "unit": "MJ",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1": {
+        "mean": 0,
+        "unit": "MJ",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B1_years": null,
+      "B2": {
+        "mean": 0,
+        "unit": "MJ",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B2_years": null,
+      "B3": {
+        "mean": 0,
+        "unit": "MJ",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B3_years": null,
+      "B4": {
+        "mean": 0,
+        "unit": "MJ",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B4_years": null,
+      "B5": {
+        "mean": 0,
+        "unit": "MJ",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B5_years": null,
+      "B6": {
+        "mean": 0.0011,
+        "unit": "MJ",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B6_years": null,
+      "B7": {
+        "mean": 0,
+        "unit": "MJ",
+        "rsd": null,
+        "dist": "log-normal"
+      },
+      "B7_years": null,
+      "C_scenarios": [],
+      "C1": null,
+      "C2": null,
+      "C3": null,
+      "C4": null,
+      "D": {
+        "mean": -3.57e-06,
+        "unit": "MJ",
+        "rsd": null,
+        "dist": "log-normal"
+      }
+    }
+  }
+}

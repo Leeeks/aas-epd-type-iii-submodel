@@ -1,0 +1,59 @@
+name: Model Change Proposal
+description: Propose a change to the generic EPD Type III Submodel Template
+title: "[Change]: "
+labels: ["enhancement", "model"]
+body:
+  - type: input
+    id: affected_path
+    attributes:
+      label: Affected AAS path
+      description: Provide the specific Submodel/Collection/List path
+    validations:
+      required: true
+  - type: textarea
+    id: current_model
+    attributes:
+      label: Current model
+      description: How is this modeled currently?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_model
+    attributes:
+      label: Proposed model
+      description: Describe your proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why is this change needed?
+    validations:
+      required: true
+  - type: input
+    id: normative_source
+    attributes:
+      label: Normative source
+      description: Does this align with ISO 14025, EN 15804, or similar?
+  - type: textarea
+    id: affected_mappings
+    attributes:
+      label: Affected mappings
+      description: Does this break existing mappings (e.g., ILCD, PEP)?
+  - type: dropdown
+    id: backward_compatibility
+    attributes:
+      label: Backward-compatibility impact
+      options:
+        - None (Non-breaking)
+        - Minor (Schema changes, data preserved)
+        - Major (Breaking Change)
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Required updates
+      options:
+        - label: Template update required
+        - label: Example instance update required
+        - label: ConceptDescription update required

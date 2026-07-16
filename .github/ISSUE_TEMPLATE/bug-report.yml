@@ -1,0 +1,45 @@
+name: Bug Report
+description: Report an issue with the template or example instance
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: affected_artifact
+    attributes:
+      label: Affected artifact
+      description: E.g., epd-type-iii-submodel-template.aasx
+    validations:
+      required: true
+  - type: input
+    id: tool_and_version
+    attributes:
+      label: Tool and version
+      description: E.g., AASX Package Explorer v3.0, custom script
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to reproduce
+      description: How can we trigger the bug?
+    validations:
+      required: true
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: validation_message
+    attributes:
+      label: Validation message
+      description: Any errors from the AAS schema validator?
+  - type: textarea
+    id: screenshots_or_logs
+    attributes:
+      label: Screenshots or logs

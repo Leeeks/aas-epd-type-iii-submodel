@@ -1,0 +1,54 @@
+name: Review Comment
+description: Submit a review comment during the working-group review phase
+title: "[Review]: "
+labels: ["review"]
+body:
+  - type: input
+    id: reviewed_file
+    attributes:
+      label: Reviewed file
+      description: E.g., epd-type-iii-submodel-template.aasx
+    validations:
+      required: true
+  - type: input
+    id: reviewed_version
+    attributes:
+      label: Reviewed version
+      description: Which template/commit version?
+    validations:
+      required: true
+  - type: input
+    id: section_or_change_id
+    attributes:
+      label: Section or Change ID
+      description: Reference the specific part of the model or an ADR/Change ID
+    validations:
+      required: true
+  - type: textarea
+    id: comment
+    attributes:
+      label: Comment
+      description: Your review feedback
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_resolution
+    attributes:
+      label: Proposed resolution
+      description: How should we address this?
+  - type: dropdown
+    id: criticality
+    attributes:
+      label: Criticality
+      options:
+        - Blocker
+        - Major
+        - Minor
+        - Question
+  - type: dropdown
+    id: review_type
+    attributes:
+      label: Review type
+      options:
+        - Domain review (LCA/EPD)
+        - Technical review (AAS)

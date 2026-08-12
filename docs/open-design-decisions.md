@@ -125,3 +125,103 @@
 **Compatibility impact**: None
 **Required reviewers**: WAGO representatives
 **Status**: open
+
+## Decision ID: ODD-15
+**Topic**: Indicator-specific quantitative ConceptDescriptions for LCIA result values
+**Status**: proposition – open for working-group discussion. **NOT implemented.**
+
+### Problem statement
+
+The current generic model assigns all LCIA numeric values the same generic semantic:
+
+```
+value
+  semanticId → LifeCyclePhaseValue
+  valueType  → xs:decimal
+  value      → 0.0124
+```
+
+This value cannot be interpreted completely in isolation. A consumer must inspect the surrounding `LCIAResultEntry` to determine `indicatorCode` and `characterizationUnit`. The individual numeric property does not carry indicator-specific quantitative semantics and cannot reference a unit directly via its ConceptDescription.
+
+Structurally, the generic model is valid and enables an extensible LCIA architecture, but the IEC 61360 `REAL_MEASURE` data type (which requires a unit) cannot be applied to the generic `LifeCyclePhaseValue` ConceptDescription. This is the reason `dataType` has been left unspecified on `LifeCyclePhaseValue` as an interim correction (see CHANGELOG).
+
+### Proposed long-term solution
+
+Introduce **indicator-specific quantitative ConceptDescriptions**, while preserving the generic LCIA structural pattern.
+
+Each supported LCIA indicator would receive its own result-value ConceptDescription:
+
+```
+GWP_total_ResultValue
+  preferredName : "Global warming potential – total result value"
+  dataType      : REAL_MEASURE
+  unit          : kg CO2-eq
+  isCaseOf      → LifeCyclePhaseValue
+
+AP_ResultValue
+  dataType      : REAL_MEASURE
+  unit          : mol H+-eq
+  isCaseOf      → LifeCyclePhaseValue
+
+ODP_ResultValue
+  dataType      : REAL_MEASURE
+  unit          : kg CFC11-eq
+  isCaseOf      → LifeCyclePhaseValue
+
+PENRT_ResultValue
+  dataType      : REAL_MEASURE
+  unit          : MJ
+  isCaseOf      → LifeCyclePhaseValue
+```
+
+The actual value property in an LCIA result entry would then reference the indicator-specific ConceptDescription:
+
+```
+value
+  semanticId → GWP_total_ResultValue
+  valueType  → xs:decimal
+  value      → 0.0124
+```
+
+### Motivation / advantages
+
+- Each quantitative LCIA value becomes semantically interpretable on its own.
+- `REAL_MEASURE` can be used correctly, together with the correct characterization unit.
+- The generic `LifeCyclePhaseValue` concept still serves as the common semantic abstraction.
+- `isCaseOf` expresses the relationship between generic and indicator-specific concepts.
+- Generic consumers can continue to reason about `LifeCyclePhaseValue`.
+- More specific consumers can distinguish GWP, AP, ODP, etc. directly from the value property's `semanticId`.
+- IEC 61360 semantics are used more explicitly and completely.
+
+### Trade-offs and open questions requiring working-group discussion
+
+- A separate quantitative ConceptDescription is required for every supported LCIA indicator.
+- This substantially increases the number of ConceptDescriptions.
+- The relationship between the existing indicator enumeration ConceptDescriptions (used as `ValueList` values for `indicatorCode`) and the new quantitative result ConceptDescriptions must be clearly defined and kept non-overlapping.
+- Naming conventions and semantic ID patterns need a consistent, agreed-upon scheme.
+- It must be decided whether `isCaseOf` is the appropriate AAS relation, or whether another semantic modelling pattern is preferred by IDTA.
+- Existing AAS tooling and semantic matching behaviour with `isCaseOf` should be verified.
+- Extension with future EPD/LCIA indicators must remain straightforward.
+- Backwards compatibility with existing instances and parser complexity should be considered.
+
+### Current interim solution (implemented)
+
+Pending working-group discussion, the chosen interim approach remains:
+
+```
+generic LifeCyclePhaseValue ConceptDescription
+  preferredName : "Life cycle phase value"
+  definition    : "Numeric LCIA value for the declared life cycle module."
+  dataType      : <not specified>
+  unit          : <not specified>
+
+value Property
+  semanticId → LifeCyclePhaseValue
+  valueType  → xs:decimal
+  value      → <numeric>
+```
+
+The applicable unit is resolved from `characterizationUnit` in the enclosing `LCIAResultEntry`.
+
+**Compatibility impact**: High (if implemented – would require new semantic IDs and migration of all existing instances)
+**Required reviewers**: IDTA working group, LCA experts, AAS Architect

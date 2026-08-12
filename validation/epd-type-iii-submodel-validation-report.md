@@ -22,6 +22,9 @@
 | Consistent `typeValueListElement` | **passed** | | No |
 | Consistent `valueTypeListElement` | **passed** | | No |
 | No broken references | **passed** | | No |
+| `LifeCyclePhaseValue` has no `REAL_MEASURE` | **passed** | IEC 61360 correction applied | No |
+| All `indicatorCode` ValueList CDs have matching `<value>` | **passed** | 37 CDs corrected | No |
+| Numeric LCIA values unchanged | **passed** | Verified by re-extraction | No |
 | Embedded PEP file accessible | **warning** | Legal clarification for PDF publication is missing. | **Release blocker** |
 | Use of `idShort` in list elements | **warning** | AAS V3.0 conformity of `idShort` on direct list elements must be validated. | **Release blocker** |
 | `issueDate` incomplete | **warning** | Check formatting (e.g., xs:dateTime). | Medium |

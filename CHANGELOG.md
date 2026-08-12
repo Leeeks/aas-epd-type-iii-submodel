@@ -25,3 +25,21 @@
 - Added ODD-15: Proposition for indicator-specific quantitative ConceptDescriptions
   (`REAL_MEASURE` + `unit` + `isCaseOf → LifeCyclePhaseValue`). Marked as open for
   working-group discussion. **Not implemented.**
+- **Refactored `identificationPublication` semantics**:
+  - Replaced single `epdId` and `registrationId` properties with `documentIds`
+    `SubmodelElementList` containing `documentId` `SubmodelElementCollection` elements
+    (pattern based on IDTA Handover Documentation / VDI 2770). Supports multiple document
+    identifiers for the same EPD (e.g. primary Program Operator ID and openEPD UUID).
+  - Renamed `version` to `programOperatorVersion` to explicitly represent the EPD document
+    version issued by the Program Operator.
+  - Replaced single `language` property with `languages` `SubmodelElementList` containing ISO 639-1
+    two-letter language code properties.
+  - Renamed `originalDataFormat` to `sourceDataFormat`.
+  - Added optional `declarationUrl` property (0..1) linking to official online publication.
+  - Removed openEPD transport and application database fields from core domain model:
+    `doctype`, `private`, `epdType`, `lastChange`, and `tags`.
+  - Replaced all placeholder `http://example.com/` and `http://eclass.example.com/` semantic IDs
+    in `identificationPublication` with authoritative IDTA, VDI 2770, and ECLASS semantic IDs.
+- Added **ODD-16** (EPD Publication/Lifecycle Status vs. Access Control), **ODD-17** (Incomplete
+  Date Precision), and **ODD-18** (Provenance Metadata Placement).
+- Updated openEPD JSON interoperability mapping matrix in `docs/interoperability-mapping.md`.

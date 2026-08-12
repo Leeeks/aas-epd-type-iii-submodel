@@ -25,8 +25,11 @@
 | `LifeCyclePhaseValue` has no `REAL_MEASURE` | **passed** | IEC 61360 correction applied | No |
 | All `indicatorCode` ValueList CDs have matching `<value>` | **passed** | 37 CDs corrected | No |
 | Numeric LCIA values unchanged | **passed** | Verified by re-extraction | No |
+| `documentIds` multi-ID structure | **passed** | Handover Doc / VDI 2770 pattern | No |
+| Refactored `identificationPublication` semantics | **passed** | Transport/app fields removed, version/languages clarified | No |
+| Authoritative Semantic IDs | **passed** | All placeholder `example.com` IDs in `identificationPublication` eliminated | No |
 | Embedded PEP file accessible | **warning** | Legal clarification for PDF publication is missing. | **Release blocker** |
 | Use of `idShort` in list elements | **warning** | AAS V3.0 conformity of `idShort` on direct list elements must be validated. | **Release blocker** |
-| `issueDate` incomplete | **warning** | Check formatting (e.g., xs:dateTime). | Medium |
-| Placeholder Semantic IDs | **warning** | Working IDs (0173-1#...) used. | **Release blocker** |
+| `issueDate` incomplete | **warning** | Documented in ODD-17. | Medium |
+| Placeholder Semantic IDs | **warning** | Submodel-wide cleanup ongoing (identificationPublication complete). | **Release blocker** |
 | `Total` as life cycle phase | **warning** | Not standard-compliant with specific phases. | Medium |

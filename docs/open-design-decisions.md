@@ -291,3 +291,38 @@ Evaluate whether `sourceDataFormat` should remain an optional property within `i
 
 **Compatibility impact**: Low
 **Required reviewers**: IDTA working group, AAS Architecture WG
+
+## Decision ID: ODD-19
+**Topic**: Adoption of IDTA ContactInformation for EPD organizations
+**Status**: OPEN / PROPOSITION
+
+### Problem statement
+
+The previous draft modeled \programOperator\, \	hirdPartyVerifier\, and \epdDeveloper\ as partially structured SMCs with redundant flat properties (e.g., \	hirdPartyVerifier.name\, \programOperator.id\) and non-standard properties like \RoleOfContactPerson\. This led to semantic ambiguities and duplicated structures.
+
+### Proposition
+
+Refactor these organizational elements to use the established IDTA \ContactInformation\ semantics (e.g. \https://admin-shell.io/idta/ContactInformation/1/0/ContactInformation\).
+- Flat fields like \
+ame\ and \email\ are replaced by standard \ContactInformation\ properties such as \Company\ and the \EmailAddress\ SMC.
+- The obsolete \RoleOfContactPerson\ and flat properties are removed.
+- \programOperator\ cardinality is updated to 1.
+
+**Compatibility impact**: High (requires structural update of AAS instances)
+**Required reviewers**: IDTA working group, AAS Architect
+
+## Decision ID: ODD-20
+**Topic**: Extension of thirdPartyVerifier with Verification metadata
+**Status**: OPEN / PROPOSITION
+
+### Problem statement
+
+The \	hirdPartyVerifier\ element requires properties like \erifierAccreditationId\ and \erificationStatementUrl\ (previously flat \	hirdPartyVerifier.url\), which are not part of the standard IDTA \ContactInformation\ submodel.
+
+### Proposition
+
+Extend the \	hirdPartyVerifier\ SMC (which uses the \ContactInformation\ semantic ID) with these two specific EPD properties. Alternatively, a custom EPD SMC could wrap the \ContactInformation\ element. The current implementation directly extends the \ContactInformation\ SMC for simplicity.
+
+**Compatibility impact**: Low
+**Required reviewers**: IDTA working group, LCA experts
+

@@ -225,3 +225,69 @@ The applicable unit is resolved from `characterizationUnit` in the enclosing `LC
 
 **Compatibility impact**: High (if implemented – would require new semantic IDs and migration of all existing instances)
 **Required reviewers**: IDTA working group, LCA experts, AAS Architect
+
+## Decision ID: ODD-16
+**Topic**: EPD Publication / Lifecycle Status vs. Technical Access Control
+**Status**: OPEN / PROPOSITION – Not implemented
+
+### Problem statement
+
+The previous draft included a boolean `private` property originating from openEPD transport schemas. This field combined access control, workflow status, and publication visibility into a single EPD domain property.
+
+### Distinction of concerns
+
+1. **Publication / Workflow Lifecycle Status**:
+   Describes the editorial and legal lifecycle stage of an EPD record, for example:
+   - `Draft`: EPD creation in progress, unverified.
+   - `InReview`: Under verification by a third-party verifier or Program Operator.
+   - `Released`: Officially published and valid.
+   - `Withdrawn`: Retracted by the manufacturer or Program Operator prior to expiration.
+   - `Expired`: Past its validity period (`validUntil`).
+
+2. **Technical Access Control / Authorization**:
+   Determines which clients/users can read or modify the Submodel instance (e.g., public vs. internal network, role-based access). This is an infrastructure concern handled by standard AAS Access Control (ABAC/RBAC) mechanisms, not domain properties inside the Submodel.
+
+### Proposition
+
+Remove `private` from core domain data (implemented). If working-group consensus requires representing incomplete/draft EPD records, introduce a dedicated `publicationStatus` property with a controlled enumeration (`Draft`, `InReview`, `Released`, `Withdrawn`, `Expired`), kept strictly separate from AAS access control security policies.
+
+**Compatibility impact**: Low
+**Required reviewers**: IDTA working group, Program Operators, AAS Security WG
+
+## Decision ID: ODD-17
+**Topic**: Incomplete Date Precision and Duration-Based Validity
+**Status**: OPEN / PROPOSITION
+
+### Problem statement
+
+Program Operators (e.g., PEP ecopassport) frequently publish EPDs with issue dates specifying only Month and Year (e.g., `02-2026`) and define validity as a period (e.g., "5 years", giving validity until `02-2031`).
+
+`dateOfIssue` and `validUntil` use `valueType = xs:date` in the AAS model, which requires complete `YYYY-MM-DD` ISO calendar dates. In previous drafts, strings like `"02-2026"` were stored directly under `xs:date`, causing XSD validation failures.
+
+### Options for Working-Group Resolution
+
+1. **Normative Day Derivation Rule**: Define a normative rule that when a Program Operator specifies Month/Year `YYYY-MM`, `dateOfIssue` defaults to the 1st day of the month (`YYYY-MM-01`) and `validUntil` defaults to the last day of the month.
+2. **Flexible Date Datatype**: Allow `dateOfIssue` and `validUntil` to use `xs:string` or `xs:date` / `xs:gYearMonth` depending on source precision.
+3. **Explicit Precision Qualifier**: Add a metadata qualifier describing date precision (e.g. `Day`, `Month`, `Year`).
+
+Inventing a calendar day without a normative rule is unacceptable. Until the working group defines a standard convention, exact dates should be used where available, and date precision handling remains an open design topic.
+
+**Compatibility impact**: Medium
+**Required reviewers**: IDTA working group, Program Operators
+
+## Decision ID: ODD-18
+**Topic**: Placement of Source Provenance Metadata (`sourceDataFormat`)
+**Status**: OPEN / PROPOSITION
+
+### Problem statement
+
+The property `sourceDataFormat` (renamed from `originalDataFormat`) describes the original format or representation from which the AAS EPD submodel instance was generated (e.g., `openEPD`, `ILCD+EPD`, `PEP XML`, `PEP Ecopassport PDF`, `manual`).
+
+Currently, `sourceDataFormat` is located inside `identificationPublication`.
+
+### Proposition
+
+Evaluate whether `sourceDataFormat` should remain an optional property within `identificationPublication`, or whether it should be moved to a dedicated AAS provenance/source-information section if IDTA standardizes submodel-level provenance metadata across Submodel Templates.
+
+**Compatibility impact**: Low
+**Required reviewers**: IDTA working group, AAS Architecture WG

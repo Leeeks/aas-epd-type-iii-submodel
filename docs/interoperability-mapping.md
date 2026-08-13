@@ -45,6 +45,12 @@ The IDTA EPD Type III Submodel preserves full bidirectional mapping capability w
 | `product_service_life_years` | `manufacturerProduct/referenceServiceLife` | ↔ Bidirectional. |
 | `manufacturing_description` | `manufacturerProduct/manufacturingDescription` | ↔ Bidirectional. |
 
+## `lca_StandardsPcr` Mappings
+
+| openEPD JSON Field | AAS EPD Type III Submodel Element | Mapping Direction & Notes |
+|---|---|---|
+| `pcr` | `lca_StandardsPcr/productCategoryRules` | ↔ Bidirectional. openEPD PCR hierarchy (including parent PCRs) must be traversed and unrolled into a flat list of `productCategoryRule` elements in AAS. `ruleType` explicitly preserves the semantic role (e.g., `PCR`, `PSR`, `c-PCR`). |
+
 ## Implementation status
 - **PEP Ecopassport**: Partially mapped, validated by WAGO-00001-V01.01-EN.
 - **EN 15804**: Partially mapped, basis for LCIA indicators.

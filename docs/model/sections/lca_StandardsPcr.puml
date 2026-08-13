@@ -7,55 +7,13 @@ hide empty members
 class lca_StandardsPcr <<SMC>> {
   sem: Sem_052
 }
-class pcr.id <<Property>> {
-  valueType: xs:string
+class standardsCompliance <<SML>> {
   sem: Sem_053
 }
-class pcr.name <<Property>> {
-  valueType: xs:string
+class productCategoryRules <<SML>> {
   sem: Sem_054
 }
-class compliance <<Property>> {
-  valueType: xs:string
-  sem: Sem_055
-}
-class lcaDiscussion <<Property>> {
-  valueType: xs:string
-  sem: Sem_056
-}
-class pcr.publisher <<Property>> {
-  valueType: xs:string
-  sem: Sem_057
-}
-class pcr.referenceYear <<Property>> {
-  valueType: xs:string
-  sem: Sem_058
-}
-class pcr.link <<Property>> {
-  valueType: xs:string
-  sem: Sem_059
-}
-class pcr.version <<Property>> {
-  valueType: xs:string
-  sem: Sem_060
-}
-class pcr.validFrom <<Property>> {
-  valueType: xs:date
-  sem: Sem_061
-}
-class pcr.validUntil <<Property>> {
-  valueType: xs:date
-  sem: Sem_062
-}
 
-lca_StandardsPcr *-- "1" pcr.id
-lca_StandardsPcr *-- "1" pcr.name
-lca_StandardsPcr *-- "1" compliance
-lca_StandardsPcr *-- "1" lcaDiscussion
-lca_StandardsPcr *-- "1" pcr.publisher
-lca_StandardsPcr *-- "1" pcr.referenceYear
-lca_StandardsPcr *-- "1" pcr.link
-lca_StandardsPcr *-- "1" pcr.version
-lca_StandardsPcr *-- "1" pcr.validFrom
-lca_StandardsPcr *-- "1" pcr.validUntil
+lca_StandardsPcr *-- "1" standardsCompliance
+lca_StandardsPcr *-- "1" productCategoryRules
 @enduml

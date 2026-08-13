@@ -207,75 +207,41 @@ package "lca_StandardsPcr" {
 class lca_StandardsPcr <<SMC>> {
   sem: Sem_052
 }
-class pcr.id <<Property>> {
-  valueType: xs:string
+class standardsCompliance <<SML>> {
   sem: Sem_053
 }
-class pcr.name <<Property>> {
-  valueType: xs:string
+class productCategoryRules <<SML>> {
   sem: Sem_054
-}
-class compliance <<Property>> {
-  valueType: xs:string
-  sem: Sem_055
-}
-class lcaDiscussion <<Property>> {
-  valueType: xs:string
-  sem: Sem_056
-}
-class pcr.publisher <<Property>> {
-  valueType: xs:string
-  sem: Sem_057
-}
-class pcr.referenceYear <<Property>> {
-  valueType: xs:string
-  sem: Sem_058
-}
-class pcr.link <<Property>> {
-  valueType: xs:string
-  sem: Sem_059
-}
-class pcr.version <<Property>> {
-  valueType: xs:string
-  sem: Sem_060
-}
-class pcr.validFrom <<Property>> {
-  valueType: xs:date
-  sem: Sem_061
-}
-class pcr.validUntil <<Property>> {
-  valueType: xs:date
-  sem: Sem_062
 }
 }
 package "lciaResults" {
 class lciaResults <<SML>> {
-  sem: Sem_063
+  sem: Sem_055
 }
 class None <<SMC>> {
-  sem: Sem_064
+  sem: Sem_056
 }
 class lciaIndicator <<SMC>> {
-  sem: Sem_065
+  sem: Sem_057
 }
 class indicatorCode <<Property>> {
   valueType: xs:string
-  sem: Sem_066
+  sem: Sem_058
 }
 class indicatorName <<Property>> {
   valueType: xs:string
-  sem: Sem_067
+  sem: Sem_059
 }
 class indicatorGroup <<Property>> {
   valueType: xs:string
-  sem: Sem_068
+  sem: Sem_060
 }
 class indicatorStandard <<Property>> {
   valueType: xs:string
-  sem: Sem_069
+  sem: Sem_061
 }
 class characterizationUnit <<SMC>> {
-  sem: Sem_070
+  sem: Sem_062
 }
 class unit <<Property>> {
   valueType: xs:string
@@ -293,25 +259,25 @@ class unitId <<Property>> {
 }
 class referenceUnitForCalculation <<Property>> {
   valueType: xs:string
-  sem: Sem_071
+  sem: Sem_063
 }
 class quantityOfReferenceUnit <<Property>> {
   valueType: xs:decimal
-  sem: Sem_072
+  sem: Sem_064
 }
 class lifeCyclePhaseValues <<SML>> {
-  sem: Sem_073
+  sem: Sem_065
 }
 class None <<SMC>> {
-  sem: Sem_074
+  sem: Sem_066
 }
 class lifeCyclePhase <<Property>> {
   valueType: xs:string
-  sem: Sem_075
+  sem: Sem_067
 }
 class value <<Property>> {
   valueType: xs:decimal
-  sem: Sem_076
+  sem: Sem_068
 }
 }
 package "declaredUnit" {
@@ -320,11 +286,11 @@ class declaredUnit <<SMC>> {
 }
 class declaredQuantity <<Property>> {
   valueType: xs:decimal
-  sem: Sem_077
+  sem: Sem_069
 }
 class unitOfMeasure <<Property>> {
   valueType: xs:string
-  sem: Sem_078
+  sem: Sem_070
 }
 class massPerDeclaredUnit <<Property>> {
   valueType: xs:decimal
@@ -337,40 +303,40 @@ class referenceServiceLife <<Property>> {
 }
 package "systemBoundary" {
 class systemBoundary <<SMC>> {
-  sem: Sem_079
+  sem: Sem_071
 }
 class includesA1_A3 <<Property>> {
   valueType: xs:boolean
-  sem: Sem_080
+  sem: Sem_072
 }
 class includesA4_A5 <<Property>> {
   valueType: xs:boolean
-  sem: Sem_081
+  sem: Sem_073
 }
 class includesB1_B7 <<Property>> {
   valueType: xs:boolean
-  sem: Sem_082
+  sem: Sem_074
 }
 class includesC1_C4 <<Property>> {
   valueType: xs:boolean
-  sem: Sem_083
+  sem: Sem_075
 }
 class includesD <<Property>> {
   valueType: xs:boolean
-  sem: Sem_084
+  sem: Sem_076
 }
 class geographicScope <<Property>> {
   valueType: xs:string
-  sem: Sem_085
+  sem: Sem_077
 }
 class technologyCoverage <<Property>> {
   valueType: xs:string
-  sem: Sem_086
+  sem: Sem_078
 }
 }
 package "epdDocument" {
 class epdDocument <<File>> {
-  sem: Sem_087
+  sem: Sem_079
 }
 }
 
@@ -423,16 +389,8 @@ representativenessReference *-- "1" technicalPurpose
 representativenessReference *-- "1" pictogramSource
 representativenessReference *-- "1" flowDiagramSource
 representativenessReference *-- "0..1" energyModel
-lca_StandardsPcr *-- "1" pcr.id
-lca_StandardsPcr *-- "1" pcr.name
-lca_StandardsPcr *-- "1" compliance
-lca_StandardsPcr *-- "1" lcaDiscussion
-lca_StandardsPcr *-- "1" pcr.publisher
-lca_StandardsPcr *-- "1" pcr.referenceYear
-lca_StandardsPcr *-- "1" pcr.link
-lca_StandardsPcr *-- "1" pcr.version
-lca_StandardsPcr *-- "1" pcr.validFrom
-lca_StandardsPcr *-- "1" pcr.validUntil
+lca_StandardsPcr *-- "1" standardsCompliance
+lca_StandardsPcr *-- "1" productCategoryRules
 lciaResults *-- "0..*" None
 None *-- "1" lciaIndicator
 lciaIndicator *-- "1" indicatorCode

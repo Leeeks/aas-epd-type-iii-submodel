@@ -5,32 +5,32 @@ skinparam linetype ortho
 hide empty members
 
 class lciaResults <<SML>> {
-  sem: Sem_063
+  sem: Sem_055
 }
 class None <<SMC>> {
-  sem: Sem_064
+  sem: Sem_056
 }
 class lciaIndicator <<SMC>> {
-  sem: Sem_065
+  sem: Sem_057
 }
 class indicatorCode <<Property>> {
   valueType: xs:string
-  sem: Sem_066
+  sem: Sem_058
 }
 class indicatorName <<Property>> {
   valueType: xs:string
-  sem: Sem_067
+  sem: Sem_059
 }
 class indicatorGroup <<Property>> {
   valueType: xs:string
-  sem: Sem_068
+  sem: Sem_060
 }
 class indicatorStandard <<Property>> {
   valueType: xs:string
-  sem: Sem_069
+  sem: Sem_061
 }
 class characterizationUnit <<SMC>> {
-  sem: Sem_070
+  sem: Sem_062
 }
 class unit <<Property>> {
   valueType: xs:string
@@ -48,25 +48,25 @@ class unitId <<Property>> {
 }
 class referenceUnitForCalculation <<Property>> {
   valueType: xs:string
-  sem: Sem_071
+  sem: Sem_063
 }
 class quantityOfReferenceUnit <<Property>> {
   valueType: xs:decimal
-  sem: Sem_072
+  sem: Sem_064
 }
 class lifeCyclePhaseValues <<SML>> {
-  sem: Sem_073
+  sem: Sem_065
 }
 class None <<SMC>> {
-  sem: Sem_074
+  sem: Sem_066
 }
 class lifeCyclePhase <<Property>> {
   valueType: xs:string
-  sem: Sem_075
+  sem: Sem_067
 }
 class value <<Property>> {
   valueType: xs:decimal
-  sem: Sem_076
+  sem: Sem_068
 }
 
 lciaResults *-- "0..*" None

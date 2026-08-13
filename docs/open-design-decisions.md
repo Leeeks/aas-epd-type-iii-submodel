@@ -424,3 +424,52 @@ Biogenic carbon content for both product and packaging needs to be modeled separ
 
 **Compatibility impact**: Medium
 **Required reviewers**: IDTA working group, LCA experts
+
+## Decision ID: ODD-26
+**Topic**: Representation of hierarchical PCR / PSR / c-PCR rule sets
+**Status**: OPEN / PROPOSITION
+
+### Problem statement
+Different EPD programmes express applicable category rules differently:
+- PCR + PSR
+- PCR + c-PCR
+- core PCR + programme PCR + c-PCR
+
+Some external formats also express parent-child relationships between PCR documents.
+
+### Current proposition
+Represent all applicable rules as `productCategoryRules [SML]` with an explicit `ruleType` for each rule.
+
+### Open question
+Should future versions additionally model an explicit parent relationship between rules?
+Possible approaches include:
+- parent rule identifier
+- AAS ReferenceElement
+- generic relationship element
+- external semantic reference
+
+Do not implement a parent relationship yet unless an established repository pattern already solves this cleanly.
+
+**Compatibility impact**: Medium
+**Required reviewers**: IDTA working group
+
+## Decision ID: ODD-27
+**Topic**: Semantic roles for standards compliance
+**Status**: OPEN / PROPOSITION
+
+### Problem statement
+The `standardsCompliance` list currently represents all normative standards with which the declaration or LCA explicitly claims conformity.
+
+### Proposition
+Keep the standards list simple and only include standards to which the source EPD explicitly claims relevant conformity. Do not implement a role taxonomy yet.
+
+### Open question
+Do entries in `standardsCompliance` need an explicit semantic role in the future?
+Possible future roles might include:
+- declaration standard
+- LCA methodology standard
+- core PCR standard
+- product standard
+
+**Compatibility impact**: Low
+**Required reviewers**: IDTA working group

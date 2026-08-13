@@ -9,11 +9,11 @@ class declaredUnit <<SMC>> {
 }
 class declaredQuantity <<Property>> {
   valueType: xs:decimal
-  sem: Sem_077
+  sem: Sem_069
 }
 class unitOfMeasure <<Property>> {
   valueType: xs:string
-  sem: Sem_078
+  sem: Sem_070
 }
 class massPerDeclaredUnit <<Property>> {
   valueType: xs:decimal

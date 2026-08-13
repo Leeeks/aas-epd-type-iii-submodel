@@ -2,6 +2,21 @@
 
 ## Unreleased – Working Draft
 
+- **Refactored `epdDeveloper` semantics** (ODD-19 partial implementation):
+  - Added `Company` as a `MultiLanguageProperty` (MLP) inside `epdDeveloper` with authoritative
+    semantic ID `0173-1#02-AAW001#001` (IDTA 02002 / ECLASS), cardinality `One`. This represents
+    the name of the EPD developer organization.
+  - Removed custom `epdDeveloper.name` ConceptDescription
+    (`http://eclass.example.com/epdDeveloper.name`) — orphaned; no SME referenced it.
+  - Removed `RoleOfContactPerson` ConceptDescription — the element was already absent from the
+    `epdDeveloper` SMC after the prior refactoring.
+  - **Semantic-ID mismatch reported**: The removed `RoleOfContactPerson` CD carried IRDI
+    `0173-1#02-AAQ836#005`, which belongs to the IDTA 02002 **Email** SubmodelElementCollection,
+    not to `RoleOfContactPerson` (correct IRDI: `0173-1#02-AAO204#003`). The CD was removed
+    without correction since the element is no longer used.
+  - Added `Company` ConceptDescription (`0173-1#02-AAW001#001`, `STRING_TRANSLATABLE`).
+  - Added ODD-21: Orphaned `epdDeveloper.email` CD (`http://eclass.example.com/epdDeveloper.email`)
+    — removal deferred to next cleanup.
 - Implemented dynamic idShort values for `lciaResults`.
 - Implemented dynamic idShort values for `lifeCyclePhaseValues`.
 - Compact modeling of `characterizationUnit`.

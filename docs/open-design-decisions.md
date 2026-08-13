@@ -294,19 +294,28 @@ Evaluate whether `sourceDataFormat` should remain an optional property within `i
 
 ## Decision ID: ODD-19
 **Topic**: Adoption of IDTA ContactInformation for EPD organizations
-**Status**: OPEN / PROPOSITION
+**Status**: PARTIALLY IMPLEMENTED
 
 ### Problem statement
 
-The previous draft modeled \programOperator\, \	hirdPartyVerifier\, and \epdDeveloper\ as partially structured SMCs with redundant flat properties (e.g., \	hirdPartyVerifier.name\, \programOperator.id\) and non-standard properties like \RoleOfContactPerson\. This led to semantic ambiguities and duplicated structures.
+The previous draft modeled `programOperator`, `thirdPartyVerifier`, and `epdDeveloper` as partially structured SMCs with redundant flat properties (e.g., `thirdPartyVerifier.name`, `programOperator.id`) and non-standard properties like `RoleOfContactPerson`. This led to semantic ambiguities and duplicated structures.
 
 ### Proposition
 
-Refactor these organizational elements to use the established IDTA \ContactInformation\ semantics (e.g. \https://admin-shell.io/idta/ContactInformation/1/0/ContactInformation\).
-- Flat fields like \
-ame\ and \email\ are replaced by standard \ContactInformation\ properties such as \Company\ and the \EmailAddress\ SMC.
-- The obsolete \RoleOfContactPerson\ and flat properties are removed.
-- \programOperator\ cardinality is updated to 1.
+Refactor these organizational elements to use the established IDTA `ContactInformation` semantics (e.g. `https://admin-shell.io/idta/ContactInformation/1/0/ContactInformation`).
+- Flat fields like `name` and `email` are replaced by standard `ContactInformation` properties such as `Company` and the `EmailAddress` SMC.
+- The obsolete `RoleOfContactPerson` and flat properties are removed.
+- `programOperator` cardinality is updated to 1.
+
+### Implementation status
+
+- **`programOperator`**: Implemented (commit `771057f`). Uses IDTA ContactInformation semanticId; `Company` property (xs:string, `ZeroToMany`) present. Note: SME type is `property`, not `multiLanguageProperty` as required by IDTA 02002. Deferred to future cleanup.
+- **`thirdPartyVerifier`**: Implemented (commit `771057f`). Uses IDTA ContactInformation semanticId; extended with EPD-specific `verifierAccreditationId` and `verificationStatementUrl`.
+- **`epdDeveloper`**: **Implemented** (this change). `Company` added as `multiLanguageProperty` with authoritative semantic ID `0173-1#02-AAW001#001`, cardinality `One`. Custom `epdDeveloper.name` CD removed. `RoleOfContactPerson` (wrong-IRDI) CD removed.
+
+### Semantic-ID mismatch found and reported
+
+The ConceptDescription previously associated with `RoleOfContactPerson` used IRDI `0173-1#02-AAQ836#005`. This IRDI belongs to the IDTA 02002 **Email** SubmodelElementCollection, not to `RoleOfContactPerson`. The authoritative IRDI for `RoleOfContactPerson` is `0173-1#02-AAO204#003`. Since `RoleOfContactPerson` has been removed from `epdDeveloper`, the CD with the wrong IRDI was removed without correction.
 
 **Compatibility impact**: High (requires structural update of AAS instances)
 **Required reviewers**: IDTA working group, AAS Architect
@@ -317,12 +326,26 @@ ame\ and \email\ are replaced by standard \ContactInformation\ properties such a
 
 ### Problem statement
 
-The \	hirdPartyVerifier\ element requires properties like \erifierAccreditationId\ and \erificationStatementUrl\ (previously flat \	hirdPartyVerifier.url\), which are not part of the standard IDTA \ContactInformation\ submodel.
+The `thirdPartyVerifier` element requires properties like `verifierAccreditationId` and `verificationStatementUrl` (previously flat `thirdPartyVerifier.url`), which are not part of the standard IDTA `ContactInformation` submodel.
 
 ### Proposition
 
-Extend the \	hirdPartyVerifier\ SMC (which uses the \ContactInformation\ semantic ID) with these two specific EPD properties. Alternatively, a custom EPD SMC could wrap the \ContactInformation\ element. The current implementation directly extends the \ContactInformation\ SMC for simplicity.
+Extend the `thirdPartyVerifier` SMC (which uses the `ContactInformation` semantic ID) with these two specific EPD properties. Alternatively, a custom EPD SMC could wrap the `ContactInformation` element. The current implementation directly extends the `ContactInformation` SMC for simplicity.
 
 **Compatibility impact**: Low
 **Required reviewers**: IDTA working group, LCA experts
 
+## Decision ID: ODD-21
+**Topic**: Removal of orphaned `epdDeveloper.email` ConceptDescription
+**Status**: OPEN / PROPOSITION
+
+### Problem statement
+
+A custom ConceptDescription `http://eclass.example.com/epdDeveloper.email` remains in the model after the `epdDeveloper` refactoring. It is not referenced by any SubmodelElement (the `epdDeveloper` SMC uses the standard IDTA `EmailAddress` SMC pattern, not this custom CD). It is an orphaned artifact with a placeholder semantic ID.
+
+### Proposition
+
+Remove the `epdDeveloper.email` ConceptDescription in the next cleanup pass. Email for `epdDeveloper` should be represented via the standard IDTA `ContactInformation/EmailAddress` SMC (consistent with `programOperator` and `thirdPartyVerifier`), not via a custom flat property.
+
+**Compatibility impact**: Low (CD is not referenced by any SME)
+**Required reviewers**: IDTA working group

@@ -94,245 +94,188 @@ package "manufacturerProduct" {
 class manufacturerProduct <<SMC>> {
   sem: Sem_022
 }
-class manufacturer.name <<Property>> {
-  valueType: xs:string
+class manufacturerName <<MLP>> {
   sem: Sem_023
 }
-class manufacturer.webDomain <<Property>> {
-  valueType: xs:string
+class manufacturingSites <<SML>> {
   sem: Sem_024
 }
-class plants <<Property>> {
-  valueType: xs:string
+class productName <<MLP>> {
   sem: Sem_025
 }
-class productName <<Property>> {
+class productArticleNumberOfManufacturer <<Property>> {
   valueType: xs:string
   sem: Sem_026
 }
-class productSKU <<Property>> {
-  valueType: xs:string
+class productDescription <<MLP>> {
   sem: Sem_027
 }
-class productDescription <<Property>> {
-  valueType: xs:string
+class productImage <<File>> {
   sem: Sem_028
 }
-class productImageSmall <<Property>> {
-  valueType: xs:string
+class declaredUnit <<SMC>> {
   sem: Sem_029
 }
-class productImage <<Property>> {
-  valueType: xs:string
+class quantity <<Property>> {
+  valueType: xs:decimal
   sem: Sem_030
 }
-class declaredUnit.qty <<Property>> {
+class unit <<Property>> {
   valueType: xs:string
   sem: Sem_031
 }
-class declaredUnit.unit <<Property>> {
-  valueType: xs:string
+class massPerDeclaredUnit <<Property>> {
+  valueType: xs:decimal
   sem: Sem_032
 }
-class kgPerDeclaredUnit.qty <<Property>> {
-  valueType: xs:string
+class referenceServiceLife <<Property>> {
+  valueType: xs:decimal
   sem: Sem_033
 }
-class kgCPerDeclaredUnit.qty <<Property>> {
-  valueType: xs:string
+class applicableJurisdictions <<SML>> {
   sem: Sem_034
 }
-class kgCBiogenicPerDeclaredUnit.qty <<Property>> {
-  valueType: xs:string
+class manufacturingDescription <<MLP>> {
   sem: Sem_035
 }
-class productServiceLifeYears <<Property>> {
-  valueType: xs:string
+class biogenicCarbonContent <<SMC>> {
   sem: Sem_036
 }
-class applicableIn <<Property>> {
-  valueType: xs:string
+class biogenicCarbonContentProduct <<Property>> {
+  valueType: xs:decimal
   sem: Sem_037
 }
-class productUsageDescription <<Property>> {
-  valueType: xs:string
+class biogenicCarbonContentPackaging <<Property>> {
+  valueType: xs:decimal
   sem: Sem_038
-}
-class productClasses <<Property>> {
-  valueType: xs:string
-  sem: Sem_039
-}
-class specs <<Property>> {
-  valueType: xs:string
-  sem: Sem_040
-}
-class attachments <<Property>> {
-  valueType: xs:string
-  sem: Sem_041
-}
-class manufacturer.id <<Property>> {
-  valueType: xs:string
-  sem: Sem_042
-}
-class manufacturer.category <<Property>> {
-  valueType: xs:string
-  sem: Sem_043
-}
-class manufacturing <<Property>> {
-  valueType: xs:string
-  sem: Sem_044
-}
-class useAdvice <<Property>> {
-  valueType: xs:string
-  sem: Sem_045
-}
-class productUsage <<Property>> {
-  valueType: xs:string
-  sem: Sem_046
-}
-class product.flow <<Property>> {
-  valueType: xs:string
-  sem: Sem_047
-}
-class product.flowProperty <<Property>> {
-  valueType: xs:string
-  sem: Sem_048
-}
-class product.unit <<Property>> {
-  valueType: xs:string
-  sem: Sem_049
-}
-class product.amount <<Property>> {
-  valueType: xs:string
-  sem: Sem_050
 }
 }
 package "representativenessReference" {
 class representativenessReference <<SMC>> {
-  sem: Sem_051
+  sem: Sem_039
 }
 class referenceFlow.id <<Property>> {
   valueType: xs:string
-  sem: Sem_052
+  sem: Sem_040
 }
 class referenceFlow.amount <<Property>> {
   valueType: xs:string
-  sem: Sem_053
+  sem: Sem_041
 }
 class referenceYear <<Property>> {
   valueType: xs:string
-  sem: Sem_054
+  sem: Sem_042
 }
 class dataSetValidUntil <<Property>> {
   valueType: xs:string
-  sem: Sem_055
+  sem: Sem_043
 }
 class timeRepresentativenessDescription <<Property>> {
   valueType: xs:string
-  sem: Sem_056
+  sem: Sem_044
 }
 class location <<Property>> {
   valueType: xs:string
-  sem: Sem_057
+  sem: Sem_045
 }
 class geographicalDescription <<Property>> {
   valueType: xs:string
-  sem: Sem_058
+  sem: Sem_046
 }
 class technologyDescription <<Property>> {
   valueType: xs:string
-  sem: Sem_059
+  sem: Sem_047
 }
 class technicalPurpose <<Property>> {
   valueType: xs:string
-  sem: Sem_060
+  sem: Sem_048
 }
 class pictogramSource <<Property>> {
   valueType: xs:string
-  sem: Sem_061
+  sem: Sem_049
 }
 class flowDiagramSource <<Property>> {
   valueType: xs:string
-  sem: Sem_062
+  sem: Sem_050
 }
 class energyModel <<Property>> {
   valueType: xs:string
-  sem: Sem_063
+  sem: Sem_051
 }
 }
 package "lca_StandardsPcr" {
 class lca_StandardsPcr <<SMC>> {
-  sem: Sem_064
+  sem: Sem_052
 }
 class pcr.id <<Property>> {
   valueType: xs:string
-  sem: Sem_065
+  sem: Sem_053
 }
 class pcr.name <<Property>> {
   valueType: xs:string
-  sem: Sem_066
+  sem: Sem_054
 }
 class compliance <<Property>> {
   valueType: xs:string
-  sem: Sem_067
+  sem: Sem_055
 }
 class lcaDiscussion <<Property>> {
   valueType: xs:string
-  sem: Sem_068
+  sem: Sem_056
 }
 class pcr.publisher <<Property>> {
   valueType: xs:string
-  sem: Sem_069
+  sem: Sem_057
 }
 class pcr.referenceYear <<Property>> {
   valueType: xs:string
-  sem: Sem_070
+  sem: Sem_058
 }
 class pcr.link <<Property>> {
   valueType: xs:string
-  sem: Sem_071
+  sem: Sem_059
 }
 class pcr.version <<Property>> {
   valueType: xs:string
-  sem: Sem_072
+  sem: Sem_060
 }
 class pcr.validFrom <<Property>> {
   valueType: xs:date
-  sem: Sem_073
+  sem: Sem_061
 }
 class pcr.validUntil <<Property>> {
   valueType: xs:date
-  sem: Sem_074
+  sem: Sem_062
 }
 }
 package "lciaResults" {
 class lciaResults <<SML>> {
-  sem: Sem_075
+  sem: Sem_063
 }
 class None <<SMC>> {
-  sem: Sem_076
+  sem: Sem_064
 }
 class lciaIndicator <<SMC>> {
-  sem: Sem_077
+  sem: Sem_065
 }
 class indicatorCode <<Property>> {
   valueType: xs:string
-  sem: Sem_078
+  sem: Sem_066
 }
 class indicatorName <<Property>> {
   valueType: xs:string
-  sem: Sem_079
+  sem: Sem_067
 }
 class indicatorGroup <<Property>> {
   valueType: xs:string
-  sem: Sem_080
+  sem: Sem_068
 }
 class indicatorStandard <<Property>> {
   valueType: xs:string
-  sem: Sem_081
+  sem: Sem_069
 }
 class characterizationUnit <<SMC>> {
-  sem: Sem_082
+  sem: Sem_070
 }
 class unit <<Property>> {
   valueType: xs:string
@@ -350,97 +293,84 @@ class unitId <<Property>> {
 }
 class referenceUnitForCalculation <<Property>> {
   valueType: xs:string
-  sem: Sem_083
+  sem: Sem_071
 }
 class quantityOfReferenceUnit <<Property>> {
   valueType: xs:decimal
-  sem: Sem_084
+  sem: Sem_072
 }
 class lifeCyclePhaseValues <<SML>> {
-  sem: Sem_085
+  sem: Sem_073
 }
 class None <<SMC>> {
-  sem: Sem_086
+  sem: Sem_074
 }
 class lifeCyclePhase <<Property>> {
   valueType: xs:string
-  sem: Sem_087
+  sem: Sem_075
 }
 class value <<Property>> {
   valueType: xs:decimal
-  sem: Sem_088
+  sem: Sem_076
 }
 }
 package "declaredUnit" {
 class declaredUnit <<SMC>> {
-  sem: Sem_089
+  sem: Sem_029
 }
 class declaredQuantity <<Property>> {
   valueType: xs:decimal
-  sem: Sem_090
+  sem: Sem_077
 }
 class unitOfMeasure <<Property>> {
   valueType: xs:string
-  sem: Sem_091
+  sem: Sem_078
 }
 class massPerDeclaredUnit <<Property>> {
   valueType: xs:decimal
-  sem: Sem_092
+  sem: Sem_032
 }
 class referenceServiceLife <<Property>> {
   valueType: xs:integer
-  sem: Sem_093
+  sem: Sem_033
 }
 }
 package "systemBoundary" {
 class systemBoundary <<SMC>> {
-  sem: Sem_094
+  sem: Sem_079
 }
 class includesA1_A3 <<Property>> {
   valueType: xs:boolean
-  sem: Sem_095
+  sem: Sem_080
 }
 class includesA4_A5 <<Property>> {
   valueType: xs:boolean
-  sem: Sem_096
+  sem: Sem_081
 }
 class includesB1_B7 <<Property>> {
   valueType: xs:boolean
-  sem: Sem_097
+  sem: Sem_082
 }
 class includesC1_C4 <<Property>> {
   valueType: xs:boolean
-  sem: Sem_098
+  sem: Sem_083
 }
 class includesD <<Property>> {
   valueType: xs:boolean
-  sem: Sem_099
+  sem: Sem_084
 }
 class geographicScope <<Property>> {
   valueType: xs:string
-  sem: Sem_100
+  sem: Sem_085
 }
 class technologyCoverage <<Property>> {
   valueType: xs:string
-  sem: Sem_101
-}
-}
-package "biogenicCarbon" {
-class biogenicCarbon <<SMC>> {
-  sem: Sem_102
-}
-class biogenicCarbonProduct <<Property>> {
-  valueType: xs:decimal
-  sem: Sem_103
-}
-class biogenicCarbonPackaging <<Property>> {
-  valueType: xs:decimal
-  sem: Sem_104
+  sem: Sem_086
 }
 }
 package "epdDocument" {
 class epdDocument <<File>> {
-  sem: Sem_105
+  sem: Sem_087
 }
 }
 
@@ -465,34 +395,22 @@ thirdPartyVerifier *-- "0..1" verifierAccreditationId
 thirdPartyVerifier *-- "0..1" verificationStatementUrl
 programOperatorVerification *-- "0..1" epdDeveloper
 epdDeveloper *-- "1" Company
-manufacturerProduct *-- "1" manufacturer.name
-manufacturerProduct *-- "1" manufacturer.webDomain
-manufacturerProduct *-- "1" plants
+manufacturerProduct *-- "1" manufacturerName
+manufacturerProduct *-- "0..1" manufacturingSites
 manufacturerProduct *-- "1" productName
-manufacturerProduct *-- "1" productSKU
-manufacturerProduct *-- "1" productDescription
-manufacturerProduct *-- "1" productImageSmall
-manufacturerProduct *-- "1" productImage
-manufacturerProduct *-- "1" declaredUnit.qty
-manufacturerProduct *-- "1" declaredUnit.unit
-manufacturerProduct *-- "1" kgPerDeclaredUnit.qty
-manufacturerProduct *-- "1" kgCPerDeclaredUnit.qty
-manufacturerProduct *-- "1" kgCBiogenicPerDeclaredUnit.qty
-manufacturerProduct *-- "1" productServiceLifeYears
-manufacturerProduct *-- "1" applicableIn
-manufacturerProduct *-- "1" productUsageDescription
-manufacturerProduct *-- "1" productClasses
-manufacturerProduct *-- "1" specs
-manufacturerProduct *-- "1" attachments
-manufacturerProduct *-- "1" manufacturer.id
-manufacturerProduct *-- "1" manufacturer.category
-manufacturerProduct *-- "1" manufacturing
-manufacturerProduct *-- "1" useAdvice
-manufacturerProduct *-- "1" productUsage
-manufacturerProduct *-- "1" product.flow
-manufacturerProduct *-- "1" product.flowProperty
-manufacturerProduct *-- "1" product.unit
-manufacturerProduct *-- "1" product.amount
+manufacturerProduct *-- "1" productArticleNumberOfManufacturer
+manufacturerProduct *-- "0..1" productDescription
+manufacturerProduct *-- "0..1" productImage
+manufacturerProduct *-- "1" declaredUnit
+declaredUnit *-- "1" quantity
+declaredUnit *-- "1" unit
+manufacturerProduct *-- "0..1" massPerDeclaredUnit
+manufacturerProduct *-- "0..1" referenceServiceLife
+manufacturerProduct *-- "0..1" applicableJurisdictions
+manufacturerProduct *-- "0..1" manufacturingDescription
+manufacturerProduct *-- "0..1" biogenicCarbonContent
+biogenicCarbonContent *-- "0..1" biogenicCarbonContentProduct
+biogenicCarbonContent *-- "0..1" biogenicCarbonContentPackaging
 representativenessReference *-- "1" referenceFlow.id
 representativenessReference *-- "1" referenceFlow.amount
 representativenessReference *-- "1" referenceYear
@@ -544,6 +462,4 @@ systemBoundary *-- "0..1" includesC1_C4
 systemBoundary *-- "0..1" includesD
 systemBoundary *-- "1" geographicScope
 systemBoundary *-- "0..1" technologyCoverage
-biogenicCarbon *-- "1" biogenicCarbonProduct
-biogenicCarbon *-- "0..1" biogenicCarbonPackaging
 @enduml

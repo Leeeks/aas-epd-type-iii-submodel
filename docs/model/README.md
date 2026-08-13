@@ -31,7 +31,6 @@ python scripts/generate_model_uml.py
 - [lciaResults](sections/lciaResults.svg)
 - [declaredUnit](sections/declaredUnit.svg)
 - [systemBoundary](sections/systemBoundary.svg)
-- [biogenicCarbon](sections/biogenicCarbon.svg)
 - [epdDocument](sections/epdDocument.svg)
 
 ## Semantic References

@@ -5,35 +5,35 @@ skinparam linetype ortho
 hide empty members
 
 class systemBoundary <<SMC>> {
-  sem: Sem_094
+  sem: Sem_079
 }
 class includesA1_A3 <<Property>> {
   valueType: xs:boolean
-  sem: Sem_095
+  sem: Sem_080
 }
 class includesA4_A5 <<Property>> {
   valueType: xs:boolean
-  sem: Sem_096
+  sem: Sem_081
 }
 class includesB1_B7 <<Property>> {
   valueType: xs:boolean
-  sem: Sem_097
+  sem: Sem_082
 }
 class includesC1_C4 <<Property>> {
   valueType: xs:boolean
-  sem: Sem_098
+  sem: Sem_083
 }
 class includesD <<Property>> {
   valueType: xs:boolean
-  sem: Sem_099
+  sem: Sem_084
 }
 class geographicScope <<Property>> {
   valueType: xs:string
-  sem: Sem_100
+  sem: Sem_085
 }
 class technologyCoverage <<Property>> {
   valueType: xs:string
-  sem: Sem_101
+  sem: Sem_086
 }
 
 systemBoundary *-- "1" includesA1_A3

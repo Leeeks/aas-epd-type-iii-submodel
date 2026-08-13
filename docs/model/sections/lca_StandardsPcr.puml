@@ -5,47 +5,47 @@ skinparam linetype ortho
 hide empty members
 
 class lca_StandardsPcr <<SMC>> {
-  sem: Sem_064
+  sem: Sem_052
 }
 class pcr.id <<Property>> {
   valueType: xs:string
-  sem: Sem_065
+  sem: Sem_053
 }
 class pcr.name <<Property>> {
   valueType: xs:string
-  sem: Sem_066
+  sem: Sem_054
 }
 class compliance <<Property>> {
   valueType: xs:string
-  sem: Sem_067
+  sem: Sem_055
 }
 class lcaDiscussion <<Property>> {
   valueType: xs:string
-  sem: Sem_068
+  sem: Sem_056
 }
 class pcr.publisher <<Property>> {
   valueType: xs:string
-  sem: Sem_069
+  sem: Sem_057
 }
 class pcr.referenceYear <<Property>> {
   valueType: xs:string
-  sem: Sem_070
+  sem: Sem_058
 }
 class pcr.link <<Property>> {
   valueType: xs:string
-  sem: Sem_071
+  sem: Sem_059
 }
 class pcr.version <<Property>> {
   valueType: xs:string
-  sem: Sem_072
+  sem: Sem_060
 }
 class pcr.validFrom <<Property>> {
   valueType: xs:date
-  sem: Sem_073
+  sem: Sem_061
 }
 class pcr.validUntil <<Property>> {
   valueType: xs:date
-  sem: Sem_074
+  sem: Sem_062
 }
 
 lca_StandardsPcr *-- "1" pcr.id

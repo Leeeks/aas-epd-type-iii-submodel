@@ -17,6 +17,11 @@ The IDTA EPD Type III Submodel preserves full bidirectional mapping capability w
 | `language` | `languages` `[Property]` | ↔ Bidirectional. Represented as ISO 639-1 two-letter language code string in `languages` SML. |
 | `declaration_url` | `declarationUrl` | ↔ Bidirectional. Direct URL link to official publication record. |
 | `original_data_format` | `sourceDataFormat` | ↔ Bidirectional. Source format provenance string (e.g. `openEPD`, `PEP Ecopassport PDF`). |
+| `program_operator` (Org Object) | `programOperatorVerification/programOperator` | ↔ Bidirectional. Mapped to IDTA ContactInformation (e.g., openEPD name to `Company`). |
+| `third_party_verifier` (Org Object) | `programOperatorVerification/thirdPartyVerifier` | ↔ Bidirectional. Mapped to IDTA ContactInformation (e.g., openEPD name to `Company`). |
+| `third_party_verifier_email` | `.../thirdPartyVerifier/EmailAddress/EmailAddress` | ↔ Bidirectional. Mapped to IDTA ContactInformation nested EmailAddress property. |
+| `epd_developer` (Org Object) | `programOperatorVerification/epdDeveloper` | ↔ Bidirectional. Mapped to IDTA ContactInformation; openEPD `name` maps to `Company` [MLP, `0173-1#02-AAW001#001`]. |
+| `epd_developer_email` | `.../epdDeveloper/EmailAddress/EmailAddress` | ↔ Bidirectional. Mapped to IDTA ContactInformation nested EmailAddress property. |
 | `doctype` | *(Excluded from Submodel)* | ➔ openEPD serialization layer. Hardcoded transport type (e.g., `"openEPD"`), handled by openEPD converter. |
 | `openepd_version` | *(Excluded from Submodel)* | ➔ openEPD serialization layer. Transport schema version, handled by openEPD converter. |
 | `private` | *(Excluded from Submodel)* | ➔ Transport / Access control layer. Handled by AAS Access Control / API authorization policies. |

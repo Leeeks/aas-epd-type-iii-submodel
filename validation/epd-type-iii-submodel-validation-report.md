@@ -27,6 +27,8 @@
 | Numeric LCIA values unchanged | **passed** | Verified by re-extraction | No |
 | `documentIds` multi-ID structure | **passed** | Handover Doc / VDI 2770 pattern | No |
 | Refactored `identificationPublication` semantics | **passed** | Transport/app fields removed, version/languages clarified | No |
+| Refactored `programOperatorVerification` semantics | **passed** | Flat fields removed in favor of IDTA ContactInformation SMCs | No |
+| `epdDeveloper/Company` MLP structure | **passed** | `Company` [MLP, `0173-1#02-AAW001#001`] added; `RoleOfContactPerson` CD (wrong IRDI `0173-1#02-AAQ836#005`) removed; custom `epdDeveloper.name` CD removed | No |
 | Authoritative Semantic IDs | **passed** | All placeholder `example.com` IDs in `identificationPublication` eliminated | No |
 | Embedded PEP file accessible | **warning** | Legal clarification for PDF publication is missing. | **Release blocker** |
 | Use of `idShort` in list elements | **warning** | AAS V3.0 conformity of `idShort` on direct list elements must be validated. | **Release blocker** |

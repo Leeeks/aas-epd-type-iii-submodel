@@ -1,0 +1,11 @@
+@startuml
+title epdDocument
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+class epdDocument <<File>> {
+  sem: Sem_105
+}
+
+@enduml

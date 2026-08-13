@@ -1,0 +1,31 @@
+@startuml
+title declaredUnit
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+class declaredUnit <<SMC>> {
+  sem: Sem_089
+}
+class declaredQuantity <<Property>> {
+  valueType: xs:decimal
+  sem: Sem_090
+}
+class unitOfMeasure <<Property>> {
+  valueType: xs:string
+  sem: Sem_091
+}
+class massPerDeclaredUnit <<Property>> {
+  valueType: xs:decimal
+  sem: Sem_092
+}
+class referenceServiceLife <<Property>> {
+  valueType: xs:integer
+  sem: Sem_093
+}
+
+declaredUnit *-- "1" declaredQuantity
+declaredUnit *-- "1" unitOfMeasure
+declaredUnit *-- "0..1" massPerDeclaredUnit
+declaredUnit *-- "0..1" referenceServiceLife
+@enduml

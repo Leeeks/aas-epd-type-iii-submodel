@@ -1,0 +1,71 @@
+@startuml
+title representativenessReference
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+class representativenessReference <<SMC>> {
+  sem: Sem_051
+}
+class referenceFlow.id <<Property>> {
+  valueType: xs:string
+  sem: Sem_052
+}
+class referenceFlow.amount <<Property>> {
+  valueType: xs:string
+  sem: Sem_053
+}
+class referenceYear <<Property>> {
+  valueType: xs:string
+  sem: Sem_054
+}
+class dataSetValidUntil <<Property>> {
+  valueType: xs:string
+  sem: Sem_055
+}
+class timeRepresentativenessDescription <<Property>> {
+  valueType: xs:string
+  sem: Sem_056
+}
+class location <<Property>> {
+  valueType: xs:string
+  sem: Sem_057
+}
+class geographicalDescription <<Property>> {
+  valueType: xs:string
+  sem: Sem_058
+}
+class technologyDescription <<Property>> {
+  valueType: xs:string
+  sem: Sem_059
+}
+class technicalPurpose <<Property>> {
+  valueType: xs:string
+  sem: Sem_060
+}
+class pictogramSource <<Property>> {
+  valueType: xs:string
+  sem: Sem_061
+}
+class flowDiagramSource <<Property>> {
+  valueType: xs:string
+  sem: Sem_062
+}
+class energyModel <<Property>> {
+  valueType: xs:string
+  sem: Sem_063
+}
+
+representativenessReference *-- "1" referenceFlow.id
+representativenessReference *-- "1" referenceFlow.amount
+representativenessReference *-- "1" referenceYear
+representativenessReference *-- "1" dataSetValidUntil
+representativenessReference *-- "1" timeRepresentativenessDescription
+representativenessReference *-- "1" location
+representativenessReference *-- "1" geographicalDescription
+representativenessReference *-- "1" technologyDescription
+representativenessReference *-- "1" technicalPurpose
+representativenessReference *-- "1" pictogramSource
+representativenessReference *-- "1" flowDiagramSource
+representativenessReference *-- "0..1" energyModel
+@enduml

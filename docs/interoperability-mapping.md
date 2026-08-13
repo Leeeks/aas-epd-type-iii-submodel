@@ -27,6 +27,24 @@ The IDTA EPD Type III Submodel preserves full bidirectional mapping capability w
 | `private` | *(Excluded from Submodel)* | ➔ Transport / Access control layer. Handled by AAS Access Control / API authorization policies. |
 | `version` (record version) | *(Excluded from Submodel)* | ➔ AAS Administrative Information (`submodel.administration.revision`). |
 
+## `manufacturerProduct` and Biogenic Carbon Mappings
+
+| openEPD JSON Field | AAS EPD Type III Submodel Element | Mapping Direction & Notes |
+|---|---|---|
+| `manufacturer.name` | `manufacturerProduct/manufacturerName` | ↔ Bidirectional. |
+| `product_name` | `manufacturerProduct/productName` | ↔ Bidirectional. |
+| `product_sku` | `manufacturerProduct/productArticleNumberOfManufacturer` | ↔ Bidirectional. |
+| `plants` | `manufacturerProduct/manufacturingSites` | ↔ Bidirectional. Extracted to `manufacturingSite/addressInformation`. |
+| `product_description` | `manufacturerProduct/productDescription` | ↔ Bidirectional. |
+| `declared_unit.qty` | `manufacturerProduct/declaredUnit/quantity` | ↔ Bidirectional. |
+| `declared_unit.unit` | `manufacturerProduct/declaredUnit/unit` | ↔ Bidirectional. |
+| `kg_per_declared_unit` | `manufacturerProduct/massPerDeclaredUnit` | ↔ Bidirectional. |
+| `kg_C_per_declared_unit` | *(Excluded from Submodel)* | ➔ Intentionally not represented in EPD Type III core. |
+| `kg_C_biogenic_per_declared_unit` | `manufacturerProduct/biogenicCarbonContent/biogenicCarbonContentProduct` | ↔ Bidirectional. |
+| *(No direct openEPD core field)* | `manufacturerProduct/biogenicCarbonContent/biogenicCarbonContentPackaging` | ➔ Preserved in AAS; no direct openEPD core mapping currently available. |
+| `product_service_life_years` | `manufacturerProduct/referenceServiceLife` | ↔ Bidirectional. |
+| `manufacturing_description` | `manufacturerProduct/manufacturingDescription` | ↔ Bidirectional. |
+
 ## Implementation status
 - **PEP Ecopassport**: Partially mapped, validated by WAGO-00001-V01.01-EN.
 - **EN 15804**: Partially mapped, basis for LCIA indicators.

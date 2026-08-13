@@ -5,23 +5,23 @@ skinparam linetype ortho
 hide empty members
 
 class declaredUnit <<SMC>> {
-  sem: Sem_089
+  sem: Sem_029
 }
 class declaredQuantity <<Property>> {
   valueType: xs:decimal
-  sem: Sem_090
+  sem: Sem_077
 }
 class unitOfMeasure <<Property>> {
   valueType: xs:string
-  sem: Sem_091
+  sem: Sem_078
 }
 class massPerDeclaredUnit <<Property>> {
   valueType: xs:decimal
-  sem: Sem_092
+  sem: Sem_032
 }
 class referenceServiceLife <<Property>> {
   valueType: xs:integer
-  sem: Sem_093
+  sem: Sem_033
 }
 
 declaredUnit *-- "1" declaredQuantity

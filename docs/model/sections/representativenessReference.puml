@@ -5,55 +5,55 @@ skinparam linetype ortho
 hide empty members
 
 class representativenessReference <<SMC>> {
-  sem: Sem_051
+  sem: Sem_039
 }
 class referenceFlow.id <<Property>> {
   valueType: xs:string
-  sem: Sem_052
+  sem: Sem_040
 }
 class referenceFlow.amount <<Property>> {
   valueType: xs:string
-  sem: Sem_053
+  sem: Sem_041
 }
 class referenceYear <<Property>> {
   valueType: xs:string
-  sem: Sem_054
+  sem: Sem_042
 }
 class dataSetValidUntil <<Property>> {
   valueType: xs:string
-  sem: Sem_055
+  sem: Sem_043
 }
 class timeRepresentativenessDescription <<Property>> {
   valueType: xs:string
-  sem: Sem_056
+  sem: Sem_044
 }
 class location <<Property>> {
   valueType: xs:string
-  sem: Sem_057
+  sem: Sem_045
 }
 class geographicalDescription <<Property>> {
   valueType: xs:string
-  sem: Sem_058
+  sem: Sem_046
 }
 class technologyDescription <<Property>> {
   valueType: xs:string
-  sem: Sem_059
+  sem: Sem_047
 }
 class technicalPurpose <<Property>> {
   valueType: xs:string
-  sem: Sem_060
+  sem: Sem_048
 }
 class pictogramSource <<Property>> {
   valueType: xs:string
-  sem: Sem_061
+  sem: Sem_049
 }
 class flowDiagramSource <<Property>> {
   valueType: xs:string
-  sem: Sem_062
+  sem: Sem_050
 }
 class energyModel <<Property>> {
   valueType: xs:string
-  sem: Sem_063
+  sem: Sem_051
 }
 
 representativenessReference *-- "1" referenceFlow.id

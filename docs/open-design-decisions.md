@@ -349,3 +349,78 @@ Remove the `epdDeveloper.email` ConceptDescription in the next cleanup pass. Ema
 
 **Compatibility impact**: Low (CD is not referenced by any SME)
 **Required reviewers**: IDTA working group
+
+## Decision ID: ODD-22
+**Topic**: EPD instance granularity for homogeneous product families
+**Status**: OPEN / PROPOSITION
+
+### Problem statement
+A published EPD may cover a homogeneous product family and provide multiplication/scaling factors for individual variants. A consuming system should ideally not need to interpret a multiplication-factor table before using environmental results.
+
+### Proposition
+Proposed long-term approach: one product AAS/SKU → one EPD Type III submodel instance → one complete, directly usable result set. A source EPD covering several variants may therefore result in several AAS EPD instances. Each instance may reference the same original Program Operator EPD document identifier while containing results already scaled to the relevant product variant.
+
+**Questions**:
+- Should multiplication-factor tables remain available as provenance/authoring information?
+- Should receiving systems ever perform the multiplication?
+- How should multiple AAS EPD instances reference one source EPD?
+- How should the reference variant be retained?
+- How should Type Assets vs Instance Assets be treated?
+
+**Compatibility impact**: High
+**Required reviewers**: IDTA working group, LCA experts
+
+## Decision ID: ODD-23
+**Topic**: Manufacturing-site modelling
+**Status**: OPEN / PROPOSITION
+
+### Problem statement
+The `manufacturingSites` property represents the sites to which the EPD declaration/result set applies.
+
+### Proposition
+This property should not represent the complete upstream supply network, but only the final production sites or locations to which the EPD declaration directly applies.
+
+**Questions**:
+- What qualifies as a manufacturing site in the EPD context?
+- Are allocation shares required?
+- How should site-specific versus averaged EPD results be distinguished?
+
+**Compatibility impact**: Medium
+**Required reviewers**: IDTA working group, LCA experts
+
+## Decision ID: ODD-24
+**Topic**: Jurisdiction coding
+**Status**: OPEN / PROPOSITION
+
+### Problem statement
+The model includes `applicableJurisdictions` but currently lacks a canonical geography coding system.
+
+### Proposition
+A canonical coding model must be selected. Consideration should include:
+- ISO 3166-1 / ISO 3166-2
+- UN M49
+- Supranational regions (e.g. EU)
+- Global applicability representation
+- Mapping to openEPD Geography
+
+Until agreed, jurisdiction is represented as a string property without enforcing a specific coding scheme.
+
+**Compatibility impact**: Medium
+**Required reviewers**: IDTA working group
+
+## Decision ID: ODD-25
+**Topic**: Biogenic carbon placement and interoperability
+**Status**: OPEN / PROPOSITION
+
+### Problem statement
+Biogenic carbon content for both product and packaging needs to be modeled separately from generic total elemental carbon and separate from LCIA impact indicators.
+
+### Proposition
+- **Scope**: Represent `Biogenic carbon content in product` and `Biogenic carbon content in packaging` as separate additional/inventory indicators.
+- **Semantic classification**: They are quantitative additional environmental/inventory information, not LCIA impact indicators or generic total carbon content.
+- **Structural location**: Interim placement is a grouped structure within `manufacturerProduct`. The long-term standardized structure should place them under `additionalEnvironmentalInformation` or another dedicated non-LCIA EPD information section.
+- **openEPD mapping**: `kg_C_biogenic_per_declared_unit` maps to product biogenic carbon. There is no direct openEPD core mapping currently available for packaging carbon.
+- **Total elemental carbon**: openEPD's `kg_C_per_declared_unit` is intentionally **not part of the standardized EPD Type III core**.
+
+**Compatibility impact**: Medium
+**Required reviewers**: IDTA working group, LCA experts

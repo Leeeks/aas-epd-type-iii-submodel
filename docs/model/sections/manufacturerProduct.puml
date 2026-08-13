@@ -7,145 +7,76 @@ hide empty members
 class manufacturerProduct <<SMC>> {
   sem: Sem_022
 }
-class manufacturer.name <<Property>> {
-  valueType: xs:string
+class manufacturerName <<MLP>> {
   sem: Sem_023
 }
-class manufacturer.webDomain <<Property>> {
-  valueType: xs:string
+class manufacturingSites <<SML>> {
   sem: Sem_024
 }
-class plants <<Property>> {
-  valueType: xs:string
+class productName <<MLP>> {
   sem: Sem_025
 }
-class productName <<Property>> {
+class productArticleNumberOfManufacturer <<Property>> {
   valueType: xs:string
   sem: Sem_026
 }
-class productSKU <<Property>> {
-  valueType: xs:string
+class productDescription <<MLP>> {
   sem: Sem_027
 }
-class productDescription <<Property>> {
-  valueType: xs:string
+class productImage <<File>> {
   sem: Sem_028
 }
-class productImageSmall <<Property>> {
-  valueType: xs:string
+class declaredUnit <<SMC>> {
   sem: Sem_029
 }
-class productImage <<Property>> {
-  valueType: xs:string
+class quantity <<Property>> {
+  valueType: xs:decimal
   sem: Sem_030
 }
-class declaredUnit.qty <<Property>> {
+class unit <<Property>> {
   valueType: xs:string
   sem: Sem_031
 }
-class declaredUnit.unit <<Property>> {
-  valueType: xs:string
+class massPerDeclaredUnit <<Property>> {
+  valueType: xs:decimal
   sem: Sem_032
 }
-class kgPerDeclaredUnit.qty <<Property>> {
-  valueType: xs:string
+class referenceServiceLife <<Property>> {
+  valueType: xs:decimal
   sem: Sem_033
 }
-class kgCPerDeclaredUnit.qty <<Property>> {
-  valueType: xs:string
+class applicableJurisdictions <<SML>> {
   sem: Sem_034
 }
-class kgCBiogenicPerDeclaredUnit.qty <<Property>> {
-  valueType: xs:string
+class manufacturingDescription <<MLP>> {
   sem: Sem_035
 }
-class productServiceLifeYears <<Property>> {
-  valueType: xs:string
+class biogenicCarbonContent <<SMC>> {
   sem: Sem_036
 }
-class applicableIn <<Property>> {
-  valueType: xs:string
+class biogenicCarbonContentProduct <<Property>> {
+  valueType: xs:decimal
   sem: Sem_037
 }
-class productUsageDescription <<Property>> {
-  valueType: xs:string
+class biogenicCarbonContentPackaging <<Property>> {
+  valueType: xs:decimal
   sem: Sem_038
 }
-class productClasses <<Property>> {
-  valueType: xs:string
-  sem: Sem_039
-}
-class specs <<Property>> {
-  valueType: xs:string
-  sem: Sem_040
-}
-class attachments <<Property>> {
-  valueType: xs:string
-  sem: Sem_041
-}
-class manufacturer.id <<Property>> {
-  valueType: xs:string
-  sem: Sem_042
-}
-class manufacturer.category <<Property>> {
-  valueType: xs:string
-  sem: Sem_043
-}
-class manufacturing <<Property>> {
-  valueType: xs:string
-  sem: Sem_044
-}
-class useAdvice <<Property>> {
-  valueType: xs:string
-  sem: Sem_045
-}
-class productUsage <<Property>> {
-  valueType: xs:string
-  sem: Sem_046
-}
-class product.flow <<Property>> {
-  valueType: xs:string
-  sem: Sem_047
-}
-class product.flowProperty <<Property>> {
-  valueType: xs:string
-  sem: Sem_048
-}
-class product.unit <<Property>> {
-  valueType: xs:string
-  sem: Sem_049
-}
-class product.amount <<Property>> {
-  valueType: xs:string
-  sem: Sem_050
-}
 
-manufacturerProduct *-- "1" manufacturer.name
-manufacturerProduct *-- "1" manufacturer.webDomain
-manufacturerProduct *-- "1" plants
+manufacturerProduct *-- "1" manufacturerName
+manufacturerProduct *-- "0..1" manufacturingSites
 manufacturerProduct *-- "1" productName
-manufacturerProduct *-- "1" productSKU
-manufacturerProduct *-- "1" productDescription
-manufacturerProduct *-- "1" productImageSmall
-manufacturerProduct *-- "1" productImage
-manufacturerProduct *-- "1" declaredUnit.qty
-manufacturerProduct *-- "1" declaredUnit.unit
-manufacturerProduct *-- "1" kgPerDeclaredUnit.qty
-manufacturerProduct *-- "1" kgCPerDeclaredUnit.qty
-manufacturerProduct *-- "1" kgCBiogenicPerDeclaredUnit.qty
-manufacturerProduct *-- "1" productServiceLifeYears
-manufacturerProduct *-- "1" applicableIn
-manufacturerProduct *-- "1" productUsageDescription
-manufacturerProduct *-- "1" productClasses
-manufacturerProduct *-- "1" specs
-manufacturerProduct *-- "1" attachments
-manufacturerProduct *-- "1" manufacturer.id
-manufacturerProduct *-- "1" manufacturer.category
-manufacturerProduct *-- "1" manufacturing
-manufacturerProduct *-- "1" useAdvice
-manufacturerProduct *-- "1" productUsage
-manufacturerProduct *-- "1" product.flow
-manufacturerProduct *-- "1" product.flowProperty
-manufacturerProduct *-- "1" product.unit
-manufacturerProduct *-- "1" product.amount
+manufacturerProduct *-- "1" productArticleNumberOfManufacturer
+manufacturerProduct *-- "0..1" productDescription
+manufacturerProduct *-- "0..1" productImage
+manufacturerProduct *-- "1" declaredUnit
+declaredUnit *-- "1" quantity
+declaredUnit *-- "1" unit
+manufacturerProduct *-- "0..1" massPerDeclaredUnit
+manufacturerProduct *-- "0..1" referenceServiceLife
+manufacturerProduct *-- "0..1" applicableJurisdictions
+manufacturerProduct *-- "0..1" manufacturingDescription
+manufacturerProduct *-- "0..1" biogenicCarbonContent
+biogenicCarbonContent *-- "0..1" biogenicCarbonContentProduct
+biogenicCarbonContent *-- "0..1" biogenicCarbonContentPackaging
 @enduml

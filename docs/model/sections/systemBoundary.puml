@@ -1,0 +1,46 @@
+@startuml
+title systemBoundary
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+class systemBoundary <<SMC>> {
+  sem: Sem_094
+}
+class includesA1_A3 <<Property>> {
+  valueType: xs:boolean
+  sem: Sem_095
+}
+class includesA4_A5 <<Property>> {
+  valueType: xs:boolean
+  sem: Sem_096
+}
+class includesB1_B7 <<Property>> {
+  valueType: xs:boolean
+  sem: Sem_097
+}
+class includesC1_C4 <<Property>> {
+  valueType: xs:boolean
+  sem: Sem_098
+}
+class includesD <<Property>> {
+  valueType: xs:boolean
+  sem: Sem_099
+}
+class geographicScope <<Property>> {
+  valueType: xs:string
+  sem: Sem_100
+}
+class technologyCoverage <<Property>> {
+  valueType: xs:string
+  sem: Sem_101
+}
+
+systemBoundary *-- "1" includesA1_A3
+systemBoundary *-- "0..1" includesA4_A5
+systemBoundary *-- "0..1" includesB1_B7
+systemBoundary *-- "0..1" includesC1_C4
+systemBoundary *-- "0..1" includesD
+systemBoundary *-- "1" geographicScope
+systemBoundary *-- "0..1" technologyCoverage
+@enduml

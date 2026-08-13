@@ -24,6 +24,11 @@ Development of an interoperable AAS Submodel Template for EPD Type III, mapping 
 - Legally binding verification
 - Replacement of the original EPD PDF
 
+## Data model
+A complete UML representation of the EPD Type III submodel is available here:
+
+[View complete UML model](docs/model/epd-type-iii-model.svg)
+
 ## Repository structure
 - `model/template`: The generic EPD Type III AAS Submodel Template
 - `examples/wago-00001`: WAGO example instance, mapping, and source PDF

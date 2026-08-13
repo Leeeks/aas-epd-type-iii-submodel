@@ -1,0 +1,51 @@
+@startuml
+title programOperatorVerification
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+class programOperatorVerification <<SMC>> {
+  sem: Sem_014
+}
+class programOperator <<SMC>> {
+  sem: Sem_015
+}
+class Company <<Property>> {
+  valueType: xs:string
+  sem: Sem_016
+}
+class EmailAddress <<SMC>> {
+  sem: Sem_017
+}
+class EmailAddress <<Property>> {
+  valueType: xs:string
+  sem: Sem_018
+}
+class thirdPartyVerifier <<SMC>> {
+  sem: Sem_015
+}
+class verifierAccreditationId <<Property>> {
+  valueType: xs:string
+  sem: Sem_019
+}
+class verificationStatementUrl <<Property>> {
+  valueType: xs:string
+  sem: Sem_020
+}
+class epdDeveloper <<SMC>> {
+  sem: Sem_015
+}
+class Company <<MLP>> {
+  sem: Sem_021
+}
+
+programOperatorVerification *-- "1" programOperator
+programOperator *-- "0..*" Company
+programOperator *-- "0..*" EmailAddress
+EmailAddress *-- "1" EmailAddress
+programOperatorVerification *-- "0..1" thirdPartyVerifier
+thirdPartyVerifier *-- "0..1" verifierAccreditationId
+thirdPartyVerifier *-- "0..1" verificationStatementUrl
+programOperatorVerification *-- "0..1" epdDeveloper
+epdDeveloper *-- "1" Company
+@enduml

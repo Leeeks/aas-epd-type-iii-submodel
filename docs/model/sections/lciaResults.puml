@@ -1,0 +1,90 @@
+@startuml
+title lciaResults
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+class lciaResults <<SML>> {
+  sem: Sem_075
+}
+class None <<SMC>> {
+  sem: Sem_076
+}
+class lciaIndicator <<SMC>> {
+  sem: Sem_077
+}
+class indicatorCode <<Property>> {
+  valueType: xs:string
+  sem: Sem_078
+}
+class indicatorName <<Property>> {
+  valueType: xs:string
+  sem: Sem_079
+}
+class indicatorGroup <<Property>> {
+  valueType: xs:string
+  sem: Sem_080
+}
+class indicatorStandard <<Property>> {
+  valueType: xs:string
+  sem: Sem_081
+}
+class characterizationUnit <<SMC>> {
+  sem: Sem_082
+}
+class unit <<Property>> {
+  valueType: xs:string
+}
+class unitId <<Property>> {
+  valueType: xs:string
+}
+class baseUnit <<SMC>> {
+}
+class unit <<Property>> {
+  valueType: xs:string
+}
+class unitId <<Property>> {
+  valueType: xs:string
+}
+class referenceUnitForCalculation <<Property>> {
+  valueType: xs:string
+  sem: Sem_083
+}
+class quantityOfReferenceUnit <<Property>> {
+  valueType: xs:decimal
+  sem: Sem_084
+}
+class lifeCyclePhaseValues <<SML>> {
+  sem: Sem_085
+}
+class None <<SMC>> {
+  sem: Sem_086
+}
+class lifeCyclePhase <<Property>> {
+  valueType: xs:string
+  sem: Sem_087
+}
+class value <<Property>> {
+  valueType: xs:decimal
+  sem: Sem_088
+}
+
+lciaResults *-- "0..*" None
+None *-- "1" lciaIndicator
+lciaIndicator *-- "1" indicatorCode
+lciaIndicator *-- "1" indicatorName
+lciaIndicator *-- "1" indicatorGroup
+lciaIndicator *-- "0..1" indicatorStandard
+None *-- "1" characterizationUnit
+characterizationUnit *-- "1" unit
+characterizationUnit *-- "1" unitId
+characterizationUnit *-- "0..1" baseUnit
+baseUnit *-- "1" unit
+baseUnit *-- "1" unitId
+None *-- "0..1" referenceUnitForCalculation
+None *-- "0..1" quantityOfReferenceUnit
+None *-- "1" lifeCyclePhaseValues
+lifeCyclePhaseValues *-- "0..*" None
+None *-- "1" lifeCyclePhase
+None *-- "1" value
+@enduml

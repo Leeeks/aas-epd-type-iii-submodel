@@ -26,12 +26,14 @@ python scripts/generate_model_uml.py
 - [identificationPublication](sections/identificationPublication.svg)
 - [programOperatorVerification](sections/programOperatorVerification.svg)
 - [manufacturerProduct](sections/manufacturerProduct.svg)
-- [representativenessReference](sections/representativenessReference.svg)
+- [LCAMethodology](sections/LCAMethodology.svg)
 - [lca_StandardsPcr](sections/lca_StandardsPcr.svg)
-- [lciaResults](sections/lciaResults.svg)
-- [declaredUnit](sections/declaredUnit.svg)
-- [systemBoundary](sections/systemBoundary.svg)
 - [epdDocument](sections/epdDocument.svg)
+- [EnvironmentalResults](sections/EnvironmentalResults.svg)
+- [EPDScope](sections/EPDScope.svg)
+- [ContentDeclaration](sections/ContentDeclaration.svg)
+- [FunctionalUnit](sections/FunctionalUnit.svg)
+- [DeclaredUnit](sections/DeclaredUnit.svg)
 
 ## Semantic References
 See [semantic-references.md](semantic-references.md) for full URI mappings of the `Sem_XXX` compact IDs used in the diagrams.

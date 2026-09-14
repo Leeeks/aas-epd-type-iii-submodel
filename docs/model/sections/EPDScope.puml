@@ -1,0 +1,29 @@
+@startuml
+title EPDScope
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+class EPDScope <<SMC>> {
+  sem: Sem_060
+}
+class scopeType <<Property>> {
+  valueType: xs:string
+  sem: Sem_061
+}
+class coveredProductReferences <<SML>> {
+  sem: Sem_062
+}
+class scopeDescription <<MLP>> {
+  sem: Sem_063
+}
+class sourceDeclarationReference <<Property>> {
+  valueType: xs:string
+  sem: Sem_064
+}
+
+EPDScope *-- "1" scopeType
+EPDScope *-- "0..1" coveredProductReferences
+EPDScope *-- "0..1" scopeDescription
+EPDScope *-- "0..1" sourceDeclarationReference
+@enduml

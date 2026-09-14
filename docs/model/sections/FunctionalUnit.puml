@@ -1,11 +1,11 @@
 @startuml
-title DeclaredUnit
+title FunctionalUnit
 skinparam classAttributeIconSize 0
 skinparam linetype ortho
 hide empty members
 
-class DeclaredUnit <<SMC>> {
-  sem: Sem_074
+class FunctionalUnit <<SMC>> {
+  sem: Sem_070
 }
 class quantity <<Property>> {
   valueType: xs:decimal
@@ -19,7 +19,7 @@ class description <<MLP>> {
   sem: Sem_073
 }
 
-DeclaredUnit *-- "1" quantity
-DeclaredUnit *-- "1" unit
-DeclaredUnit *-- "0..1" description
+FunctionalUnit *-- "1" quantity
+FunctionalUnit *-- "1" unit
+FunctionalUnit *-- "0..1" description
 @enduml

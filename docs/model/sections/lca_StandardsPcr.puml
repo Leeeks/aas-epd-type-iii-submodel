@@ -5,13 +5,13 @@ skinparam linetype ortho
 hide empty members
 
 class lca_StandardsPcr <<SMC>> {
-  sem: Sem_052
+  sem: Sem_055
 }
 class standardsCompliance <<SML>> {
-  sem: Sem_053
+  sem: Sem_056
 }
 class productCategoryRules <<SML>> {
-  sem: Sem_054
+  sem: Sem_057
 }
 
 lca_StandardsPcr *-- "1" standardsCompliance

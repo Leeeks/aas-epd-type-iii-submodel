@@ -38,6 +38,14 @@ class epdDeveloper <<SMC>> {
 class Company <<MLP>> {
   sem: Sem_021
 }
+class verificationType <<Property>> {
+  valueType: xs:string
+  sem: Sem_022
+}
+class verificationDate <<Property>> {
+  valueType: xs:date
+  sem: Sem_023
+}
 
 programOperatorVerification *-- "1" programOperator
 programOperator *-- "0..*" Company
@@ -48,4 +56,6 @@ thirdPartyVerifier *-- "0..1" verifierAccreditationId
 thirdPartyVerifier *-- "0..1" verificationStatementUrl
 programOperatorVerification *-- "0..1" epdDeveloper
 epdDeveloper *-- "1" Company
+programOperatorVerification *-- "0..1" verificationType
+programOperatorVerification *-- "0..1" verificationDate
 @enduml

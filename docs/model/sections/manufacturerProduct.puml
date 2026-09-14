@@ -5,62 +5,62 @@ skinparam linetype ortho
 hide empty members
 
 class manufacturerProduct <<SMC>> {
-  sem: Sem_022
-}
-class manufacturerName <<MLP>> {
-  sem: Sem_023
-}
-class manufacturingSites <<SML>> {
   sem: Sem_024
 }
-class productName <<MLP>> {
+class manufacturerName <<MLP>> {
   sem: Sem_025
+}
+class manufacturingSites <<SML>> {
+  sem: Sem_026
+}
+class productName <<MLP>> {
+  sem: Sem_027
 }
 class productArticleNumberOfManufacturer <<Property>> {
   valueType: xs:string
-  sem: Sem_026
-}
-class productDescription <<MLP>> {
-  sem: Sem_027
-}
-class productImage <<File>> {
   sem: Sem_028
 }
-class declaredUnit <<SMC>> {
+class productDescription <<MLP>> {
   sem: Sem_029
+}
+class productImage <<File>> {
+  sem: Sem_030
+}
+class declaredUnit <<SMC>> {
+  sem: Sem_031
 }
 class quantity <<Property>> {
   valueType: xs:decimal
-  sem: Sem_030
+  sem: Sem_032
 }
 class unit <<Property>> {
   valueType: xs:string
-  sem: Sem_031
+  sem: Sem_033
 }
 class massPerDeclaredUnit <<Property>> {
   valueType: xs:decimal
-  sem: Sem_032
+  sem: Sem_034
 }
 class referenceServiceLife <<Property>> {
   valueType: xs:decimal
-  sem: Sem_033
-}
-class applicableJurisdictions <<SML>> {
-  sem: Sem_034
-}
-class manufacturingDescription <<MLP>> {
   sem: Sem_035
 }
-class biogenicCarbonContent <<SMC>> {
+class applicableJurisdictions <<SML>> {
   sem: Sem_036
+}
+class manufacturingDescription <<MLP>> {
+  sem: Sem_037
+}
+class biogenicCarbonContent <<SMC>> {
+  sem: Sem_038
 }
 class biogenicCarbonContentProduct <<Property>> {
   valueType: xs:decimal
-  sem: Sem_037
+  sem: Sem_039
 }
 class biogenicCarbonContentPackaging <<Property>> {
   valueType: xs:decimal
-  sem: Sem_038
+  sem: Sem_040
 }
 
 manufacturerProduct *-- "1" manufacturerName

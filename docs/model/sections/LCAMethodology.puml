@@ -1,0 +1,75 @@
+@startuml
+title LCAMethodology
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+class LCAMethodology <<SMC>> {
+  sem: Sem_041
+}
+class referenceFlow.id <<Property>> {
+  valueType: xs:string
+  sem: Sem_042
+}
+class referenceFlow.amount <<Property>> {
+  valueType: xs:string
+  sem: Sem_043
+}
+class referenceYear <<Property>> {
+  valueType: xs:string
+  sem: Sem_044
+}
+class dataSetValidUntil <<Property>> {
+  valueType: xs:string
+  sem: Sem_045
+}
+class timeRepresentativenessDescription <<Property>> {
+  valueType: xs:string
+  sem: Sem_046
+}
+class location <<Property>> {
+  valueType: xs:string
+  sem: Sem_047
+}
+class geographicalDescription <<Property>> {
+  valueType: xs:string
+  sem: Sem_048
+}
+class technologyDescription <<Property>> {
+  valueType: xs:string
+  sem: Sem_049
+}
+class technicalPurpose <<Property>> {
+  valueType: xs:string
+  sem: Sem_050
+}
+class pictogramSource <<Property>> {
+  valueType: xs:string
+  sem: Sem_051
+}
+class flowDiagramSource <<Property>> {
+  valueType: xs:string
+  sem: Sem_052
+}
+class energyModel <<Property>> {
+  valueType: xs:string
+  sem: Sem_053
+}
+class DeclaredStages <<SML>> {
+  sem: Sem_054
+}
+
+LCAMethodology *-- "1" referenceFlow.id
+LCAMethodology *-- "1" referenceFlow.amount
+LCAMethodology *-- "1" referenceYear
+LCAMethodology *-- "1" dataSetValidUntil
+LCAMethodology *-- "1" timeRepresentativenessDescription
+LCAMethodology *-- "1" location
+LCAMethodology *-- "1" geographicalDescription
+LCAMethodology *-- "1" technologyDescription
+LCAMethodology *-- "1" technicalPurpose
+LCAMethodology *-- "1" pictogramSource
+LCAMethodology *-- "1" flowDiagramSource
+LCAMethodology *-- "0..1" energyModel
+LCAMethodology *-- "1" DeclaredStages
+@enduml

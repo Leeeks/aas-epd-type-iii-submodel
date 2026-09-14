@@ -1,11 +1,11 @@
 @startuml
-title epdDocument
+title EnvironmentalResults
 skinparam classAttributeIconSize 0
 skinparam linetype ortho
 hide empty members
 
-class epdDocument <<File>> {
-  sem: Sem_058
+class EnvironmentalResults <<SML>> {
+  sem: Sem_059
 }
 
 @enduml

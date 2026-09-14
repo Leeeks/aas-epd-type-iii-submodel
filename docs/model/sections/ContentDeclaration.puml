@@ -1,0 +1,31 @@
+@startuml
+title ContentDeclaration
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+class ContentDeclaration <<SMC>> {
+  sem: Sem_065
+}
+class productMass <<Property>> {
+  valueType: xs:decimal
+  sem: Sem_066
+}
+class biogenicCarbonContentProduct <<Property>> {
+  valueType: xs:decimal
+  sem: Sem_067
+}
+class biogenicCarbonContentPackaging <<Property>> {
+  valueType: xs:decimal
+  sem: Sem_068
+}
+class recycledContentPercentage <<Property>> {
+  valueType: xs:decimal
+  sem: Sem_069
+}
+
+ContentDeclaration *-- "0..1" productMass
+ContentDeclaration *-- "0..1" biogenicCarbonContentProduct
+ContentDeclaration *-- "0..1" biogenicCarbonContentPackaging
+ContentDeclaration *-- "0..1" recycledContentPercentage
+@enduml

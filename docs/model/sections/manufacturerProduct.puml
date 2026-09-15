@@ -5,62 +5,40 @@ skinparam linetype ortho
 hide empty members
 
 class manufacturerProduct <<SMC>> {
-  sem: Sem_024
+  sem: Sem_018
 }
 class manufacturerName <<MLP>> {
-  sem: Sem_025
+  sem: Sem_019
 }
 class manufacturingSites <<SML>> {
-  sem: Sem_026
+  sem: Sem_020
 }
 class productName <<MLP>> {
-  sem: Sem_027
+  sem: Sem_021
 }
 class productArticleNumberOfManufacturer <<Property>> {
   valueType: xs:string
-  sem: Sem_028
+  sem: Sem_022
 }
 class productDescription <<MLP>> {
-  sem: Sem_029
+  sem: Sem_023
 }
 class productImage <<File>> {
-  sem: Sem_030
-}
-class declaredUnit <<SMC>> {
-  sem: Sem_031
-}
-class quantity <<Property>> {
-  valueType: xs:decimal
-  sem: Sem_032
-}
-class unit <<Property>> {
-  valueType: xs:string
-  sem: Sem_033
+  sem: Sem_024
 }
 class massPerDeclaredUnit <<Property>> {
   valueType: xs:decimal
-  sem: Sem_034
+  sem: Sem_025
 }
 class referenceServiceLife <<Property>> {
   valueType: xs:decimal
-  sem: Sem_035
+  sem: Sem_026
 }
 class applicableJurisdictions <<SML>> {
-  sem: Sem_036
+  sem: Sem_027
 }
 class manufacturingDescription <<MLP>> {
-  sem: Sem_037
-}
-class biogenicCarbonContent <<SMC>> {
-  sem: Sem_038
-}
-class biogenicCarbonContentProduct <<Property>> {
-  valueType: xs:decimal
-  sem: Sem_039
-}
-class biogenicCarbonContentPackaging <<Property>> {
-  valueType: xs:decimal
-  sem: Sem_040
+  sem: Sem_028
 }
 
 manufacturerProduct *-- "1" manufacturerName
@@ -69,14 +47,8 @@ manufacturerProduct *-- "1" productName
 manufacturerProduct *-- "1" productArticleNumberOfManufacturer
 manufacturerProduct *-- "0..1" productDescription
 manufacturerProduct *-- "0..1" productImage
-manufacturerProduct *-- "1" declaredUnit
-declaredUnit *-- "1" quantity
-declaredUnit *-- "1" unit
 manufacturerProduct *-- "0..1" massPerDeclaredUnit
 manufacturerProduct *-- "0..1" referenceServiceLife
 manufacturerProduct *-- "0..1" applicableJurisdictions
 manufacturerProduct *-- "0..1" manufacturingDescription
-manufacturerProduct *-- "0..1" biogenicCarbonContent
-biogenicCarbonContent *-- "0..1" biogenicCarbonContentProduct
-biogenicCarbonContent *-- "0..1" biogenicCarbonContentPackaging
 @enduml

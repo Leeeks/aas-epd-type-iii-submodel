@@ -5,27 +5,31 @@ skinparam linetype ortho
 hide empty members
 
 class ContentDeclaration <<SMC>> {
-  sem: Sem_065
+  sem: Sem_048
 }
 class productMass <<Property>> {
   valueType: xs:decimal
-  sem: Sem_066
-}
-class biogenicCarbonContentProduct <<Property>> {
-  valueType: xs:decimal
-  sem: Sem_067
-}
-class biogenicCarbonContentPackaging <<Property>> {
-  valueType: xs:decimal
-  sem: Sem_068
+  sem: Sem_049
 }
 class recycledContentPercentage <<Property>> {
   valueType: xs:decimal
-  sem: Sem_069
+  sem: Sem_050
+}
+class biogenicCarbonContent <<SMC>> {
+  sem: Sem_051
+}
+class biogenicCarbonContentProduct <<Property>> {
+  valueType: xs:decimal
+  sem: Sem_052
+}
+class biogenicCarbonContentPackaging <<Property>> {
+  valueType: xs:decimal
+  sem: Sem_053
 }
 
 ContentDeclaration *-- "0..1" productMass
-ContentDeclaration *-- "0..1" biogenicCarbonContentProduct
-ContentDeclaration *-- "0..1" biogenicCarbonContentPackaging
 ContentDeclaration *-- "0..1" recycledContentPercentage
+ContentDeclaration *-- "0..1" biogenicCarbonContent
+biogenicCarbonContent *-- "0..1" biogenicCarbonContentProduct
+biogenicCarbonContent *-- "0..1" biogenicCarbonContentPackaging
 @enduml

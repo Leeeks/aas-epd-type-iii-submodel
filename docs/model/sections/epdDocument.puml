@@ -5,7 +5,7 @@ skinparam linetype ortho
 hide empty members
 
 class epdDocument <<File>> {
-  sem: Sem_058
+  sem: Sem_042
 }
 
 @enduml

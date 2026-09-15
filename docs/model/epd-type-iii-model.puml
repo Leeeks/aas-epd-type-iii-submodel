@@ -11,313 +11,304 @@ class identificationPublication <<SMC>> {
 class documentIds <<SML>> {
   sem: Sem_002
 }
-class documentId_01 <<SMC>> {
-  sem: Sem_003
-}
-class documentDomainId <<Property>> {
-  valueType: xs:string
-  sem: Sem_004
-}
-class documentIdentifier <<Property>> {
-  valueType: xs:string
-  sem: Sem_005
-}
-class documentIsPrimary <<Property>> {
-  valueType: xs:boolean
-  sem: Sem_006
-}
 class programOperatorVersion <<Property>> {
   valueType: xs:string
-  sem: Sem_007
+  sem: Sem_003
 }
 class dateOfIssue <<Property>> {
   valueType: xs:date
-  sem: Sem_008
+  sem: Sem_004
 }
 class validUntil <<Property>> {
   valueType: xs:date
-  sem: Sem_009
+  sem: Sem_005
 }
 class languages <<SML>> {
-  sem: Sem_010
-}
-class language_01 <<Property>> {
-  valueType: xs:string
-  sem: Sem_011
+  sem: Sem_006
 }
 class sourceDataFormat <<Property>> {
   valueType: xs:string
-  sem: Sem_012
+  sem: Sem_007
 }
 class declarationUrl <<Property>> {
   valueType: xs:string
-  sem: Sem_013
+  sem: Sem_008
 }
 }
 package "programOperatorVerification" {
 class programOperatorVerification <<SMC>> {
-  sem: Sem_014
+  sem: Sem_009
 }
 class programOperator <<SMC>> {
-  sem: Sem_015
+  sem: Sem_010
 }
 class Company <<Property>> {
   valueType: xs:string
-  sem: Sem_016
+  sem: Sem_011
 }
 class EmailAddress <<SMC>> {
-  sem: Sem_017
+  sem: Sem_012
 }
 class EmailAddress <<Property>> {
   valueType: xs:string
-  sem: Sem_018
+  sem: Sem_013
 }
 class thirdPartyVerifier <<SMC>> {
-  sem: Sem_015
+  sem: Sem_010
 }
 class verifierAccreditationId <<Property>> {
   valueType: xs:string
-  sem: Sem_019
-}
-class verificationStatementUrl <<Property>> {
-  valueType: xs:string
-  sem: Sem_020
+  sem: Sem_014
 }
 class epdDeveloper <<SMC>> {
-  sem: Sem_015
+  sem: Sem_010
 }
 class Company <<MLP>> {
-  sem: Sem_021
+  sem: Sem_015
 }
 class verificationType <<Property>> {
   valueType: xs:string
-  sem: Sem_022
+  sem: Sem_016
 }
 class verificationDate <<Property>> {
   valueType: xs:date
-  sem: Sem_023
+  sem: Sem_017
 }
 }
 package "manufacturerProduct" {
 class manufacturerProduct <<SMC>> {
-  sem: Sem_024
+  sem: Sem_018
 }
 class manufacturerName <<MLP>> {
-  sem: Sem_025
+  sem: Sem_019
 }
 class manufacturingSites <<SML>> {
-  sem: Sem_026
+  sem: Sem_020
+}
+class ManufacturingSite <<SMC>> {
+sem: Sem_020_1
+}
+class SiteIdentifiers <<SML>> {
+sem: Sem_020_2_SML
+}
+class SiteIdentifier <<SMC>> {
+sem: Sem_020_2
+}
+class identifierScheme <<Property>> {
+valueType: xs:string
+sem: Sem_020_2_1
+}
+class identifierValue <<Property>> {
+valueType: xs:string
+sem: Sem_020_2_2
+}
+class siteName <<Property>> {
+valueType: xs:string
+sem: Sem_020_3
+}
+class siteType <<Property>> {
+valueType: xs:string
+sem: Sem_020_4
+}
+class siteOperator <<Property>> {
+valueType: xs:string
+sem: Sem_020_5
+}
+class Location <<SMC>> {
+sem: Sem_020_6
+}
+class countryCode <<Property>> {
+valueType: xs:string
+sem: Sem_020_7
+}
+class region <<Property>> {
+valueType: xs:string
+sem: Sem_020_8
+}
+class locality <<Property>> {
+valueType: xs:string
+sem: Sem_020_9
+}
+class latitude <<Property>> {
+valueType: xs:decimal
+sem: Sem_020_10
+}
+class longitude <<Property>> {
+valueType: xs:decimal
+sem: Sem_020_11
+}
+class LocationCodes <<SML>> {
+sem: Sem_020_12_SML
+}
+class LocationCode <<SMC>> {
+sem: Sem_020_12
+}
+class codingSystem <<Property>> {
+valueType: xs:string
+sem: Sem_020_12_1
+}
+class code <<Property>> {
+valueType: xs:string
+sem: Sem_020_12_2
 }
 class productName <<MLP>> {
-  sem: Sem_027
+  sem: Sem_021
 }
 class productArticleNumberOfManufacturer <<Property>> {
   valueType: xs:string
-  sem: Sem_028
+  sem: Sem_022
 }
 class productDescription <<MLP>> {
-  sem: Sem_029
+  sem: Sem_023
 }
 class productImage <<File>> {
-  sem: Sem_030
-}
-class declaredUnit <<SMC>> {
-  sem: Sem_031
-}
-class quantity <<Property>> {
-  valueType: xs:decimal
-  sem: Sem_032
-}
-class unit <<Property>> {
-  valueType: xs:string
-  sem: Sem_033
+  sem: Sem_024
 }
 class massPerDeclaredUnit <<Property>> {
   valueType: xs:decimal
-  sem: Sem_034
+  sem: Sem_025
 }
 class referenceServiceLife <<Property>> {
   valueType: xs:decimal
-  sem: Sem_035
+  sem: Sem_026
 }
 class applicableJurisdictions <<SML>> {
-  sem: Sem_036
+  sem: Sem_027
 }
 class manufacturingDescription <<MLP>> {
-  sem: Sem_037
-}
-class biogenicCarbonContent <<SMC>> {
-  sem: Sem_038
-}
-class biogenicCarbonContentProduct <<Property>> {
-  valueType: xs:decimal
-  sem: Sem_039
-}
-class biogenicCarbonContentPackaging <<Property>> {
-  valueType: xs:decimal
-  sem: Sem_040
+  sem: Sem_028
 }
 }
 package "LCAMethodology" {
 class LCAMethodology <<SMC>> {
-  sem: Sem_041
+  sem: Sem_029
 }
-class referenceFlow.id <<Property>> {
+class lcaReferenceYear <<Property>> {
   valueType: xs:string
-  sem: Sem_042
-}
-class referenceFlow.amount <<Property>> {
-  valueType: xs:string
-  sem: Sem_043
-}
-class referenceYear <<Property>> {
-  valueType: xs:string
-  sem: Sem_044
-}
-class dataSetValidUntil <<Property>> {
-  valueType: xs:string
-  sem: Sem_045
+  sem: Sem_030
 }
 class timeRepresentativenessDescription <<Property>> {
   valueType: xs:string
-  sem: Sem_046
+  sem: Sem_032
 }
-class location <<Property>> {
+class geographicalScope <<Property>> {
   valueType: xs:string
-  sem: Sem_047
+  sem: Sem_033
 }
 class geographicalDescription <<Property>> {
   valueType: xs:string
-  sem: Sem_048
+  sem: Sem_034
 }
 class technologyDescription <<Property>> {
   valueType: xs:string
-  sem: Sem_049
+  sem: Sem_035
 }
-class technicalPurpose <<Property>> {
+class lcaEnergyModel <<Property>> {
   valueType: xs:string
-  sem: Sem_050
-}
-class pictogramSource <<Property>> {
-  valueType: xs:string
-  sem: Sem_051
-}
-class flowDiagramSource <<Property>> {
-  valueType: xs:string
-  sem: Sem_052
-}
-class energyModel <<Property>> {
-  valueType: xs:string
-  sem: Sem_053
+  sem: Sem_037
 }
 class DeclaredStages <<SML>> {
-  sem: Sem_054
+  sem: Sem_038
 }
 }
 package "lca_StandardsPcr" {
 class lca_StandardsPcr <<SMC>> {
-  sem: Sem_055
+  sem: Sem_039
 }
 class standardsCompliance <<SML>> {
-  sem: Sem_056
+  sem: Sem_040
 }
 class productCategoryRules <<SML>> {
-  sem: Sem_057
+  sem: Sem_041
 }
 }
 package "epdDocument" {
 class epdDocument <<File>> {
-  sem: Sem_058
+  sem: Sem_042
 }
 }
 package "EnvironmentalResults" {
 class EnvironmentalResults <<SML>> {
-  sem: Sem_059
+  sem: Sem_043
 }
 }
 package "EPDScope" {
 class EPDScope <<SMC>> {
-  sem: Sem_060
+  sem: Sem_044
 }
 class scopeType <<Property>> {
   valueType: xs:string
-  sem: Sem_061
+  sem: Sem_045
 }
 class coveredProductReferences <<SML>> {
-  sem: Sem_062
+  sem: Sem_046
 }
 class scopeDescription <<MLP>> {
-  sem: Sem_063
-}
-class sourceDeclarationReference <<Property>> {
-  valueType: xs:string
-  sem: Sem_064
+  sem: Sem_047
 }
 }
 package "ContentDeclaration" {
 class ContentDeclaration <<SMC>> {
-  sem: Sem_065
+  sem: Sem_048
 }
 class productMass <<Property>> {
   valueType: xs:decimal
-  sem: Sem_066
-}
-class biogenicCarbonContentProduct <<Property>> {
-  valueType: xs:decimal
-  sem: Sem_067
-}
-class biogenicCarbonContentPackaging <<Property>> {
-  valueType: xs:decimal
-  sem: Sem_068
+  sem: Sem_049
 }
 class recycledContentPercentage <<Property>> {
   valueType: xs:decimal
-  sem: Sem_069
+  sem: Sem_050
+}
+class biogenicCarbonContent <<SMC>> {
+  sem: Sem_051
+}
+class biogenicCarbonContentProduct <<Property>> {
+  valueType: xs:decimal
+  sem: Sem_052
+}
+class biogenicCarbonContentPackaging <<Property>> {
+  valueType: xs:decimal
+  sem: Sem_053
 }
 }
 package "FunctionalUnit" {
 class FunctionalUnit <<SMC>> {
-  sem: Sem_070
+  sem: Sem_054
 }
 class quantity <<Property>> {
   valueType: xs:decimal
-  sem: Sem_071
+  sem: Sem_055
 }
 class unit <<Property>> {
   valueType: xs:string
-  sem: Sem_072
+  sem: Sem_056
 }
 class description <<MLP>> {
-  sem: Sem_073
+  sem: Sem_057
 }
 }
 package "DeclaredUnit" {
 class DeclaredUnit <<SMC>> {
-  sem: Sem_074
+  sem: Sem_058
 }
 class quantity <<Property>> {
   valueType: xs:decimal
-  sem: Sem_071
+  sem: Sem_055
 }
 class unit <<Property>> {
   valueType: xs:string
-  sem: Sem_072
+  sem: Sem_056
 }
 class description <<MLP>> {
-  sem: Sem_073
+  sem: Sem_057
 }
 }
 
 identificationPublication *-- "1" documentIds
-documentIds *-- "1..*" documentId_01
-documentId_01 *-- "1" documentDomainId
-documentId_01 *-- "1" documentIdentifier
-documentId_01 *-- "0..1" documentIsPrimary
 identificationPublication *-- "1" programOperatorVersion
 identificationPublication *-- "1" dateOfIssue
 identificationPublication *-- "1" validUntil
 identificationPublication *-- "1" languages
-languages *-- "1..*" language_01
 identificationPublication *-- "0..1" sourceDataFormat
 identificationPublication *-- "0..1" declarationUrl
 programOperatorVerification *-- "1" programOperator
@@ -326,7 +317,6 @@ programOperator *-- "0..*" EmailAddress
 EmailAddress *-- "1" EmailAddress
 programOperatorVerification *-- "0..1" thirdPartyVerifier
 thirdPartyVerifier *-- "0..1" verifierAccreditationId
-thirdPartyVerifier *-- "0..1" verificationStatementUrl
 programOperatorVerification *-- "0..1" epdDeveloper
 epdDeveloper *-- "1" Company
 programOperatorVerification *-- "0..1" verificationType
@@ -337,39 +327,45 @@ manufacturerProduct *-- "1" productName
 manufacturerProduct *-- "1" productArticleNumberOfManufacturer
 manufacturerProduct *-- "0..1" productDescription
 manufacturerProduct *-- "0..1" productImage
-manufacturerProduct *-- "1" declaredUnit
-declaredUnit *-- "1" quantity
-declaredUnit *-- "1" unit
 manufacturerProduct *-- "0..1" massPerDeclaredUnit
 manufacturerProduct *-- "0..1" referenceServiceLife
 manufacturerProduct *-- "0..1" applicableJurisdictions
 manufacturerProduct *-- "0..1" manufacturingDescription
-manufacturerProduct *-- "0..1" biogenicCarbonContent
-biogenicCarbonContent *-- "0..1" biogenicCarbonContentProduct
-biogenicCarbonContent *-- "0..1" biogenicCarbonContentPackaging
-LCAMethodology *-- "1" referenceFlow.id
-LCAMethodology *-- "1" referenceFlow.amount
-LCAMethodology *-- "1" referenceYear
-LCAMethodology *-- "1" dataSetValidUntil
-LCAMethodology *-- "1" timeRepresentativenessDescription
-LCAMethodology *-- "1" location
-LCAMethodology *-- "1" geographicalDescription
-LCAMethodology *-- "1" technologyDescription
-LCAMethodology *-- "1" technicalPurpose
-LCAMethodology *-- "1" pictogramSource
-LCAMethodology *-- "1" flowDiagramSource
-LCAMethodology *-- "0..1" energyModel
+manufacturingSites *-- "0..*" ManufacturingSite
+ManufacturingSite *-- "0..1" SiteIdentifiers
+SiteIdentifiers *-- "0..*" SiteIdentifier
+SiteIdentifier *-- "1" identifierScheme
+SiteIdentifier *-- "1" identifierValue
+ManufacturingSite *-- "0..1" siteName
+ManufacturingSite *-- "0..1" siteType
+ManufacturingSite *-- "0..1" siteOperator
+ManufacturingSite *-- "0..1" Location
+Location *-- "0..1" countryCode
+Location *-- "0..1" region
+Location *-- "0..1" locality
+Location *-- "0..1" latitude
+Location *-- "0..1" longitude
+Location *-- "0..1" LocationCodes
+LocationCodes *-- "0..*" LocationCode
+LocationCode *-- "1" codingSystem
+LocationCode *-- "1" code
+LCAMethodology *-- "1" lcaReferenceYear
+LCAMethodology *-- "0..1" timeRepresentativenessDescription
+LCAMethodology *-- "1" geographicalScope
+LCAMethodology *-- "0..1" geographicalDescription
+LCAMethodology *-- "0..1" technologyDescription
+LCAMethodology *-- "1" lcaEnergyModel
 LCAMethodology *-- "1" DeclaredStages
 lca_StandardsPcr *-- "1" standardsCompliance
 lca_StandardsPcr *-- "1" productCategoryRules
 EPDScope *-- "1" scopeType
 EPDScope *-- "0..1" coveredProductReferences
 EPDScope *-- "0..1" scopeDescription
-EPDScope *-- "0..1" sourceDeclarationReference
 ContentDeclaration *-- "0..1" productMass
-ContentDeclaration *-- "0..1" biogenicCarbonContentProduct
-ContentDeclaration *-- "0..1" biogenicCarbonContentPackaging
 ContentDeclaration *-- "0..1" recycledContentPercentage
+ContentDeclaration *-- "0..1" biogenicCarbonContent
+biogenicCarbonContent *-- "0..1" biogenicCarbonContentProduct
+biogenicCarbonContent *-- "0..1" biogenicCarbonContentPackaging
 FunctionalUnit *-- "1" quantity
 FunctionalUnit *-- "1" unit
 FunctionalUnit *-- "0..1" description

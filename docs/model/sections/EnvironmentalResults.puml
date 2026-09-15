@@ -5,7 +5,7 @@ skinparam linetype ortho
 hide empty members
 
 class EnvironmentalResults <<SML>> {
-  sem: Sem_059
+  sem: Sem_043
 }
 
 @enduml

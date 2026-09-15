@@ -37,6 +37,7 @@ A complete UML representation of the EPD Type III submodel is available here:
 - `validation`: Validation reports and checksums
 
 ## Main artifacts
+- [User Guide](docs/EPD-Type-III-Submodel-User-Guide.md)
 - [Template](model/template/epd-type-iii-submodel-template.aasx)
 - [WAGO Example Instance](examples/wago-00001/wago-00001-v01-01-en-epd-submodel-instance.aasx)
 - [PEP Mapping](examples/wago-00001/mapping/wago-00001-to-epd-submodel-mapping.json)
@@ -44,6 +45,7 @@ A complete UML representation of the EPD Type III submodel is available here:
 - [Open Design Decisions](docs/open-design-decisions.md)
 - [ADRs](docs/adr/0001-dynamic-idshort-for-lcia-results.md)
 - [Validation Report](validation/epd-type-iii-submodel-validation-report.md)
+- [Documentation Coverage Report](docs/review/documentation-coverage-report.md)
 
 ## Quick start
 1. Open AASX Package Explorer.

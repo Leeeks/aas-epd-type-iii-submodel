@@ -5,46 +5,42 @@ skinparam linetype ortho
 hide empty members
 
 class programOperatorVerification <<SMC>> {
-  sem: Sem_014
+  sem: Sem_009
 }
 class programOperator <<SMC>> {
-  sem: Sem_015
+  sem: Sem_010
 }
 class Company <<Property>> {
   valueType: xs:string
-  sem: Sem_016
+  sem: Sem_011
 }
 class EmailAddress <<SMC>> {
-  sem: Sem_017
+  sem: Sem_012
 }
 class EmailAddress <<Property>> {
   valueType: xs:string
-  sem: Sem_018
+  sem: Sem_013
 }
 class thirdPartyVerifier <<SMC>> {
-  sem: Sem_015
+  sem: Sem_010
 }
 class verifierAccreditationId <<Property>> {
   valueType: xs:string
-  sem: Sem_019
-}
-class verificationStatementUrl <<Property>> {
-  valueType: xs:string
-  sem: Sem_020
+  sem: Sem_014
 }
 class epdDeveloper <<SMC>> {
-  sem: Sem_015
+  sem: Sem_010
 }
 class Company <<MLP>> {
-  sem: Sem_021
+  sem: Sem_015
 }
 class verificationType <<Property>> {
   valueType: xs:string
-  sem: Sem_022
+  sem: Sem_016
 }
 class verificationDate <<Property>> {
   valueType: xs:date
-  sem: Sem_023
+  sem: Sem_017
 }
 
 programOperatorVerification *-- "1" programOperator
@@ -53,7 +49,6 @@ programOperator *-- "0..*" EmailAddress
 EmailAddress *-- "1" EmailAddress
 programOperatorVerification *-- "0..1" thirdPartyVerifier
 thirdPartyVerifier *-- "0..1" verifierAccreditationId
-thirdPartyVerifier *-- "0..1" verificationStatementUrl
 programOperatorVerification *-- "0..1" epdDeveloper
 epdDeveloper *-- "1" Company
 programOperatorVerification *-- "0..1" verificationType

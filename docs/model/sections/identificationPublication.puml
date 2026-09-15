@@ -10,59 +10,35 @@ class identificationPublication <<SMC>> {
 class documentIds <<SML>> {
   sem: Sem_002
 }
-class documentId_01 <<SMC>> {
-  sem: Sem_003
-}
-class documentDomainId <<Property>> {
-  valueType: xs:string
-  sem: Sem_004
-}
-class documentIdentifier <<Property>> {
-  valueType: xs:string
-  sem: Sem_005
-}
-class documentIsPrimary <<Property>> {
-  valueType: xs:boolean
-  sem: Sem_006
-}
 class programOperatorVersion <<Property>> {
   valueType: xs:string
-  sem: Sem_007
+  sem: Sem_003
 }
 class dateOfIssue <<Property>> {
   valueType: xs:date
-  sem: Sem_008
+  sem: Sem_004
 }
 class validUntil <<Property>> {
   valueType: xs:date
-  sem: Sem_009
+  sem: Sem_005
 }
 class languages <<SML>> {
-  sem: Sem_010
-}
-class language_01 <<Property>> {
-  valueType: xs:string
-  sem: Sem_011
+  sem: Sem_006
 }
 class sourceDataFormat <<Property>> {
   valueType: xs:string
-  sem: Sem_012
+  sem: Sem_007
 }
 class declarationUrl <<Property>> {
   valueType: xs:string
-  sem: Sem_013
+  sem: Sem_008
 }
 
 identificationPublication *-- "1" documentIds
-documentIds *-- "1..*" documentId_01
-documentId_01 *-- "1" documentDomainId
-documentId_01 *-- "1" documentIdentifier
-documentId_01 *-- "0..1" documentIsPrimary
 identificationPublication *-- "1" programOperatorVersion
 identificationPublication *-- "1" dateOfIssue
 identificationPublication *-- "1" validUntil
 identificationPublication *-- "1" languages
-languages *-- "1..*" language_01
 identificationPublication *-- "0..1" sourceDataFormat
 identificationPublication *-- "0..1" declarationUrl
 @enduml

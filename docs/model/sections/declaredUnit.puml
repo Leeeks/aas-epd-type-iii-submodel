@@ -5,18 +5,18 @@ skinparam linetype ortho
 hide empty members
 
 class DeclaredUnit <<SMC>> {
-  sem: Sem_074
+  sem: Sem_058
 }
 class quantity <<Property>> {
   valueType: xs:decimal
-  sem: Sem_071
+  sem: Sem_055
 }
 class unit <<Property>> {
   valueType: xs:string
-  sem: Sem_072
+  sem: Sem_056
 }
 class description <<MLP>> {
-  sem: Sem_073
+  sem: Sem_057
 }
 
 DeclaredUnit *-- "1" quantity

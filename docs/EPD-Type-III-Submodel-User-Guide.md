@@ -190,10 +190,17 @@ EnvironmentalResults [SML]
     ├── resultCategory [Property, 1] (e.g., "ImpactIndicator", "ResourceUse")
     ├── indicatorCode [Property, 1] (e.g., "GWP-total")
     ├── indicatorName [Property, 0..1]
-    ├── unit [Property, 1] (e.g., "kg CO2 eq")
+    ├── unit [Property, 1] (Characterization unit, e.g., "kg CO2 eq")
+    ├── unitId [Property, 0..1] (Semantic ID of the characterization unit)
+    ├── baseUnit [SMC, 0..1] (Underlying physical/reference unit component)
+    │   ├── unit [Property, 1]
+    │   └── unitId [Property, 1]
     └── stageValues [SML, 1] (List of StageValue SMCs)
 ```
 Each `EnvironmentalResult` specifies the `resultCategory` (e.g., `ImpactIndicator`, `ResourceUse`, `Waste`, `OutputFlow`) and an `indicatorCode` (e.g., `GWP-total`, `PENRT`, `HWD`). Note: illustrative indicators in examples do not necessarily originate from the actual published EPD.
+
+### Environmental Indicator Registry
+To ensure interoperability, `indicatorCode` and `unit` combinations **must** match the recognized combinations defined in the central `environmental-indicator-registry.yaml`. When a characterization unit represents a complex derived unit, its underlying physical base unit MUST be provided using the optional `baseUnit` SMC. Extensions beyond the registry must provide explicit semantic IDs.
 
 ## 9. Lifecycle / Stage Guide
 Lifecycle stages are represented in the `stageValues` SML inside each indicator.

@@ -72,56 +72,56 @@ LEGACY_CD_IDS = {
 # Indicator catalogue
 # ---------------------------------------------------------------------------
 # (openEPD key, AAS idShort, resultCategory, unit, indicatorName)
-IMPACT_INDICATORS: list[tuple[str, str, str, str, str]] = [
-    ("gwp",          "GWP_total",      "ImpactIndicator", "kg CO2 eq.",   "Global Warming Potential (total)"),
-    ("gwp-fossil",   "GWP_fossil",     "ImpactIndicator", "kg CO2 eq.",   "Global Warming Potential (fossil)"),
-    ("gwp-biogenic", "GWP_biogenic",   "ImpactIndicator", "kg CO2 eq.",   "Global Warming Potential (biogenic)"),
-    ("gwp-luluc",    "GWP_luluc",      "ImpactIndicator", "kg CO2 eq.",   "Global Warming Potential (land use and land use change)"),
-    ("odp",          "ODP",            "ImpactIndicator", "kg CFC-11 eq.","Ozone Depletion Potential"),
-    ("ap",           "AP",             "ImpactIndicator", "mol H+ eq.",   "Acidification Potential"),
-    ("ep-fresh",     "EP_freshwater",  "ImpactIndicator", "kg P eq.",     "Eutrophication Potential (freshwater)"),
-    ("ep-marine",    "EP_marine",      "ImpactIndicator", "kg N eq.",     "Eutrophication Potential (marine)"),
-    ("ep-terr",      "EP_terrestrial", "ImpactIndicator", "mol N eq.",    "Eutrophication Potential (terrestrial)"),
-    ("pocp",         "POCP",           "ImpactIndicator", "kg NMVOC eq.", "Photochemical Ozone Creation Potential"),
-    ("adp-fossil",   "ADPF",           "ImpactIndicator", "MJ",           "Abiotic Depletion Potential (fossil fuels)"),
-    ("adp-elements", "ADPE",           "ImpactIndicator", "kg Sb eq.",    "Abiotic Depletion Potential (elements)"),
+IMPACT_INDICATORS: list[tuple[str, str, str, str, str, str]] = [
+    ("gwp",          "GWP_total",      "GWP-total",    "ImpactIndicator", "kg CO2 eq.",   "Global Warming Potential (total)"),
+    ("gwp-fossil",   "GWP_fossil",     "GWP-fossil",   "ImpactIndicator", "kg CO2 eq.",   "Global Warming Potential (fossil)"),
+    ("gwp-biogenic", "GWP_biogenic",   "GWP-biogenic", "ImpactIndicator", "kg CO2 eq.",   "Global Warming Potential (biogenic)"),
+    ("gwp-luluc",    "GWP_luluc",      "GWP-luluc",    "ImpactIndicator", "kg CO2 eq.",   "Global Warming Potential (land use and land use change)"),
+    ("odp",          "ODP",            "ODP",          "ImpactIndicator", "kg CFC-11 eq.","Ozone Depletion Potential"),
+    ("ap",           "AP",             "AP",           "ImpactIndicator", "mol H+ eq.",   "Acidification Potential"),
+    ("ep-fresh",     "EP_freshwater",  "EP-freshwater","ImpactIndicator", "kg P eq.",     "Eutrophication Potential (freshwater)"),
+    ("ep-marine",    "EP_marine",      "EP-marine",    "ImpactIndicator", "kg N eq.",     "Eutrophication Potential (marine)"),
+    ("ep-terr",      "EP_terrestrial", "EP-terrestrial","ImpactIndicator", "mol N eq.",    "Eutrophication Potential (terrestrial)"),
+    ("pocp",         "POCP",           "POCP",         "ImpactIndicator", "kg NMVOC eq.", "Photochemical Ozone Creation Potential"),
+    ("adp-fossil",   "ADPF",           "ADPF",         "ImpactIndicator", "MJ",           "Abiotic Depletion Potential (fossil fuels)"),
+    ("adp-elements", "ADPE",           "ADPE",         "ImpactIndicator", "kg Sb eq.",    "Abiotic Depletion Potential (elements)"),
 ]
 
 # Indicators present in WAGO AASX model but absent from the openEPD source
 # — values are ILLUSTRATIVE only; marked [ILLUSTRATIVE EXAMPLE]
-ILLUSTRATIVE_INDICATORS: list[tuple[str, str, str, str]] = [
-    ("WDP",     "ImpactIndicator", "m3 eq.",             "Water Deprivation Potential [ILLUSTRATIVE EXAMPLE]"),
-    ("Total_PE","ImpactIndicator", "MJ",                 "Total Primary Energy [ILLUSTRATIVE EXAMPLE]"),
-    ("PM",      "ImpactIndicator", "disease incidence",  "Particulate Matter Formation [ILLUSTRATIVE EXAMPLE]"),
-    ("IR",      "ImpactIndicator", "kBq U-235 eq.",      "Ionising Radiation [ILLUSTRATIVE EXAMPLE]"),
-    ("ETP_fw",  "ImpactIndicator", "CTUe",               "Ecotoxicity (freshwater) [ILLUSTRATIVE EXAMPLE]"),
-    ("HTP_c",   "ImpactIndicator", "CTUh",               "Human Toxicity Potential (cancer) [ILLUSTRATIVE EXAMPLE]"),
-    ("HTP_nc",  "ImpactIndicator", "CTUh",               "Human Toxicity Potential (non-cancer) [ILLUSTRATIVE EXAMPLE]"),
-    ("SQP",     "ImpactIndicator", "dimensionless",      "Soil Quality Potential [ILLUSTRATIVE EXAMPLE]"),
+ILLUSTRATIVE_INDICATORS: list[tuple[str, str, str, str, str]] = [
+    ("WDP",     "WDP",     "ImpactIndicator", "m3 eq.",             "Water Deprivation Potential [ILLUSTRATIVE EXAMPLE]"),
+    ("Total_PE","Total-PE","ImpactIndicator", "MJ",                 "Total Primary Energy [ILLUSTRATIVE EXAMPLE]"),
+    ("PM",      "PM",      "ImpactIndicator", "disease incidence",  "Particulate Matter Formation [ILLUSTRATIVE EXAMPLE]"),
+    ("IR",      "IR",      "ImpactIndicator", "kBq U-235 eq.",      "Ionising Radiation [ILLUSTRATIVE EXAMPLE]"),
+    ("ETP_fw",  "ETP-fw",  "ImpactIndicator", "CTUe",               "Ecotoxicity (freshwater) [ILLUSTRATIVE EXAMPLE]"),
+    ("HTP_c",   "HTP-c",   "ImpactIndicator", "CTUh",               "Human Toxicity Potential (cancer) [ILLUSTRATIVE EXAMPLE]"),
+    ("HTP_nc",  "HTP-nc",  "ImpactIndicator", "CTUh",               "Human Toxicity Potential (non-cancer) [ILLUSTRATIVE EXAMPLE]"),
+    ("SQP",     "SQP",     "ImpactIndicator", "dimensionless",      "Soil Quality Potential [ILLUSTRATIVE EXAMPLE]"),
 ]
 
 # (openEPD key, AAS idShort, resultCategory, unit, indicatorName)
-OUTPUT_FLOW_INDICATORS: list[tuple[str, str, str, str, str]] = [
-    ("hwd",  "HWD",  "Waste",      "kg", "Hazardous Waste Disposed"),
-    ("nhwd", "NHWD", "Waste",      "kg", "Non-Hazardous Waste Disposed"),
-    ("rwd",  "RWD",  "Waste",      "kg", "Radioactive Waste Disposed"),
-    ("cru",  "CRU",  "OutputFlow", "kg", "Components for Re-use"),
-    ("mfr",  "MFR",  "OutputFlow", "kg", "Materials for Recycling"),
-    ("mer",  "MER",  "OutputFlow", "kg", "Materials for Energy Recovery"),
-    ("ee",   "EE",   "OutputFlow", "MJ", "Exported Energy"),
+OUTPUT_FLOW_INDICATORS: list[tuple[str, str, str, str, str, str]] = [
+    ("hwd",  "HWD",  "HWD",  "Waste",      "kg", "Hazardous Waste Disposed"),
+    ("nhwd", "NHWD", "NHWD", "Waste",      "kg", "Non-Hazardous Waste Disposed"),
+    ("rwd",  "RWD",  "RWD",  "Waste",      "kg", "Radioactive Waste Disposed"),
+    ("cru",  "CRU",  "CRU",  "OutputFlow", "kg", "Components for Re-use"),
+    ("mfr",  "MFR",  "MFR",  "OutputFlow", "kg", "Materials for Recycling"),
+    ("mer",  "MER",  "MER",  "OutputFlow", "kg", "Materials for Energy Recovery"),
+    ("ee",   "EE",   "EE",   "OutputFlow", "MJ", "Exported Energy"),
 ]
 
 # Illustrative ResourceUse entries (source resource_uses = {})
-ILLUSTRATIVE_RESOURCE_USE: list[tuple[str, str, str, str, dict]] = [
+ILLUSTRATIVE_RESOURCE_USE: list[tuple[str, str, str, str, str, dict]] = [
     (
-        "PENRE", "ResourceUse", "MJ",
+        "PENRE", "PENRE", "ResourceUse", "MJ",
         "Non-renewable Primary Energy [ILLUSTRATIVE EXAMPLE]",
         {"A1-A3": ("Declared", 0.215), "A4": ("Declared", 0.008),
          "A5": ("Declared", 0.001), "B6": ("Declared", 0.950),
          "D": ("Declared", -0.010)},
     ),
     (
-        "PERE", "ResourceUse", "MJ",
+        "PERE", "PERE", "ResourceUse", "MJ",
         "Renewable Primary Energy [ILLUSTRATIVE EXAMPLE]",
         {"A1-A3": ("Declared", 0.042), "A4": ("Declared", 0.001),
          "A5": ("Declared", 0.0),   "B6": ("Declared", 0.005),
@@ -232,7 +232,8 @@ def add_desc(parent, text):
 
 def make_simple_prop(parent_val: ET.Element, id_short: str,
                      sem_url: str, vtype: str, value: str,
-                     category: str = "") -> ET.Element:
+                     category: str = "", desc: str = "",
+                     value_id: str = "") -> ET.Element:
     prop = ET.SubElement(parent_val, T("property"))
     ET.SubElement(prop, T("idShort")).text = id_short
     if category:
@@ -241,6 +242,17 @@ def make_simple_prop(parent_val: ET.Element, id_short: str,
     make_cardinality_qualifier(prop, "One")
     ET.SubElement(prop, T("valueType")).text = vtype
     ET.SubElement(prop, T("value")).text = value
+    if desc:
+        add_desc(prop, desc)
+        
+    if value_id:
+        vid = ET.SubElement(prop, T("valueId"))
+        ET.SubElement(vid, T("type")).text = "ExternalReference"
+        keys = ET.SubElement(vid, T("keys"))
+        k1 = ET.SubElement(keys, T("key"))
+        ET.SubElement(k1, T("type")).text = "GlobalReference"
+        ET.SubElement(k1, T("value")).text = value_id
+        
     return prop
 
 
@@ -258,7 +270,8 @@ def build_stage_value(stage_code: str, status: str,
 
     make_simple_prop(val, "stageCode",
                      "https://wg-epd.example.com/draft/v1/StageCode",
-                     "xs:string", stage_code, "PARAMETER")
+                     "xs:string", stage_code, "PARAMETER",
+                     value_id=f"https://wg-epd.example.com/draft/v1/Value/{stage_code}")
     make_simple_prop(val, "valueStatus",
                      "https://wg-epd.example.com/draft/v1/ValueStatus",
                      "xs:string", status, "PARAMETER")
@@ -320,6 +333,9 @@ def build_environmental_result_smc(
     indicator_code: str,
     indicator_name: str,
     unit: str,
+    unit_id: str,
+    base_unit: str,
+    base_unit_id: str,
     stage_values: list[ET.Element],
 ) -> ET.Element:
     smc = ET.Element(T("submodelElementCollection"))
@@ -331,16 +347,36 @@ def build_environmental_result_smc(
 
     make_simple_prop(val, "resultCategory",
                      "https://wg-epd.example.com/draft/v1/ResultCategory",
-                     "xs:string", result_category, "PARAMETER")
+                     "xs:string", result_category, "PARAMETER",
+                     value_id=f"https://wg-epd.example.com/draft/v1/Value/{result_category}")
     make_simple_prop(val, "indicatorCode",
                      "https://wg-epd.example.com/draft/v1/IndicatorCode",
-                     "xs:string", indicator_code, "PARAMETER")
+                     "xs:string", indicator_code, "PARAMETER",
+                     value_id=f"https://wg-epd.example.com/draft/v1/Indicator/{indicator_code}")
     make_simple_prop(val, "indicatorName",
                      "https://wg-epd.example.com/draft/v1/IndicatorName",
                      "xs:string", indicator_name, "PARAMETER")
     make_simple_prop(val, "unit",
                      "https://wg-epd.example.com/draft/v1/Unit",
                      "xs:string", unit, "PARAMETER")
+    if unit_id:
+        make_simple_prop(val, "unitId",
+                         "https://wg-epd.example.com/draft/v1/UnitId",
+                         "xs:string", unit_id, "PARAMETER")
+
+    if base_unit and base_unit_id:
+        bu_smc = ET.SubElement(val, T("submodelElementCollection"))
+        ET.SubElement(bu_smc, T("idShort")).text = "baseUnit"
+        make_sem(bu_smc, "https://wg-epd.example.com/draft/v1/BaseUnit")
+        make_cardinality_qualifier(bu_smc, "ZeroToOne")
+        bu_val = ET.SubElement(bu_smc, T("value"))
+        
+        make_simple_prop(bu_val, "unit",
+                         "https://wg-epd.example.com/draft/v1/Unit",
+                         "xs:string", base_unit, "PARAMETER")
+        make_simple_prop(bu_val, "unitId",
+                         "https://wg-epd.example.com/draft/v1/UnitId",
+                         "xs:string", base_unit_id, "PARAMETER")
 
     # stageValues SML
     sv_sml = ET.SubElement(val, T("submodelElementList"))
@@ -370,7 +406,7 @@ def build_environmental_result_smc(
 # ---------------------------------------------------------------------------
 
 def remove_legacy(sme_root: ET.Element, cd_root: Optional[ET.Element]) -> None:
-    print("\n[1] Removing legacy declaredUnit SMCs...")
+    print("\n[1] Removing legacy declaredUnit and architecture regressions...")
     removed = 0
 
     def _rm_from(container: ET.Element) -> int:
@@ -396,12 +432,70 @@ def remove_legacy(sme_root: ET.Element, cd_root: Optional[ET.Element]) -> None:
         mp_val = mp.find(T("value"))
         if mp_val is not None:
             removed += _rm_from(mp_val)
+            # ContentDeclaration regression protection: move/remove biogenicCarbonContent from manufacturerProduct
+            bcc = find_by_id(mp_val, "biogenicCarbonContent")
+            if bcc is not None:
+                mp_val.remove(bcc)
+                print("    [REMOVED] biogenicCarbonContent from manufacturerProduct")
+
+    # ContentDeclaration fix
+    cd = find_by_id(sme_root, "ContentDeclaration")
+    if cd is not None:
+        cd_val = cd.find(T("value"))
+        if cd_val is not None:
+            for child in list(cd_val):
+                id_el = child.find(T("idShort"))
+                if id_el is not None and id_el.text in ("biogenicCarbonContentProduct", "biogenicCarbonContentPackaging"):
+                    cd_val.remove(child)
+                    print(f"    [REMOVED] ContentDeclaration > {id_el.text} (flat)")
+            
+            # Ensure biogenicCarbonContent SMC exists
+            bcc = find_by_id(cd_val, "biogenicCarbonContent")
+            if bcc is None:
+                bcc = ET.SubElement(cd_val, T("submodelElementCollection"))
+                ET.SubElement(bcc, T("idShort")).text = "biogenicCarbonContent"
+                bcc_v = ET.SubElement(bcc, T("value"))
+                # Also create the properties since they were removed from flat representation
+                make_simple_prop(bcc_v, "biogenicCarbonContentProduct", "https://wg-epd.example.com/draft/v1/BiogenicCarbonContentProduct", "xs:decimal", "")
+                make_simple_prop(bcc_v, "biogenicCarbonContentPackaging", "https://wg-epd.example.com/draft/v1/BiogenicCarbonContentPackaging", "xs:decimal", "")
+
+    # LCAMethodology fix
+    lca = find_by_id(sme_root, "LCAMethodology")
+    if lca is not None:
+        lca_val = lca.find(T("value"))
+        if lca_val is not None:
+            for child in list(lca_val):
+                id_el = child.find(T("idShort"))
+                if id_el is not None:
+                    if id_el.text in ("referenceFlow.id", "referenceFlow.amount", "pictogramSource", "flowDiagramSource", "dataSetValidUntil", "technicalPurpose"):
+                        lca_val.remove(child)
+                        print(f"    [REMOVED] LCAMethodology > {id_el.text}")
+                    elif id_el.text == "referenceYear":
+                        id_el.text = "lcaReferenceYear"
+                        print("    [RENAMED] referenceYear -> lcaReferenceYear")
+                    elif id_el.text == "location":
+                        id_el.text = "geographicalScope"
+                        print("    [RENAMED] location -> geographicalScope")
+                    elif id_el.text == "energyModel":
+                        id_el.text = "lcaEnergyModel"
+                        print("    [RENAMED] energyModel -> lcaEnergyModel")
+
+    # EPDScope fix
+    scope = find_by_id(sme_root, "EPDScope")
+    if scope is not None:
+        scope_val = scope.find(T("value"))
+        if scope_val is not None:
+            for child in list(scope_val):
+                id_el = child.find(T("idShort"))
+                if id_el is not None and id_el.text == "sourceDeclarationReference":
+                    scope_val.remove(child)
+                    print("    [REMOVED] EPDScope > sourceDeclarationReference")
 
     if cd_root is not None:
-        for cd in list(cd_root):
-            id_el = cd.find(T("id"))
+        for cd_el in list(cd_root):
+            id_el = cd_el.find(T("id"))
             if id_el is not None and id_el.text in LEGACY_CD_IDS:
-                cd_root.remove(cd)
+                cd_root.remove(cd_el)
                 print("    [REMOVED] ConceptDescription " + id_el.text)
                 removed += 1
 
@@ -818,8 +912,10 @@ def populate_content_declaration(sme_root: ET.Element, mapping: dict) -> None:
         bcc_v = bcc.find(T("value"))
         if bcc_v is not None:
             # We don't have biogenic carbon data for the WAGO instance, use 0.0
-            set_prop(bcc_v, "Product", "0.0")
-            set_prop(bcc_v, "Packaging", "0.0")
+            if not set_prop(bcc_v, "biogenicCarbonContentProduct", "0.0"):
+                make_simple_prop(bcc_v, "biogenicCarbonContentProduct", "https://wg-epd.example.com/draft/v1/BiogenicCarbonContentProduct", "xs:decimal", "0.0")
+            if not set_prop(bcc_v, "biogenicCarbonContentPackaging", "0.0"):
+                make_simple_prop(bcc_v, "biogenicCarbonContentPackaging", "https://wg-epd.example.com/draft/v1/BiogenicCarbonContentPackaging", "xs:decimal", "0.0")
     print("    OK")
 
 
@@ -841,43 +937,68 @@ def populate_environmental_results(sme_root: ET.Element, mapping: dict) -> None:
 
     total_sv = 0
 
+    # Load registry
+    registry_yaml_path = os.path.join(REPO_ROOT, "docs", "model", "environmental-indicator-registry.yaml")
+    ind_map = {}
+    try:
+        # We will parse yaml manually for safety if yaml not found
+        import yaml
+        with open(registry_yaml_path, 'r', encoding='utf-8') as f:
+            registry_data = yaml.safe_load(f)
+        for ind in registry_data.get("indicators", []):
+            ind_map[ind["indicatorCode"]] = ind
+    except Exception as e:
+        print(f"    [WARN] Could not load registry YAML properly: {e}")
+
+    def _get_registry_info(code, fallback_unit):
+        rec = ind_map.get(code, {})
+        u = rec.get("characterizationUnit", fallback_unit)
+        uid = rec.get("characterizationUnitId", "https://wg-epd.example.com/draft/v1/Value/Unit_" + u.replace(' ', '_'))
+        bu = rec.get("baseUnit", "")
+        buid = rec.get("baseUnitId", "https://wg-epd.example.com/draft/v1/Value/Unit_" + bu.replace(' ', '_')) if bu else ""
+        return uid, bu, buid
+
     # --- Impact indicators from source ---
-    for epd_key, id_short, cat, unit, name in IMPACT_INDICATORS:
+    for epd_key, id_short, ind_code, cat, unit, name in IMPACT_INDICATORS:
         src = impacts.get(epd_key)
         if src is not None:
             svs = build_stage_values_from_source(src)
         else:
             svs = build_illustrative_stage_values(_default_illustrative_stages())
-        smc = build_environmental_result_smc(id_short, cat, id_short, name, unit, svs)
+        uid, bu, buid = _get_registry_info(ind_code, unit)
+        smc = build_environmental_result_smc(id_short, cat, ind_code, name, unit, uid, bu, buid, svs)
         er_val.append(smc)
         total_sv += len(svs)
         print("    [source]      " + id_short + "  (" + str(len(svs)) + " stages)")
 
     # --- Illustrative impact indicators ---
     ill_stages = build_illustrative_stage_values(_default_illustrative_stages())
-    for id_short, cat, unit, name in ILLUSTRATIVE_INDICATORS:
+    for id_short, ind_code, cat, unit, name in ILLUSTRATIVE_INDICATORS:
         svs = build_illustrative_stage_values(_default_illustrative_stages())
-        smc = build_environmental_result_smc(id_short, cat, id_short, name, unit, svs)
+        uid, bu, buid = _get_registry_info(ind_code, unit)
+        smc = build_environmental_result_smc(id_short, cat, ind_code, name, unit, uid, bu, buid, svs)
         er_val.append(smc)
         total_sv += len(svs)
         print("    [illustrative] " + id_short + "  (" + str(len(svs)) + " stages)")
 
     # --- Output flows from source ---
-    for epd_key, id_short, cat, unit, name in OUTPUT_FLOW_INDICATORS:
+    for epd_key, id_short, ind_code, cat, unit, name in OUTPUT_FLOW_INDICATORS:
         src = out_flows.get(epd_key)
         if src is not None:
             svs = build_stage_values_from_source(src)
         else:
             svs = build_illustrative_stage_values(_default_illustrative_stages())
-        smc = build_environmental_result_smc(id_short, cat, id_short, name, unit, svs)
+        uid, bu, buid = _get_registry_info(ind_code, unit)
+        smc = build_environmental_result_smc(id_short, cat, ind_code, name, unit, uid, bu, buid, svs)
         er_val.append(smc)
         total_sv += len(svs)
         print("    [source]      " + id_short + "  (" + str(len(svs)) + " stages)")
 
     # --- Illustrative ResourceUse ---
-    for id_short, cat, unit, name, stages in ILLUSTRATIVE_RESOURCE_USE:
+    for id_short, ind_code, cat, unit, name, stages in ILLUSTRATIVE_RESOURCE_USE:
         svs = build_illustrative_stage_values(stages)
-        smc = build_environmental_result_smc(id_short, cat, id_short, name, unit, svs)
+        uid, bu, buid = _get_registry_info(ind_code, unit)
+        smc = build_environmental_result_smc(id_short, cat, ind_code, name, unit, uid, bu, buid, svs)
         er_val.append(smc)
         total_sv += len(svs)
         print("    [illustrative] " + id_short + "  (" + str(len(svs)) + " stages) [ResourceUse]")

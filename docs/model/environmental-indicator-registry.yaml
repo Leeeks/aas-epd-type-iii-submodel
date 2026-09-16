@@ -1,0 +1,245 @@
+# Environmental Indicator Registry
+#
+# This registry defines the recognized indicator-unit combinations supported by
+# this version of the EPD Type III Submodel based on the standards, PCRs, and
+# programme references evaluated during its development (e.g., EN 15804+A2, PEP ecopassport).
+#
+# It is the single source of truth for validation and documentation generation.
+
+indicators:
+  # --- Impact Indicators ---
+  - indicatorCode: GWP-total
+    indicatorName: Global Warming Potential (total)
+    resultCategory: ImpactIndicator
+    characterizationUnit: kg CO2 eq.
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: GWP-fossil
+    indicatorName: Global Warming Potential (fossil)
+    resultCategory: ImpactIndicator
+    characterizationUnit: kg CO2 eq.
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: GWP-biogenic
+    indicatorName: Global Warming Potential (biogenic)
+    resultCategory: ImpactIndicator
+    characterizationUnit: kg CO2 eq.
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: GWP-luluc
+    indicatorName: Global Warming Potential (land use and land use change)
+    resultCategory: ImpactIndicator
+    characterizationUnit: kg CO2 eq.
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: ODP
+    indicatorName: Ozone Depletion Potential
+    resultCategory: ImpactIndicator
+    characterizationUnit: kg CFC-11 eq.
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: AP
+    indicatorName: Acidification Potential
+    resultCategory: ImpactIndicator
+    characterizationUnit: mol H+ eq.
+    baseUnit: mol
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: EP-freshwater
+    indicatorName: Eutrophication Potential (freshwater)
+    resultCategory: ImpactIndicator
+    characterizationUnit: kg P eq.
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: EP-marine
+    indicatorName: Eutrophication Potential (marine)
+    resultCategory: ImpactIndicator
+    characterizationUnit: kg N eq.
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: EP-terrestrial
+    indicatorName: Eutrophication Potential (terrestrial)
+    resultCategory: ImpactIndicator
+    characterizationUnit: mol N eq.
+    baseUnit: mol
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: POCP
+    indicatorName: Photochemical Ozone Creation Potential
+    resultCategory: ImpactIndicator
+    characterizationUnit: kg NMVOC eq.
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: ADPE
+    indicatorName: Abiotic Depletion Potential (elements)
+    resultCategory: ImpactIndicator
+    characterizationUnit: kg Sb eq.
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+    aliases: [adp-elements]
+
+  - indicatorCode: ADPF
+    indicatorName: Abiotic Depletion Potential (fossil fuels)
+    resultCategory: ImpactIndicator
+    characterizationUnit: MJ
+    baseUnit: MJ
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+    aliases: [adp-fossil]
+
+  - indicatorCode: WDP
+    indicatorName: Water Deprivation Potential
+    resultCategory: ImpactIndicator
+    characterizationUnit: m3 eq.
+    baseUnit: m3
+    sourceStandard: [EN 15804+A2]
+    vocabularyStatus: recognised
+
+  - indicatorCode: PM
+    indicatorName: Particulate Matter Formation
+    resultCategory: ImpactIndicator
+    characterizationUnit: disease incidence
+    sourceStandard: [EN 15804+A2]
+    vocabularyStatus: recognised
+
+  - indicatorCode: IR
+    indicatorName: Ionising Radiation
+    resultCategory: ImpactIndicator
+    characterizationUnit: kBq U-235 eq.
+    baseUnit: kBq
+    sourceStandard: [EN 15804+A2]
+    vocabularyStatus: recognised
+
+  - indicatorCode: ETP-fw
+    indicatorName: Ecotoxicity (freshwater)
+    resultCategory: ImpactIndicator
+    characterizationUnit: CTUe
+    sourceStandard: [EN 15804+A2]
+    vocabularyStatus: recognised
+    aliases: [ETP_fw]
+
+  - indicatorCode: HTP-c
+    indicatorName: Human Toxicity Potential (cancer)
+    resultCategory: ImpactIndicator
+    characterizationUnit: CTUh
+    sourceStandard: [EN 15804+A2]
+    vocabularyStatus: recognised
+    aliases: [HTP_c]
+
+  - indicatorCode: HTP-nc
+    indicatorName: Human Toxicity Potential (non-cancer)
+    resultCategory: ImpactIndicator
+    characterizationUnit: CTUh
+    sourceStandard: [EN 15804+A2]
+    vocabularyStatus: recognised
+    aliases: [HTP_nc]
+
+  - indicatorCode: SQP
+    indicatorName: Soil Quality Potential
+    resultCategory: ImpactIndicator
+    characterizationUnit: dimensionless
+    sourceStandard: [EN 15804+A2]
+    vocabularyStatus: recognised
+
+  # --- Waste ---
+  - indicatorCode: HWD
+    indicatorName: Hazardous Waste Disposed
+    resultCategory: Waste
+    characterizationUnit: kg
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: NHWD
+    indicatorName: Non-Hazardous Waste Disposed
+    resultCategory: Waste
+    characterizationUnit: kg
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: RWD
+    indicatorName: Radioactive Waste Disposed
+    resultCategory: Waste
+    characterizationUnit: kg
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  # --- Output Flows ---
+  - indicatorCode: CRU
+    indicatorName: Components for Re-use
+    resultCategory: OutputFlow
+    characterizationUnit: kg
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: MFR
+    indicatorName: Materials for Recycling
+    resultCategory: OutputFlow
+    characterizationUnit: kg
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: MER
+    indicatorName: Materials for Energy Recovery
+    resultCategory: OutputFlow
+    characterizationUnit: kg
+    baseUnit: kg
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: EE
+    indicatorName: Exported Energy
+    resultCategory: OutputFlow
+    characterizationUnit: MJ
+    baseUnit: MJ
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  # --- Resource Use ---
+  - indicatorCode: PENRE
+    indicatorName: Non-renewable Primary Energy
+    resultCategory: ResourceUse
+    characterizationUnit: MJ
+    baseUnit: MJ
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: PERE
+    indicatorName: Renewable Primary Energy
+    resultCategory: ResourceUse
+    characterizationUnit: MJ
+    baseUnit: MJ
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+
+  - indicatorCode: Total-PE
+    indicatorName: Total Primary Energy
+    resultCategory: ResourceUse
+    characterizationUnit: MJ
+    baseUnit: MJ
+    sourceStandard: [EN 15804+A2, PEP ecopassport]
+    vocabularyStatus: recognised
+    aliases: [Total_PE]

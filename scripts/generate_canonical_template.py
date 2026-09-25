@@ -128,9 +128,79 @@ def clean_template():
                 v.remove(child)
 
     # 5. Remove any SubmodelElementList idShorts which are invalid in BaSyx (except the list itself, its children shouldn't have idShort)
+    # AND Normalize EnvironmentalResults / stageValues to ONE generic item archetype
     for lst in root.findall(".//" + T("submodelElementList")):
+        lst_id = lst.find(T("idShort"))
+        
         v = lst.find(T("value"))
         if v is not None:
+            children = list(v)
+            if lst_id is not None and lst_id.text == "EnvironmentalResults":
+                # Ensure typeValueListElement is set
+                tvl = lst.find(T("typeValueListElement"))
+                if tvl is None:
+                    tvl = ET.Element(T("typeValueListElement"))
+                    lst.insert(1, tvl)
+                tvl.text = "SubmodelElementCollection"
+                
+                # Keep only 1 generic child
+                for child in children[1:]:
+                    v.remove(child)
+                
+                if len(children) > 0:
+                    generic_er = children[0]
+                    # Clear values inside generic ER
+                    clear_value(find_by_id(generic_er.find(T("value")), "indicatorCode"))
+                    clear_value(find_by_id(generic_er.find(T("value")), "resultCategory"))
+                    
+                    # Fix characterizationUnit if it's the old 'unit'
+                    er_val = generic_er.find(T("value"))
+                    old_unit = find_by_id(er_val, "unit")
+                    if old_unit is not None:
+                        # Rename idShort to characterizationUnit and make it an SMC
+                        id_el = old_unit.find(T("idShort"))
+                        if id_el is not None:
+                            id_el.text = "characterizationUnit"
+                        old_unit.tag = T("submodelElementCollection")
+                        # Add semanticId
+                        sem = old_unit.find(T("semanticId"))
+                        if sem is None:
+                            sem = ET.Element(T("semanticId"))
+                            old_unit.insert(1, sem)
+                        # We just let it be generic without perfectly recreating the internal baseUnit for now
+                        # Or better yet, since instance generation completely overwrites this anyway, it just needs to exist structurally.
+                        # Wait, we should probably clear its value since it might have a string value if it was a property.
+                        val_el = old_unit.find(T("value"))
+                        if val_el is not None:
+                            old_unit.remove(val_el)
+                        # Remove valueType if it exists
+                        vt = old_unit.find(T("valueType"))
+                        if vt is not None:
+                            old_unit.remove(vt)
+                        
+                        cu_val = ET.Element(T("value"))
+                        old_unit.append(cu_val)
+
+                    # Also normalize stageValues list inside it
+                    sv_lst = find_by_id(generic_er.find(T("value")), "stageValues")
+                    if sv_lst is not None:
+                        sv_tvl = sv_lst.find(T("typeValueListElement"))
+                        if sv_tvl is None:
+                            sv_tvl = ET.Element(T("typeValueListElement"))
+                            sv_lst.insert(1, sv_tvl)
+                        sv_tvl.text = "SubmodelElementCollection"
+                        
+                        sv_v = sv_lst.find(T("value"))
+                        if sv_v is not None:
+                            sv_children = list(sv_v)
+                            for sv_child in sv_children[1:]:
+                                sv_v.remove(sv_child)
+                            if len(sv_children) > 0:
+                                generic_sv = sv_children[0]
+                                clear_value(find_by_id(generic_sv.find(T("value")), "stageCode"))
+                                clear_value(find_by_id(generic_sv.find(T("value")), "value"))
+            
+            # For all SMLs, remove idShort from their children
             for child in v:
                 c_id = child.find(T("idShort"))
                 if c_id is not None:

@@ -183,24 +183,27 @@ If the EPD covers a product family, the `EPDScope` describes the family, while t
 *(Note: See Sections 8 and 13 for detailed nested structures of Environmental Results and Manufacturing Sites respectively).*
 
 ## 8. Environmental Results Guide
-The `EnvironmentalResults` structure is an SML containing multiple `EnvironmentalResult` SMCs.
+EnvironmentalResults intentionally uses a generic list structure instead of programme-specific result tables. Result category, indicator identity, unit and lifecycle stage are expressed semantically as data. This allows additional indicators and programme mappings to be introduced without changing the Submodel structure.
+
+The `EnvironmentalResults` structure is an SML containing multiple `EnvironmentalResult` SMCs (or exactly one generic archetype in the Template).
 ```text
 EnvironmentalResults [SML]
 └── EnvironmentalResult [SMC]
     ├── resultCategory [Property, 1] (e.g., "ImpactIndicator", "ResourceUse")
     ├── indicatorCode [Property, 1] (e.g., "GWP-total")
     ├── indicatorName [Property, 0..1]
-    ├── unit [Property, 1] (Characterization unit, e.g., "kg CO2 eq")
-    ├── unitId [Property, 0..1] (Semantic ID of the characterization unit)
-    ├── baseUnit [SMC, 0..1] (Underlying physical/reference unit component)
-    │   ├── unit [Property, 1]
-    │   └── unitId [Property, 1]
+    ├── characterizationUnit [SMC, 1]
+    │   ├── unit [Property, 1] (Characterization unit, e.g., "kg CO2 eq")
+    │   ├── unitId [Property, 0..1] (Semantic ID of the characterization unit)
+    │   └── baseUnit [SMC, 0..1] (Underlying physical/reference unit component)
+    │       ├── unit [Property, 1]
+    │       └── unitId [Property, 1]
     └── stageValues [SML, 1] (List of StageValue SMCs)
 ```
 Each `EnvironmentalResult` specifies the `resultCategory` (e.g., `ImpactIndicator`, `ResourceUse`, `Waste`, `OutputFlow`) and an `indicatorCode` (e.g., `GWP-total`, `PENRT`, `HWD`). Note: illustrative indicators in examples do not necessarily originate from the actual published EPD.
 
 ### Environmental Indicator Registry
-To ensure interoperability, `indicatorCode` and `unit` combinations **must** match the recognized combinations defined in the central `environmental-indicator-registry.yaml`. When a characterization unit represents a complex derived unit, its underlying physical base unit MUST be provided using the optional `baseUnit` SMC. Extensions beyond the registry must provide explicit semantic IDs.
+To ensure interoperability, `indicatorCode` and `unit` combinations **must** match the recognized combinations defined in the central `environmental-indicator-registry.yaml`. When a characterization unit represents a complex derived unit, its underlying physical base unit MUST be provided using the optional `baseUnit` SMC within `characterizationUnit`. Extensions beyond the registry must provide explicit semantic IDs.
 
 ## 9. Lifecycle / Stage Guide
 Lifecycle stages are represented in the `stageValues` SML inside each indicator.

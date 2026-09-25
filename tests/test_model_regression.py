@@ -113,6 +113,49 @@ def test_aasx(path: str):
     print("  PASS Identifier Consistency (no dangling AAS submodel references)")
 
 
+    # 6. EnvironmentalResults structure assertions
+    er_sml = find_by_id(sm_elements, "EnvironmentalResults")
+    assert er_sml is not None, "EnvironmentalResults missing"
+    
+    er_val = er_sml.find(T("value"))
+    if er_val is not None:
+        children = list(er_val)
+        if "template" in path.lower():
+            assert len(children) == 1, f"Template should have exactly 1 generic EnvironmentalResult archetype, got {len(children)}"
+            er_child = children[0]
+            id_el = er_child.find(T("idShort"))
+            assert id_el is None or id_el.text is None, "Generic Template EnvironmentalResult MUST NOT have an idShort!"
+        else:
+            assert len(children) > 1, f"Instance should have multiple EnvironmentalResult entries, got {len(children)}"
+        
+        # Test structural properties of the first element
+        if len(children) > 0:
+            first = children[0]
+            c_val = first.find(T("value"))
+            assert find_by_id(c_val, "resultCategory") is not None, "resultCategory missing"
+            assert find_by_id(c_val, "indicatorCode") is not None, "indicatorCode missing"
+            assert find_by_id(c_val, "characterizationUnit") is not None, "characterizationUnit missing"
+            
+            sv_sml = find_by_id(c_val, "stageValues")
+            assert sv_sml is not None, "stageValues missing"
+            
+            sv_val = sv_sml.find(T("value"))
+            if sv_val is not None:
+                sv_children = list(sv_val)
+                if "template" in path.lower():
+                    assert len(sv_children) == 1, f"Template should have exactly 1 generic StageValue archetype, got {len(sv_children)}"
+                    sv_child = sv_children[0]
+                    id_el = sv_child.find(T("idShort"))
+                    assert id_el is None or id_el.text is None, "Generic Template StageValue MUST NOT have an idShort!"
+                
+    # Also verify no hardcoded categories like ImpactIndicators
+    invalid_structs = ["ImpactIndicators", "ResourceUse", "Waste", "OutputFlows", "GWP-total", "AP", "ODP", "A1-A3"]
+    for inv in invalid_structs:
+        assert find_by_id(sm_elements, inv) is None, f"Found hardcoded structural element: {inv}"
+
+    print("  PASS EnvironmentalResults structure")
+
+
 if __name__ == "__main__":
     template = os.path.join(REPO_ROOT, "model", "template", "epd-type-iii-submodel-template.aasx")
     instance = os.path.join(REPO_ROOT, "examples", "wago-00001", "wago-00001-v01-01-en-epd-submodel-instance.aasx")

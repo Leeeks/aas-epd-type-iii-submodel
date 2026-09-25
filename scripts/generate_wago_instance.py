@@ -356,16 +356,23 @@ def build_environmental_result_smc(
     make_simple_prop(val, "indicatorName",
                      "https://wg-epd.example.com/draft/v1/IndicatorName",
                      "xs:string", indicator_name, "PARAMETER")
-    make_simple_prop(val, "unit",
+    # characterizationUnit SMC
+    cu_smc = ET.SubElement(val, T("submodelElementCollection"))
+    ET.SubElement(cu_smc, T("idShort")).text = "characterizationUnit"
+    make_sem(cu_smc, "https://wg-epd.example.com/draft/v1/CharacterizationUnit")
+    make_cardinality_qualifier(cu_smc, "One")
+    cu_val = ET.SubElement(cu_smc, T("value"))
+
+    make_simple_prop(cu_val, "unit",
                      "https://wg-epd.example.com/draft/v1/Unit",
                      "xs:string", unit, "PARAMETER")
     if unit_id:
-        make_simple_prop(val, "unitId",
+        make_simple_prop(cu_val, "unitId",
                          "https://wg-epd.example.com/draft/v1/UnitId",
                          "xs:string", unit_id, "PARAMETER")
 
     if base_unit and base_unit_id:
-        bu_smc = ET.SubElement(val, T("submodelElementCollection"))
+        bu_smc = ET.SubElement(cu_val, T("submodelElementCollection"))
         ET.SubElement(bu_smc, T("idShort")).text = "baseUnit"
         make_sem(bu_smc, "https://wg-epd.example.com/draft/v1/BaseUnit")
         make_cardinality_qualifier(bu_smc, "ZeroToOne")

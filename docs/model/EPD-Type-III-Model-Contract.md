@@ -4,19 +4,31 @@ This document defines the invariants, boundaries, and required architectures of 
 
 ## 1. Property Name and Structure Invariants
 
-### 1.1 EnvironmentalResult Architecture
-The `EnvironmentalResult` structure has been intentionally flattened compared to historical EPD models. The `unit` property at the `EnvironmentalResult` level **must** be preserved as the characterization unit. It must NOT be replaced by or nested into a `characterizationUnit` SubmodelElementCollection.
+## 1.1 Generic Environmental Result Architecture
 
-**Required Elements:**
+Environmental results SHALL be represented using one generic repeatable `EnvironmentalResult` structure.
+
+Environmental result categories SHALL be represented by `resultCategory`.
+
+Environmental indicator identity SHALL be represented by `indicatorCode`.
+
+Lifecycle-specific values SHALL be represented through repeatable `stageValues`.
+
+Neither environmental indicator codes nor lifecycle stage codes SHALL determine the structural hierarchy of the Submodel.
+
+The semantic vocabulary may evolve without requiring a structural schema change.
+
+**Required Elements for EnvironmentalResult:**
 - `resultCategory` (Property, String)
 - `indicatorCode` (Property, String)
 - `indicatorName` (Property, String)
-- `unit` (Property, String) - The characterization unit.
-- `unitId` (Property, String) - The semantic ID of the characterization unit.
+- `characterizationUnit` (SubmodelElementCollection) - Must contain:
+  - `unit` (Property, String)
+  - `unitId` (Property, String)
 - `stageValues` (SubmodelElementList) - The assessed lifecycle values.
 
-**Optional Extensions (Semantics restored):**
-- `baseUnit` (SubmodelElementCollection) - When the characterization unit represents a complex derived unit, the underlying physical base unit MUST be provided using this SMC. It must contain:
+**Optional Extensions:**
+- `baseUnit` (SubmodelElementCollection inside `characterizationUnit`) - When the characterization unit represents a complex derived unit, the underlying physical base unit MUST be provided using this SMC. It must contain:
   - `unit` (Property, String)
   - `unitId` (Property, String)
 

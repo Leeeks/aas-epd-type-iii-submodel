@@ -1239,12 +1239,17 @@ def main() -> None:
     tree = ET.parse(io.BytesIO(data_xml_bytes))
     root = tree.getroot()
 
+    # Canonical Instance IDs
+    CANONICAL_SUBMODEL_ID = "https://wago.com/aas/submodel/EPDTypeIII/WAGO-221-422-v01.01"
+    CANONICAL_AAS_ID = "https://wago.com/aas/EPDTypeIII/WAGO-221-422-v01.01"
+    CANONICAL_GLOBAL_ASSET_ID = "https://wago.com/asset/EPDTypeIII/WAGO-221-422"
+
     # Update submodel ID for the instance
     sm_el = root.find(".//" + T("submodel"))
     if sm_el is not None:
         id_el = sm_el.find(T("id"))
         if id_el is not None:
-            id_el.text = "https://wago.com/aas/submodel/EPDTypeIII/WAGO-221-422-v01.01"
+            id_el.text = CANONICAL_SUBMODEL_ID
         dn_el = sm_el.find(".//" + T("langStringNameType") + "/" + T("text"))
         if dn_el is not None:
             dn_el.text = "WAGO 221-422 EPD Type III Submodel"
@@ -1254,7 +1259,7 @@ def main() -> None:
     if aas_el is not None:
         aas_id = aas_el.find(T("id"))
         if aas_id is not None:
-            aas_id.text = "https://wago.com/aas/EPDTypeIII/WAGO-221-422-v01.01"
+            aas_id.text = CANONICAL_AAS_ID
         
         asset_info = aas_el.find(".//" + T("assetInformation"))
         if asset_info is not None:
@@ -1263,11 +1268,11 @@ def main() -> None:
                 asset_kind.text = "Instance"
             global_asset_id = asset_info.find(T("globalAssetId"))
             if global_asset_id is not None:
-                global_asset_id.text = "https://wago.com/asset/EPDTypeIII/WAGO-221-422"
+                global_asset_id.text = CANONICAL_GLOBAL_ASSET_ID
 
         submodel_ref_value = aas_el.find(".//" + T("submodels") + "//" + T("reference") + "//" + T("keys") + "//" + T("key") + "//" + T("value"))
         if submodel_ref_value is not None:
-            submodel_ref_value.text = "https://wago.com/aas/submodel/EPDTypeIII/WAGO-221-422-v01.01"
+            submodel_ref_value.text = CANONICAL_SUBMODEL_ID
 
     sme_root = sm_el.find(T("submodelElements"))
     cd_root = root.find(".//" + T("conceptDescriptions"))

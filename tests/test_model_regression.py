@@ -91,6 +91,28 @@ def test_aasx(path: str):
                 assert sem_id in cd_ids, f"Dangling semantic reference: {sem_id} is not present as a ConceptDescription!"
     print("  PASS Semantic References (no dangling references)")
 
+    # 5. Identifier Consistency assertions
+    # Ensure that every AAS submodel reference matches a Submodel ID in the environment
+    sm_actual_ids = set()
+    for sm in root.iter(T("submodel")):
+        id_el = sm.find(T("id"))
+        if id_el is not None and id_el.text:
+            sm_actual_ids.add(id_el.text)
+            
+    aas_refs = set()
+    for aas in root.iter(T("assetAdministrationShell")):
+        submodels_list = aas.find(T("submodels"))
+        if submodels_list is not None:
+            for ref in submodels_list.iter(T("reference")):
+                key_val = ref.find(f".//{T('keys')}/{T('key')}/{T('value')}")
+                if key_val is not None and key_val.text:
+                    aas_refs.add(key_val.text)
+                    
+    for ref_id in aas_refs:
+        assert ref_id in sm_actual_ids, f"Dangling AAS Submodel reference: '{ref_id}' not found in package Submodels!"
+    print("  PASS Identifier Consistency (no dangling AAS submodel references)")
+
+
 if __name__ == "__main__":
     template = os.path.join(REPO_ROOT, "model", "template", "epd-type-iii-submodel-template.aasx")
     instance = os.path.join(REPO_ROOT, "examples", "wago-00001", "wago-00001-v01-01-en-epd-submodel-instance.aasx")

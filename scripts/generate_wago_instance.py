@@ -1250,6 +1250,13 @@ def main() -> None:
         id_el = sm_el.find(T("id"))
         if id_el is not None:
             id_el.text = CANONICAL_SUBMODEL_ID
+            
+        kind_el = sm_el.find(T("kind"))
+        if kind_el is None:
+            kind_el = ET.Element(T("kind"))
+            sm_el.insert(1, kind_el)
+        kind_el.text = "Instance"
+            
         dn_el = sm_el.find(".//" + T("langStringNameType") + "/" + T("text"))
         if dn_el is not None:
             dn_el.text = "WAGO 221-422 EPD Type III Submodel"
